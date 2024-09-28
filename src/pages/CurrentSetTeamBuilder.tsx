@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 
 import ChampionImage from '../components/images/ChampionImage';
+import ChampionList from '../components/ChampionList';
 import PageLayout from '../components/PageLayout';
 import CURRENT_CHAMPIONS from '../data/currentChampions';
 
@@ -36,34 +37,7 @@ export default function CurrentSetTeamBuilder() {
                 </CheckboxGroup>
               </Box>
             </SimpleGrid>
-            {CURRENT_CHAMPIONS.map((champion) => (
-              <SimpleGrid
-                key={champion.name}
-                columns={4}
-                spacing={1}
-                sx={{
-                  height: '80px',
-                  '&:hover': {
-                    cursor: 'pointer',
-                    outline: '1px solid teal',
-                    borderRadius: '5px',
-                  },
-                }}
-              >
-                <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
-                <UnorderedList sx={{ width: '90px' }}>
-                  {champion.traits.map((trait) => (
-                    <ListItem key={trait} sx={{ textAlign: 'left' }}>
-                      <Text>{trait}</Text>
-                    </ListItem>
-                  ))}
-                </UnorderedList>
-                <Text sx={{ fontSize: 18, fontWeight: 600 }}>
-                  {champion.cost}
-                </Text>
-                <ChampionImage name={champion.name} />
-              </SimpleGrid>
-            ))}
+            <ChampionList champions={CURRENT_CHAMPIONS} />
           </VStack>
         </GridItem>
       </SimpleGrid>
