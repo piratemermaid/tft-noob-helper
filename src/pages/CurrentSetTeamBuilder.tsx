@@ -1,9 +1,10 @@
 import {
   Box,
-  Flex,
+  Checkbox,
+  CheckboxGroup,
   Grid,
   GridItem,
-  HStack,
+  Input,
   ListItem,
   SimpleGrid,
   Spacer,
@@ -23,11 +24,18 @@ export default function CurrentSetTeamBuilder() {
         <GridItem>TEAM BUILDER</GridItem>
         <GridItem>
           <VStack>
-            <Text></Text>
-            <VStack>
-              <Text>Search</Text>
-              <Text>Filter by Current Traits</Text>
-            </VStack>
+            <SimpleGrid columns={2} sx={{ mb: 4 }}>
+              <Box>
+                <Text sx={{ mb: 1.5 }}>Search Champs</Text>
+                <Input placeholder="Champion name (no worky yet)" />
+              </Box>
+              <Box>
+                <Text sx={{ mb: 1.5 }}>Filter by Current Traits</Text>
+                <CheckboxGroup>
+                  <Checkbox checked={false}>Traits go here</Checkbox>
+                </CheckboxGroup>
+              </Box>
+            </SimpleGrid>
             {CURRENT_CHAMPIONS.map((champion) => (
               <SimpleGrid
                 key={champion.name}
@@ -50,7 +58,9 @@ export default function CurrentSetTeamBuilder() {
                     </ListItem>
                   ))}
                 </UnorderedList>
-                <Text>{champion.cost}</Text>
+                <Text sx={{ fontSize: 18, fontWeight: 600 }}>
+                  {champion.cost}
+                </Text>
                 <ChampionImage name={champion.name} />
               </SimpleGrid>
             ))}
