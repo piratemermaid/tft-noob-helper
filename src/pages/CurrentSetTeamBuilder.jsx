@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Checkbox,
@@ -17,6 +18,8 @@ import { useStore } from '../store';
 import { useActiveTraits } from '../hooks/useActiveTraits';
 
 export default function CurrentSetTeamBuilder() {
+  const [filterTraits, setFilterTraits] = React.useState([]);
+
   const selectedChampions = useStore((state) => state.selectedChampions);
 
   const activeTraits = useActiveTraits();
@@ -24,6 +27,17 @@ export default function CurrentSetTeamBuilder() {
   const selectedChampionData = CURRENT_CHAMPIONS.filter((champion) =>
     selectedChampions?.includes(champion.name)
   );
+
+  const handleCheck = (e, trait) => {
+    if (e.target.checked) {
+      setFilterTraits([...filterTraits, trait]);
+    } else {
+      const newFilterTraits = filterTraits.filter(
+        (filterTrait) => filterTrait !== trait
+      );
+      setFilterTraits(newFilterTraits);
+    }
+  };
 
   return (
     <PageLayout title="Current Set Team Builder">
@@ -49,7 +63,11 @@ export default function CurrentSetTeamBuilder() {
                     {activeTraits?.length ? (
                       activeTraits.map((trait) => {
                         return (
-                          <Checkbox key={trait} checked={false}>
+                          <Checkbox
+                            key={trait}
+                            checked={filterTraits.includes(trait)}
+                            onChange={(e) => handleCheck(e, trait)}
+                          >
                             {trait}
                           </Checkbox>
                         );
