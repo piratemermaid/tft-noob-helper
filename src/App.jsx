@@ -14,12 +14,6 @@ export default function App() {
       <Box>
         <NavBar />
       </Box>
-
-      <Box>
-        State thing: {something ? 'yes' : 'no'}{' '}
-        <Button onClick={toggleSomething}>Toggle</Button>
-      </Box>
-
       <Outlet />
     </SimpleGrid>
   );
