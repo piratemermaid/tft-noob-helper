@@ -11,7 +11,13 @@ import ChampionImage from './images/ChampionImage';
 import { useStore } from '../store';
 import costColors from '../styles/costColors';
 
-export default function ChampionList({ champions, includeItems = false }) {
+export default function ChampionList({
+  champions,
+  checkedTraits,
+  includeItems = false,
+}) {
+  console.log('>> checkedTraits', checkedTraits);
+
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
   const getIsSelected = (name) => selectedChampions.includes(name);
@@ -47,7 +53,13 @@ export default function ChampionList({ champions, includeItems = false }) {
             <UnorderedList sx={{ width: '96px' }}>
               {champion.traits.map((trait) => (
                 <ListItem key={trait} sx={{ textAlign: 'left' }}>
-                  <Text>{trait}</Text>
+                  <Text
+                    sx={{
+                      fontWeight: checkedTraits?.includes(trait) ? 600 : 200,
+                    }}
+                  >
+                    {trait}
+                  </Text>
                 </ListItem>
               ))}
             </UnorderedList>

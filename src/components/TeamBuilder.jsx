@@ -53,7 +53,11 @@ export default function TeamBuilder({ championList }) {
         <SimpleGrid spacing={4}>
           <Text sx={{ fontSize: 18, color: 'blue.300' }}>My Team</Text>
           <TraitSummary champions={selectedChampionData} />
-          <ChampionList champions={selectedChampionData} includeItems />
+          <ChampionList
+            champions={selectedChampionData}
+            checkedTraits={checkedTraits}
+            includeItems
+          />
         </SimpleGrid>
       </GridItem>
       <GridItem>
@@ -86,7 +90,10 @@ export default function TeamBuilder({ championList }) {
               </CheckboxGroup>
             </Box>
           </SimpleGrid>
-          <ChampionList champions={filteredChampionsList} />
+          <ChampionList
+            champions={filteredChampionsList}
+            checkedTraits={checkedTraits}
+          />
         </VStack>
       </GridItem>
     </SimpleGrid>
