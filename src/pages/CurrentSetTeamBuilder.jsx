@@ -6,7 +6,7 @@ import CURRENT_ITEMS from '../data/currentItems';
 export default function CurrentSetTeamBuilder() {
   return (
     <PageLayout title="Current Set Team Builder">
-      <TeamBuilder championsList={CURRENT_CHAMPIONS} items={CURRENT_ITEMS} />
+      <TeamBuilder championList={CURRENT_CHAMPIONS} />
     </PageLayout>
   );
 }

@@ -4,6 +4,8 @@ import CURRENT_ITEMS from '../../data/currentItems';
 import ItemImage from './ItemImage';
 
 export default function ChampionBestItems({ items }) {
+  if (!items) return null;
+
   return (
     <HStack>
       {items.map((item) => {

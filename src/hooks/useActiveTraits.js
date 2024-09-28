@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { useStore } from '../store';
-import CURRENT_CHAMPIONS from '../data/currentChampions';
 
-export const useActiveTraits = () => {
+export const useActiveTraits = (championList) => {
   const selectedChampions = useStore((state) => state.selectedChampions);
-  const selectedChampionData = CURRENT_CHAMPIONS.filter((champion) =>
+  const selectedChampionData = championList.filter((champion) =>
     selectedChampions?.includes(champion.name)
   );
 

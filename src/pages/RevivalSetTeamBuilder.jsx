@@ -6,7 +6,7 @@ import CURRENT_ITEMS from '../data/currentItems';
 export default function RevivalSetTeamBuilder() {
   return (
     <PageLayout title="Revival Set Team Builder">
-      <TeamBuilder championsList={REVIVAL_CHAMPIONS} items={CURRENT_ITEMS} />
+      <TeamBuilder championList={REVIVAL_CHAMPIONS} />
     </PageLayout>
   );
 }

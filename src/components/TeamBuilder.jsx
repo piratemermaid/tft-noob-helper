@@ -11,28 +11,26 @@ import {
 } from '@chakra-ui/react';
 
 import ChampionList from './ChampionList';
-import PageLayout from './PageLayout';
 import TraitSummary from './TraitSummmary';
-import CURRENT_CHAMPIONS from '../data/currentChampions';
 import { useStore } from '../store';
 import { useActiveTraits } from '../hooks/useActiveTraits';
 
-export default function TeamBuilder() {
+export default function TeamBuilder({ championList }) {
   const [checkedTraits, setCheckedTraits] = React.useState([]);
 
   const selectedChampions = useStore((state) => state.selectedChampions);
 
-  const activeTraits = useActiveTraits();
+  const activeTraits = useActiveTraits(championList);
 
-  const selectedChampionData = CURRENT_CHAMPIONS.filter((champion) =>
+  const selectedChampionData = championList.filter((champion) =>
     selectedChampions?.includes(champion.name)
   );
 
   const filteredChampionsList = checkedTraits?.length
-    ? CURRENT_CHAMPIONS.filter((champion) => {
+    ? championList.filter((champion) => {
         return champion.traits.some((trait) => checkedTraits.includes(trait));
       })
-    : CURRENT_CHAMPIONS;
+    : championList;
 
   const handleCheck = (e, trait) => {
     if (e.target.checked) {
@@ -44,6 +42,10 @@ export default function TeamBuilder() {
       setCheckedTraits(newFilterTraits);
     }
   };
+
+  React.useEffect(() => {
+    setCheckedTraits([]);
+  }, []);
 
   return (
     <SimpleGrid columns={2}>
