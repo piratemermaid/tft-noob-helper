@@ -1,3 +1,5 @@
+import TRAITS from './traits.js';
+
 const CURRENT_CHAMPIONS = [
   {
     name: 'Ahri',
@@ -919,7 +921,6 @@ const CURRENT_CHAMPIONS = [
       magic_resist: 30,
       ability_power: 100,
       dps: [36, 65, 117],
-      damage: [50, 90, 162],
       attack_speed: 0.72,
       crit_rate: 25,
       range: 3,
@@ -927,5 +928,24 @@ const CURRENT_CHAMPIONS = [
     bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Statikk Shiv'],
   },
 ];
+
+const traitsByName = TRAITS.map((trait) => trait.name);
+
+const validateTraits = (champions, traits) => {
+  const invalidChampions = champions.filter((champion) =>
+    champion.traits.some((trait) => !traits.includes(trait))
+  );
+
+  if (invalidChampions.length > 0) {
+    console.error(
+      'Invalid traits found in the following champions:',
+      invalidChampions.map((champion) => champion.name).join(', ')
+    );
+  } else {
+    console.log('All champions have valid traits.');
+  }
+};
+
+validateTraits(CURRENT_CHAMPIONS, traitsByName);
 
 export default CURRENT_CHAMPIONS;
