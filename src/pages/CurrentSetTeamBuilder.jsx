@@ -18,7 +18,7 @@ import { useStore } from '../store';
 import { useActiveTraits } from '../hooks/useActiveTraits';
 
 export default function CurrentSetTeamBuilder() {
-  const [filterTraits, setFilterTraits] = React.useState([]);
+  const [checkedTraits, setCheckedTraits] = React.useState([]);
 
   const selectedChampions = useStore((state) => state.selectedChampions);
 
@@ -28,14 +28,20 @@ export default function CurrentSetTeamBuilder() {
     selectedChampions?.includes(champion.name)
   );
 
+  const filteredChampionsList = checkedTraits?.length
+    ? CURRENT_CHAMPIONS.filter((champion) => {
+        return champion.traits.some((trait) => checkedTraits.includes(trait));
+      })
+    : CURRENT_CHAMPIONS;
+
   const handleCheck = (e, trait) => {
     if (e.target.checked) {
-      setFilterTraits([...filterTraits, trait]);
+      setCheckedTraits([...checkedTraits, trait]);
     } else {
-      const newFilterTraits = filterTraits.filter(
+      const newFilterTraits = checkedTraits.filter(
         (filterTrait) => filterTrait !== trait
       );
-      setFilterTraits(newFilterTraits);
+      setCheckedTraits(newFilterTraits);
     }
   };
 
@@ -65,7 +71,7 @@ export default function CurrentSetTeamBuilder() {
                         return (
                           <Checkbox
                             key={trait}
-                            checked={filterTraits.includes(trait)}
+                            checked={checkedTraits.includes(trait)}
                             onChange={(e) => handleCheck(e, trait)}
                           >
                             {trait}
@@ -79,7 +85,7 @@ export default function CurrentSetTeamBuilder() {
                 </CheckboxGroup>
               </Box>
             </SimpleGrid>
-            <ChampionList champions={CURRENT_CHAMPIONS} />
+            <ChampionList champions={filteredChampionsList} />
           </VStack>
         </GridItem>
       </SimpleGrid>
