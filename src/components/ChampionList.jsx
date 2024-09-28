@@ -16,9 +16,11 @@ export default function ChampionList({ champions, includeItems = false }) {
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
   const getIsSelected = (name) => selectedChampions.includes(name);
 
+  const sortedChampions = [...champions].sort((a, b) => a.cost - b.cost);
+
   return (
     <>
-      {champions?.map((champion) => (
+      {sortedChampions?.map((champion) => (
         <Box
           key={champion.name}
           sx={{
