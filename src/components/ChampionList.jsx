@@ -9,6 +9,7 @@ import {
 import ChampionBestItems from './images/ChampionBestItems';
 import ChampionImage from './images/ChampionImage';
 import { useStore } from '../store';
+import costColors from '../styles/costColors';
 
 export default function ChampionList({ champions, includeItems = false }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
@@ -48,7 +49,15 @@ export default function ChampionList({ champions, includeItems = false }) {
                 </ListItem>
               ))}
             </UnorderedList>
-            <Text sx={{ fontSize: 18, fontWeight: 600 }}>{champion.cost}</Text>
+            <Text
+              sx={{
+                fontSize: 18,
+                fontWeight: 600,
+                color: costColors[champion.cost],
+              }}
+            >
+              {champion.cost}
+            </Text>
             <ChampionImage name={champion.name} />
           </SimpleGrid>
           {includeItems ? (
