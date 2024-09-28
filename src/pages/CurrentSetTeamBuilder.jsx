@@ -14,9 +14,12 @@ import PageLayout from '../components/PageLayout';
 import TraitSummary from '../components/TraitSummmary';
 import CURRENT_CHAMPIONS from '../data/currentChampions';
 import { useStore } from '../store';
+import { useSelectedTraits } from '../hooks/useSelectedTraits';
 
 export default function CurrentSetTeamBuilder() {
   const selectedChampions = useStore((state) => state.selectedChampions);
+
+  const selectedTraits = useSelectedTraits();
 
   const selectedChampionData = CURRENT_CHAMPIONS.filter((champion) =>
     selectedChampions?.includes(champion.name)
@@ -34,15 +37,24 @@ export default function CurrentSetTeamBuilder() {
         </GridItem>
         <GridItem>
           <VStack>
-            <SimpleGrid columns={2} sx={{ mb: 4 }}>
+            <SimpleGrid columns={2} sx={{ mb: 4 }} spacing={4}>
               <Box>
                 <Text sx={{ mb: 1.5 }}>Search Champs</Text>
                 <Input placeholder="Champion name (no worky yet)" />
               </Box>
               <Box>
                 <Text sx={{ mb: 1.5 }}>Filter by Current Traits</Text>
-                <CheckboxGroup>
-                  <Checkbox checked={false}>Traits go here</Checkbox>
+                <CheckboxGroup VStack sx={{ float: 'left' }}>
+                  <SimpleGrid sx={{ float: 'left' }}>
+                    {selectedTraits?.length &&
+                      selectedTraits.map((trait) => {
+                        return (
+                          <Checkbox key={trait} checked={false}>
+                            {trait}
+                          </Checkbox>
+                        );
+                      })}
+                  </SimpleGrid>
                 </CheckboxGroup>
               </Box>
             </SimpleGrid>

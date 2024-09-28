@@ -8,6 +8,10 @@ export const useStore = create(
       handleSelectChampion: (champion) => {
         const selectedChampions = get().selectedChampions;
 
+        if (!selectedChampions?.length) {
+          return set({ selectedChampions: [champion] });
+        }
+
         if (selectedChampions.includes(champion)) {
           const newSelectedChampions = selectedChampions.filter(
             (selectedChamp) => selectedChamp !== champion
