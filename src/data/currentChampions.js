@@ -2,7 +2,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Ahri',
     cost: 3,
-    classes: ['Arcana', 'Scholar'],
+    traits: ['Arcana', 'Scholar'],
     stats: {
       health: [800, 1440, 2592],
       damage: [50, 72, 102],
@@ -17,7 +17,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Akali',
     cost: 2,
-    classes: ['Warrior', 'Multistriker', 'Pyro'],
+    traits: ['Warrior', 'Multistriker', 'Pyro'],
     stats: {
       health: [700, 1260, 2268],
       damage: [55, 83, 124],
@@ -32,7 +32,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Ashe',
     cost: 1,
-    classes: ['Arcana', 'Marksman'],
+    traits: ['Arcana', 'Marksman'],
     stats: {
       health: [500, 900, 1620],
       damage: [40, 60, 85],
@@ -47,7 +47,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Bard',
     cost: 5,
-    classes: ['Mystic', 'Invoker'],
+    traits: ['Mystic', 'Invoker'],
     stats: {
       health: [800, 1440, 2592],
       damage: [40, 55, 75],
@@ -62,7 +62,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Blitzcrank',
     cost: 3,
-    classes: ['Brawler', 'Guardian'],
+    traits: ['Brawler', 'Guardian'],
     stats: {
       health: [600, 1080, 1944],
       damage: [60, 90, 120],
@@ -77,7 +77,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Briar',
     cost: 5,
-    classes: ['Shapeshifter', 'Ravenous', 'Eldritch'],
+    traits: ['Shapeshifter', 'Ravenous', 'Eldritch'],
     stats: {
       health: [1200, 2160, 3888],
       damage: [60, 90, 135],
@@ -92,7 +92,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Camille',
     cost: 4,
-    classes: ['Warrior', 'Multistriker'],
+    traits: ['Warrior', 'Multistriker'],
     stats: {
       health: [700, 1260, 2268],
       damage: [60, 90, 130],
@@ -107,7 +107,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Cassiopeia',
     cost: 4,
-    classes: ['Arcana', 'Mage'],
+    traits: ['Arcana', 'Mage'],
     stats: {
       health: [700, 1260, 2268],
       damage: [65, 95, 135],
@@ -122,7 +122,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Diana',
     cost: 3,
-    classes: ['Shurima', 'Warrior'],
+    traits: ['Shurima', 'Warrior'],
     stats: {
       health: [750, 1350, 2430],
       damage: [50, 90, 162],
@@ -136,7 +136,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Elise',
     cost: 2,
-    classes: ['Brawler', 'Sorcerer'],
+    traits: ['Brawler', 'Sorcerer'],
     stats: {
       health: [550, 990, 1782],
       damage: [45, 81, 146],
@@ -150,7 +150,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Ezreal',
     cost: 3,
-    classes: ['Blaster', 'Invoker'],
+    traits: ['Blaster', 'Invoker'],
     stats: {
       health: [600, 1080, 1944],
       damage: [60, 108, 195],
@@ -164,7 +164,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Fiora',
     cost: 4,
-    classes: ['Warrior', 'Witch'],
+    traits: ['Warrior', 'Witch'],
     stats: {
       health: [1150, 2070, 3726],
       damage: [75, 135, 243],
@@ -178,7 +178,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Galio',
     cost: 4,
-    classes: ['Guardian', 'Warrior'],
+    traits: ['Guardian', 'Warrior'],
     stats: {
       health: [900, 1620, 2925],
       damage: [65, 117, 210],
@@ -192,7 +192,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Gwen',
     cost: 5,
-    classes: ['Warrior', 'Witch'],
+    traits: ['Warrior', 'Witch'],
     stats: {
       health: [950, 1710, 3090],
       damage: [85, 153, 276],
@@ -206,7 +206,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Hecarim',
     cost: 4,
-    classes: ['Brawler', 'Cavalry'],
+    traits: ['Brawler', 'Cavalry'],
     stats: {
       health: [1100, 1980, 3600],
       damage: [75, 135, 243],
@@ -220,7 +220,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Hwei',
     cost: 2,
-    classes: ['Shurima', 'Invoker'],
+    traits: ['Shurima', 'Invoker'],
     stats: {
       health: [600, 1080, 1944],
       damage: [50, 90, 162],
@@ -234,7 +234,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Jax',
     cost: 3,
-    classes: ['Fighter', 'Duelist'],
+    traits: ['Fighter', 'Duelist'],
     stats: {
       health: 800,
       mana: 0,
@@ -251,7 +251,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Jayce',
     cost: 1,
-    classes: ['Shapeshifter', 'Portal'],
+    traits: ['Shapeshifter', 'Portal'],
     stats: {
       health: 600,
       mana: 60,
@@ -268,7 +268,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Jinx',
     cost: 4,
-    classes: ['Multistriker', 'Faerie'],
+    traits: ['Multistriker', 'Faerie'],
     stats: {
       health: 800,
       mana: 100,
@@ -285,7 +285,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Kalista',
     cost: 4,
-    classes: ['Multistriker', 'Faerie'],
+    traits: ['Multistriker', 'Faerie'],
     stats: {
       health: 850,
       mana: 60,
@@ -302,7 +302,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Karma',
     cost: 3,
-    classes: ['Invoker', 'Invoker'],
+    traits: ['Invoker', 'Invoker'],
     stats: {
       health: 750,
       mana: 70,
@@ -319,7 +319,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Kassadin',
     cost: 2,
-    classes: ['Invoker', 'Invoker'],
+    traits: ['Invoker', 'Invoker'],
     stats: {
       health: 750,
       mana: 50,
@@ -336,7 +336,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Katarina',
     cost: 3,
-    classes: ['Warrior', 'Faerie'],
+    traits: ['Warrior', 'Faerie'],
     stats: {
       health: 800,
       mana: 10,
@@ -353,7 +353,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: "Kog'Maw",
     cost: 4,
-    classes: ['Multistriker', 'Faerie'],
+    traits: ['Multistriker', 'Faerie'],
     stats: {
       health: 900,
       mana: 100,
@@ -370,7 +370,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Lillia',
     cost: 3,
-    classes: ['Shurima', 'Invoker'],
+    traits: ['Shurima', 'Invoker'],
     stats: {
       health: [850, 1530, 2754],
       damage: [50, 80, 118],
@@ -386,7 +386,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Milio',
     cost: 3,
-    classes: ['Shurima', 'Preserver'],
+    traits: ['Shurima', 'Preserver'],
     stats: {
       health: [800, 1440, 2592],
       damage: [50, 70, 100],
@@ -402,7 +402,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Mordekaiser',
     cost: 3,
-    classes: ['Vanguard', 'Eldritch'],
+    traits: ['Vanguard', 'Eldritch'],
     stats: {
       health: [850, 1530, 2754],
       damage: [60, 90, 135],
@@ -418,7 +418,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Morgana',
     cost: 5,
-    classes: ['Witchcraft', 'Preserver'],
+    traits: ['Witchcraft', 'Preserver'],
     stats: {
       health: [1100, 1980, 3564],
       damage: [50, 75, 113],
@@ -434,7 +434,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Nami',
     cost: 4,
-    classes: ['Shurima', 'Invoker'],
+    traits: ['Shurima', 'Invoker'],
     stats: {
       health: [950, 1710, 3078],
       damage: [45, 60, 90],
@@ -450,7 +450,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Nasus',
     cost: 2,
-    classes: ['Vanguard', 'Preserver'],
+    traits: ['Vanguard', 'Preserver'],
     stats: {
       health: [950, 1710, 3078],
       damage: [50, 75, 112],
@@ -466,7 +466,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Neeko',
     cost: 4,
-    classes: ['Shurima', 'Invokers'],
+    traits: ['Shurima', 'Invokers'],
     stats: {
       health: [850, 1530, 2754],
       damage: [60, 80, 100],
@@ -482,7 +482,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Nilah',
     cost: 4,
-    classes: ['Vanguard', 'Preserver'],
+    traits: ['Vanguard', 'Preserver'],
     stats: {
       health: [800, 1440, 2592],
       damage: [50, 80, 118],
@@ -498,7 +498,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Nomsy',
     cost: 1,
-    classes: ['Hunter', 'Dragon'],
+    traits: ['Hunter', 'Dragon'],
     stats: {
       health: [500, 900, 1620],
       damage: [50, 75, 113],
@@ -513,7 +513,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Norra & Yuumi',
     cost: 5,
-    classes: ['Mage', 'Portal'],
+    traits: ['Mage', 'Portal'],
     stats: {
       health: [900, 1620, 2916],
       damage: [50, 90, 162],
@@ -530,7 +530,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Nunu',
     cost: 4,
-    classes: ['Cavalier', 'Freljord'],
+    traits: ['Cavalier', 'Freljord'],
     stats: {
       health: [1100, 1980, 3564],
       damage: [80, 120, 180],
@@ -545,7 +545,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Olaf',
     cost: 4,
-    classes: ['Berserker', 'Juggernaut'],
+    traits: ['Berserker', 'Juggernaut'],
     stats: {
       health: '1150 / 2070 / 4226',
       armor: 60,
@@ -558,7 +558,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Poppy',
     cost: 1,
-    classes: ['Demacia', 'Vanguard'],
+    traits: ['Demacia', 'Vanguard'],
     stats: {
       health: '650 / 1170 / 2106',
       armor: 45,
@@ -571,7 +571,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Rumble',
     cost: 2,
-    classes: ['Blaster', 'Sugarcraft'],
+    traits: ['Blaster', 'Sugarcraft'],
     stats: {
       health: '800 / 1440 / 2592',
       armor: 45,
@@ -584,7 +584,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Ryze',
     cost: 4,
-    classes: ['Portal', 'Scholar'],
+    traits: ['Portal', 'Scholar'],
     stats: {
       health: '850 / 1530 / 2754',
       armor: 30,
@@ -598,7 +598,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Rakan',
     cost: 4,
-    classes: ['Preserver', 'Faerie'],
+    traits: ['Preserver', 'Faerie'],
     stats: {
       health: [1050, 1890, 3402],
       damage: [60, 90, 135],
@@ -613,7 +613,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Seraphine',
     cost: 2,
-    classes: ['Star Guardian', 'Spellslinger'],
+    traits: ['Star Guardian', 'Spellslinger'],
     stats: {
       health: 700,
       armor: 20,
@@ -627,7 +627,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Shen',
     cost: 3,
-    classes: ['Bastion', 'Pyro'],
+    traits: ['Bastion', 'Pyro'],
     stats: {
       health: 850,
       armor: 50,
@@ -641,7 +641,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Shyvana',
     cost: 4,
-    classes: ['Shapeshifter', 'Pyro'],
+    traits: ['Shapeshifter', 'Pyro'],
     stats: {
       health: 900,
       armor: 50,
@@ -655,7 +655,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Smolder',
     cost: 3,
-    classes: ['Pyro', 'Shapeshifter'],
+    traits: ['Pyro', 'Shapeshifter'],
     stats: {
       health: 750,
       armor: 45,
@@ -669,7 +669,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Soraka',
     cost: 3,
-    classes: ['Invoker', 'Star Guardian'],
+    traits: ['Invoker', 'Star Guardian'],
     stats: {
       health: 650,
       armor: 20,
@@ -683,7 +683,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Swain',
     cost: 3,
-    classes: ['Shapeshifter', 'Frost'],
+    traits: ['Shapeshifter', 'Frost'],
     stats: {
       health: 900,
       armor: 45,
@@ -697,7 +697,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Syndra',
     cost: 4,
-    classes: ['Invoker', 'Star Guardian'],
+    traits: ['Invoker', 'Star Guardian'],
     stats: {
       health: 850,
       armor: 25,
@@ -711,7 +711,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Tahm Kench',
     cost: 2,
-    classes: ['Bastion', 'Bruiser'],
+    traits: ['Bastion', 'Bruiser'],
     stats: {
       health: 700,
       armor: 40,
@@ -725,7 +725,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Taric',
     cost: 3,
-    classes: ['Targon', 'Guardian'],
+    traits: ['Targon', 'Guardian'],
     stats: {
       health: 800,
       mana: 150,
@@ -741,7 +741,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Tristana',
     cost: 2,
-    classes: ['Faerie', 'Blaster'],
+    traits: ['Faerie', 'Blaster'],
     stats: {
       health: 550,
       mana: 60,
@@ -757,7 +757,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Twitch',
     cost: 1,
-    classes: ['Frost', 'Hunter'],
+    traits: ['Frost', 'Hunter'],
     stats: {
       health: 450,
       mana: 35,
@@ -773,7 +773,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Varus',
     cost: 2,
-    classes: ['Darkin', 'Deadeye'],
+    traits: ['Darkin', 'Deadeye'],
     stats: {
       health: 700,
       mana: 60,
@@ -789,7 +789,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Veigar',
     cost: 4,
-    classes: ['Yordle', 'Sorcerer'],
+    traits: ['Yordle', 'Sorcerer'],
     stats: {
       health: 800,
       mana: 90,
@@ -805,7 +805,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Vex',
     cost: 3,
-    classes: ['Shadow Isles', 'Invoker'],
+    traits: ['Shadow Isles', 'Invoker'],
     stats: {
       health: 750,
       mana: 50,
@@ -821,7 +821,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Warwick',
     cost: 1,
-    classes: ['Frost', 'Vanguard'],
+    traits: ['Frost', 'Vanguard'],
     stats: {
       health: 700,
       mana: 0,
@@ -841,7 +841,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Wukong',
     cost: 1,
-    classes: ['Ionia', 'Juggernaut'],
+    traits: ['Ionia', 'Juggernaut'],
     stats: {
       health: 650,
       mana: 50,
@@ -857,7 +857,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Xerath',
     cost: 5,
-    classes: ['Arcana', 'Invoker'],
+    traits: ['Arcana', 'Invoker'],
     stats: {
       health: [600, 1080, 1944],
       mana: [20, 60],
@@ -875,7 +875,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Ziggs',
     cost: 1,
-    classes: ['Honeymancy', 'Incantor'],
+    traits: ['Honeymancy', 'Incantor'],
     stats: {
       health: [450, 810, 1458],
       mana: 50,
@@ -893,7 +893,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Zilean',
     cost: 2,
-    classes: ['Chrono', 'Preserver'],
+    traits: ['Chrono', 'Preserver'],
     stats: {
       health: [550, 990, 1782],
       mana: [20, 70],
@@ -911,7 +911,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Zoe',
     cost: 4,
-    classes: ['Arcana', 'Scholar'],
+    traits: ['Arcana', 'Scholar'],
     stats: {
       health: [750, 1350, 2430],
       mana: [0, 60],
