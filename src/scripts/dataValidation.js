@@ -9,7 +9,12 @@ export const validateTraits = (champions, traits) => {
     console.error('INVALID TRAITS FOUND:');
 
     for (const champ of invalidChampions) {
-      console.log(champ.name, `- https://tftactics.gg/champions/${champ.name}`);
+      console.error(
+        champ.name,
+        `- https://tftactics.gg/champions/${champ.name.replaceAll(' ', '_')}`,
+        'Invalid Traits:',
+        champ.traits.filter((trait) => !traitsByName.includes(trait))
+      );
     }
   } else {
     console.log('All champions have valid traits.');
