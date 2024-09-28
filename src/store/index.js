@@ -20,10 +20,18 @@ export const useStore = create(
         }
 
         // TODO: clean up after data is validated
-        console.log(
-          champion,
-          `- https://tftactics.gg/champions/${champion.replaceAll(' ', '_')}`
-        );
+
+        const name = champion.replaceAll(' ', '_');
+
+        const currentUrl = `https://tftactics.gg/champions/${name}
+        )}`;
+        const revivalUrl = `https://leagueoflegends.fandom.com/wiki/${name}/TFT#Set_5.5`;
+
+        // Change this for set
+        // const url = currentUrl
+        const url = revivalUrl;
+
+        console.log(champion, '-', url);
 
         return set({ selectedChampions: [...selectedChampions, champion] });
       },
