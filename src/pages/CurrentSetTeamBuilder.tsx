@@ -11,6 +11,7 @@ import {
 
 import ChampionList from '../components/ChampionList';
 import PageLayout from '../components/PageLayout';
+import TraitSummary from '../components/TraitSummmary';
 import CURRENT_CHAMPIONS from '../data/currentChampions';
 import { useStore } from '../store';
 
@@ -25,10 +26,11 @@ export default function CurrentSetTeamBuilder() {
     <PageLayout title="Current Set Team Builder">
       <SimpleGrid columns={2}>
         <GridItem>
-          <Text>My Team</Text>
-          <VStack>
+          <SimpleGrid spacing={4}>
+            <Text sx={{ fontSize: 18, color: 'blue.300' }}>My Team</Text>
+            <TraitSummary champions={selectedChampionData} />
             <ChampionList champions={selectedChampionData} />
-          </VStack>
+          </SimpleGrid>
         </GridItem>
         <GridItem>
           <VStack>
