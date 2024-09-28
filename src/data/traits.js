@@ -1,0 +1,27 @@
+const TRAITS = [
+  'Arcana',
+  'Ascendant',
+  'Bastion',
+  'Bat Queen',
+  'Blaster',
+  'Chrono',
+  'Eldritch',
+  'Faerie',
+  'Frost',
+  'Guardian',
+  'Hunter',
+  'Mage',
+  'Multistriker',
+  'Portal',
+  'Preserver',
+  'Pyro',
+  'Ravenous',
+  'Scholar',
+  'Shapeshifter',
+  'Sugarcraft',
+  'Vanguard',
+  'Warrior',
+  'Witchcraft',
+];
+
+export default TRAITS;
