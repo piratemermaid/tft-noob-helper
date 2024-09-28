@@ -1,6 +1,8 @@
 import { Image as ChakraImage } from '@chakra-ui/react';
 
 export default function Image({ name, ...rest }) {
+  if (!name) return null;
+
   const formattedName = name
     .replaceAll(' ', '')
     .replace('&', '')

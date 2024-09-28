@@ -667,6 +667,18 @@ const ITEMS = [
   [Unique - only 1 per champion]`,
     tier: 'S',
   },
+  {
+    recipe: ['Needlessly Large Rod', 'Needlessly Large Rod'],
+    combinesInto: "Rabadon's Deathcap",
+    effect: 'Deal 20% bonus damage.',
+    rating: 'A',
+  },
+  {
+    recipe: [],
+    combinesInto: "Faerie Queen's Crown",
+    effect: '?',
+    rating: '?',
+  },
 ];
 
 export default ITEMS;

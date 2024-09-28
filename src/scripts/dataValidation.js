@@ -20,3 +20,26 @@ export const validateTraits = (champions, traits) => {
     console.log('All champions have valid traits.');
   }
 };
+
+export const validateItems = (champions, items) => {
+  const itemNames = items.map((item) => item.combinesInto);
+
+  const invalidChampions = champions.filter((champion) =>
+    champion.bestItems.some((item) => !itemNames.includes(item))
+  );
+
+  if (invalidChampions.length > 0) {
+    console.error('INVALID ITEMS FOUND:');
+
+    for (const champ of invalidChampions) {
+      console.error(
+        champ.name,
+        `- https://tftactics.gg/champions/${champ.name.replaceAll(' ', '_')}`,
+        'Invalid Items:',
+        champ.bestItems.filter((item) => !itemNames.includes(item))
+      );
+    }
+  } else {
+    console.log('All champions have valid items.');
+  }
+};

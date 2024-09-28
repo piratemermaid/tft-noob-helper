@@ -10,18 +10,24 @@ export default function ChampionBestItems({ items }) {
         const itemData = ITEMS.find((itemb) => itemb.combinesInto === item);
         if (!itemData) {
           console.warn('Missing item data for', item);
-          return 'n/a';
+          return <span key={item}>missing item data</span>;
         }
 
-        const { recipe } = itemData;
+        const { recipe } = itemData ?? null;
 
         return (
           <SimpleGrid key={item} columns={5} alignItems={'center'} mx={2}>
             <ItemImage name={item} />
-            <MathText>=</MathText>
-            <ItemImage name={recipe[0]} />
-            <MathText>+</MathText>
-            <ItemImage name={recipe[1]} />
+            {recipe ? (
+              <>
+                <MathText>=</MathText>
+                <ItemImage name={recipe[0]} />
+                <MathText>+</MathText>
+                <ItemImage name={recipe[1]} />
+              </>
+            ) : (
+              <></>
+            )}
           </SimpleGrid>
         );
       })}

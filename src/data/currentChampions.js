@@ -1,5 +1,6 @@
 import TRAITS from './traits.js';
-import { validateTraits } from '../scripts/dataValidation.js';
+import { validateItems, validateTraits } from '../scripts/dataValidation.js';
+import ITEMS from './items.js';
 
 const CURRENT_CHAMPIONS = [
   {
@@ -45,7 +46,7 @@ const CURRENT_CHAMPIONS = [
       speed: 0.75,
       mana: [0, 80],
     },
-    bestItems: ['Giant Slayer', 'Rageblade', 'Infinity Edge'],
+    bestItems: ['Giant Slayer', "Guinsoo's Rageblade", 'Infinity Edge'],
   },
   {
     name: 'Bard',
@@ -60,7 +61,7 @@ const CURRENT_CHAMPIONS = [
       speed: 0.75,
       mana: [0, 100],
     },
-    bestItems: ['Guardian Angel', 'Blue Buff', 'Morellonomicon'],
+    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
   },
   {
     name: 'Blitzcrank',
@@ -75,7 +76,7 @@ const CURRENT_CHAMPIONS = [
       speed: 0.7,
       mana: [0, 90],
     },
-    bestItems: ["Titan's Resolve", "Banshee's Claw", 'Redemption'],
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Briar',
@@ -148,7 +149,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.75,
       range: 1,
     },
-    bestItems: ['Infinity Edge', 'Blue Buff', "Zeke's Herald"],
+    bestItems: ["Archangel's Staff", 'Bloodthirster', "Warmog's Armor"],
   },
   {
     name: 'Ezreal',
@@ -162,7 +163,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.8,
       range: 4,
     },
-    bestItems: ['Jewel of Ixtal', 'Giant Slayer', 'Blue Buff'],
+    bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
   },
   {
     name: 'Fiora',
@@ -190,7 +191,11 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.65,
       range: 1,
     },
-    bestItems: ["Titan's Resolve", "Zeke's Herald", "Warmog's Armor"],
+    bestItems: [
+      "Guinsoo's Rageblade",
+      "Guinsoo's Rageblade",
+      'Hextech Gunblade',
+    ],
   },
   {
     name: 'Gwen',
@@ -218,7 +223,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.75,
       range: 1,
     },
-    bestItems: ["Titan's Resolve", "Banshee's Claw", 'Bloodthirster'],
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
     name: 'Hwei',
@@ -232,7 +237,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.75,
       range: 1,
     },
-    bestItems: ['Blue Buff', 'Infinity Edge', "Zeke's Herald"],
+    bestItems: ['Blue Buff', 'Jeweled Gauntlet', "Nashor's Tooth"],
   },
   {
     name: 'Jax',
@@ -432,7 +437,7 @@ const CURRENT_CHAMPIONS = [
       mana: [40, 110],
       range: 3,
     },
-    bestItems: ['Morellonomicon', 'Hand of Justice', 'Crown of Command'],
+    bestItems: ['Bloodthirster', 'Crownguard', 'Redemption'],
   },
   {
     name: 'Nami',
@@ -464,7 +469,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 40],
       range: 1,
     },
-    bestItems: ["Warmog's Armor", 'Titanic Hydra', "Dragon's Claw"],
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Neeko',
@@ -787,7 +792,7 @@ const CURRENT_CHAMPIONS = [
       range: 5,
       attackSpeed: 0.7,
     },
-    bestItems: ['Runaans Hurricane', "Guinsoo's Rageblade", 'Deathblade'],
+    bestItems: ["Runaan's Hurricane", "Guinsoo's Rageblade", 'Deathblade'],
   },
   {
     name: 'Veigar',
@@ -835,11 +840,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
       attackSpeed: 0.75,
     },
-    bestItems: [
-      "Guinsoo's Rageblade",
-      'Quicksilver',
-      'Corrupt Vampiric Scepter',
-    ],
+    bestItems: ['Bloodthirster', "Guinsoo's Rageblade", 'Quicksilver'],
   },
   {
     name: 'Wukong',
@@ -931,5 +932,7 @@ const CURRENT_CHAMPIONS = [
 ];
 
 validateTraits(CURRENT_CHAMPIONS, TRAITS);
+
+validateItems(CURRENT_CHAMPIONS, ITEMS);
 
 export default CURRENT_CHAMPIONS;
