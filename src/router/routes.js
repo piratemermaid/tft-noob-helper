@@ -1,4 +1,5 @@
 import CurrentSetTeamBuilder from '../pages/CurrentSetTeamBuilder';
+import RevivalSetTeamBuilder from '../pages/RevivalSetTeamBuilder';
 
 const ROUTES = [
   {
@@ -9,6 +10,7 @@ const ROUTES = [
   {
     label: 'Revival Set Team Builder',
     path: '/revival_set',
+    Component: RevivalSetTeamBuilder,
   },
   {
     label: 'Item Builder',

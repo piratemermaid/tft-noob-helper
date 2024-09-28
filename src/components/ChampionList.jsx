@@ -10,7 +10,7 @@ import ChampionBestItems from './images/ChampionBestItems';
 import ChampionImage from './images/ChampionImage';
 import { useStore } from '../store';
 
-export default function ChampionList({ champions, includeItems }) {
+export default function ChampionList({ champions, includeItems = false }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
   const getIsSelected = (name) => selectedChampions.includes(name);

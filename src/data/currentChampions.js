@@ -1,6 +1,6 @@
 import TRAITS from './traits.js';
+import CURRENT_ITEMS from './currentItems';
 import { validateItems, validateTraits } from '../scripts/dataValidation.js';
-import ITEMS from './items.js';
 
 const CURRENT_CHAMPIONS = [
   {
@@ -933,6 +933,6 @@ const CURRENT_CHAMPIONS = [
 
 validateTraits(CURRENT_CHAMPIONS, TRAITS);
 
-validateItems(CURRENT_CHAMPIONS, ITEMS);
+validateItems(CURRENT_CHAMPIONS, CURRENT_ITEMS);
 
 export default CURRENT_CHAMPIONS;

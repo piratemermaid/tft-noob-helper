@@ -1,13 +1,15 @@
 import { HStack, SimpleGrid, Text } from '@chakra-ui/react';
 
-import ITEMS from '../../data/items';
+import CURRENT_ITEMS from '../../data/currentItems';
 import ItemImage from './ItemImage';
 
 export default function ChampionBestItems({ items }) {
   return (
     <HStack>
       {items.map((item) => {
-        const itemData = ITEMS.find((itemb) => itemb.combinesInto === item);
+        const itemData = CURRENT_ITEMS.find(
+          (itemb) => itemb.combinesInto === item
+        );
         if (!itemData) {
           console.warn('Missing item data for', item);
           return <span key={item}>missing item data</span>;
