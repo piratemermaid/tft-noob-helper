@@ -1,4 +1,5 @@
 import TRAITS from './traits.js';
+import { validateTraits } from '../scripts/dataValidation.js';
 
 const CURRENT_CHAMPIONS = [
   {
@@ -929,23 +930,6 @@ const CURRENT_CHAMPIONS = [
   },
 ];
 
-const traitsByName = TRAITS.map((trait) => trait.name);
-
-const validateTraits = (champions, traits) => {
-  const invalidChampions = champions.filter((champion) =>
-    champion.traits.some((trait) => !traits.includes(trait))
-  );
-
-  if (invalidChampions.length > 0) {
-    console.error(
-      'Invalid traits found in the following champions:',
-      invalidChampions.map((champion) => champion.name).join(', ')
-    );
-  } else {
-    console.log('All champions have valid traits.');
-  }
-};
-
-validateTraits(CURRENT_CHAMPIONS, traitsByName);
+validateTraits(CURRENT_CHAMPIONS, TRAITS);
 
 export default CURRENT_CHAMPIONS;
