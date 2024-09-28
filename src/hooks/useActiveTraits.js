@@ -17,5 +17,5 @@ export const useActiveTraits = () => {
     }, []);
 
     return [...new Set(allActiveTraits)];
-  }, [selectedChampions]);
+  }, [selectedChampionData]);
 };

@@ -52,7 +52,7 @@ export default function CurrentSetTeamBuilder() {
           <SimpleGrid spacing={4}>
             <Text sx={{ fontSize: 18, color: 'blue.300' }}>My Team</Text>
             <TraitSummary champions={selectedChampionData} />
-            <ChampionList champions={selectedChampionData} />
+            <ChampionList champions={selectedChampionData} includeItems />
           </SimpleGrid>
         </GridItem>
         <GridItem>

@@ -1,9 +1,16 @@
-import { ListItem, SimpleGrid, Text, UnorderedList } from '@chakra-ui/react';
+import {
+  Box,
+  ListItem,
+  SimpleGrid,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
+import ChampionBestItems from './images/ChampionBestItems';
 import ChampionImage from './images/ChampionImage';
 import { useStore } from '../store';
 
-export default function ChampionList({ champions }) {
+export default function ChampionList({ champions, includeItems }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
   const getIsSelected = (name) => selectedChampions.includes(name);
@@ -11,13 +18,11 @@ export default function ChampionList({ champions }) {
   return (
     <>
       {champions?.map((champion) => (
-        <SimpleGrid
+        <Box
           key={champion.name}
-          columns={4}
-          spacing={1}
           sx={{
-            height: '80px',
             outline: '1px solid gray',
+            p: 1,
             borderRadius: '5px',
             backgroundColor: !getIsSelected(champion.name)
               ? 'none'
@@ -27,21 +32,31 @@ export default function ChampionList({ champions }) {
               outline: '1px solid teal',
             },
           }}
-          justifyContent={'center'}
-          alignContent={'center'}
-          onClick={() => handleSelectChampion(champion.name)}
         >
-          <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
-          <UnorderedList sx={{ width: '96px' }}>
-            {champion.traits.map((trait) => (
-              <ListItem key={trait} sx={{ textAlign: 'left' }}>
-                <Text>{trait}</Text>
-              </ListItem>
-            ))}
-          </UnorderedList>
-          <Text sx={{ fontSize: 18, fontWeight: 600 }}>{champion.cost}</Text>
-          <ChampionImage name={champion.name} />
-        </SimpleGrid>
+          <SimpleGrid
+            columns={4}
+            spacing={1}
+            justifyContent={'center'}
+            alignContent={'center'}
+            onClick={() => handleSelectChampion(champion.name)}
+          >
+            <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
+            <UnorderedList sx={{ width: '96px' }}>
+              {champion.traits.map((trait) => (
+                <ListItem key={trait} sx={{ textAlign: 'left' }}>
+                  <Text>{trait}</Text>
+                </ListItem>
+              ))}
+            </UnorderedList>
+            <Text sx={{ fontSize: 18, fontWeight: 600 }}>{champion.cost}</Text>
+            <ChampionImage name={champion.name} />
+          </SimpleGrid>
+          {includeItems ? (
+            <ChampionBestItems items={champion.bestItems} />
+          ) : (
+            <></>
+          )}
+        </Box>
       ))}
     </>
   );
