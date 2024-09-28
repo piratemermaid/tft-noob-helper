@@ -1,10 +1,20 @@
-import { Outlet } from 'react-router-dom';
+import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Box, SimpleGrid } from '@chakra-ui/react';
 
 import NavBar from './components/NavBar';
+import { useStore } from './store';
 import './App.css';
 
 export default function App() {
+  const setSelectedChampions = useStore((state) => state.setSelectedChampions);
+
+  const location = useLocation();
+
+  React.useEffect(() => {
+    setSelectedChampions([]);
+  }, [location]);
+
   return (
     <SimpleGrid columns={1} spacing={4}>
       <Box>

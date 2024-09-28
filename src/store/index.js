@@ -21,6 +21,7 @@ export const useStore = create(
 
         return set({ selectedChampions: [...selectedChampions, champion] });
       },
+      setSelectedChampions: (selectedChampions) => set({ selectedChampions }),
     }),
     {
       name: 'persistedState',
