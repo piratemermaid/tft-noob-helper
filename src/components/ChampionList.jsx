@@ -1,11 +1,14 @@
 import { ListItem, SimpleGrid, Text, UnorderedList } from '@chakra-ui/react';
 
 import ChampionImage from './images/ChampionImage';
+import { useStore } from '../store';
 
 export default function ChampionList({ champions }) {
+  const handleSelectChampion = useStore((state) => state.handleSelectChampion);
+
   return (
     <>
-      {champions.map((champion) => (
+      {champions?.map((champion) => (
         <SimpleGrid
           key={champion.name}
           columns={4}
@@ -18,6 +21,7 @@ export default function ChampionList({ champions }) {
               borderRadius: '5px',
             },
           }}
+          onClick={() => handleSelectChampion(champion.name)}
         >
           <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
           <UnorderedList sx={{ width: '90px' }}>
