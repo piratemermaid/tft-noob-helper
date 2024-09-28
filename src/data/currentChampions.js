@@ -17,6 +17,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 100],
     },
     bestItems: ["Rabadon's Deathcap", 'Infinity Edge', 'Blue Buff'],
+    validated: false,
   },
   {
     name: 'Akali',
@@ -32,6 +33,7 @@ const CURRENT_CHAMPIONS = [
       mana: [10, 70],
     },
     bestItems: ['Bloodthirster', 'Edge of Night', 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Ashe',
@@ -47,6 +49,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 80],
     },
     bestItems: ['Giant Slayer', "Guinsoo's Rageblade", 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Bard',
@@ -62,6 +65,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 100],
     },
     bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
+    validated: false,
   },
   {
     name: 'Blitzcrank',
@@ -77,6 +81,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 90],
     },
     bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
+    validated: false,
   },
   {
     name: 'Briar',
@@ -92,6 +97,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 80],
     },
     bestItems: ['Bloodthirster', "Titan's Resolve", "Sterak's Gage"],
+    validated: false,
   },
   {
     name: 'Camille',
@@ -107,6 +113,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 100],
     },
     bestItems: ['Giant Slayer', 'Bloodthirster', 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Cassiopeia',
@@ -122,6 +129,7 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 100],
     },
     bestItems: ["Rabadon's Deathcap", 'Morellonomicon', 'Blue Buff'],
+    validated: false,
   },
   {
     name: 'Diana',
@@ -136,6 +144,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Infinity Edge', 'Bloodthirster', "Titan's Resolve"],
+    validated: false,
   },
   {
     name: 'Elise',
@@ -150,6 +159,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ["Archangel's Staff", 'Bloodthirster', "Warmog's Armor"],
+    validated: false,
   },
   {
     name: 'Ezreal',
@@ -164,6 +174,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
+    validated: false,
   },
   {
     name: 'Fiora',
@@ -178,6 +189,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
+    validated: false,
   },
   {
     name: 'Galio',
@@ -196,6 +208,7 @@ const CURRENT_CHAMPIONS = [
       "Guinsoo's Rageblade",
       'Hextech Gunblade',
     ],
+    validated: false,
   },
   {
     name: 'Gwen',
@@ -210,6 +223,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ["Rabadon's Deathcap", 'Giant Slayer', 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Hecarim',
@@ -224,6 +238,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
+    validated: false,
   },
   {
     name: 'Hwei',
@@ -238,6 +253,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Blue Buff', 'Jeweled Gauntlet', "Nashor's Tooth"],
+    validated: false,
   },
   {
     name: 'Jax',
@@ -255,6 +271,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Infinity Edge', 'Bloodthirster', "Titan's Resolve"],
+    validated: false,
   },
   {
     name: 'Jayce',
@@ -272,6 +289,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
+    validated: false,
   },
   {
     name: 'Jinx',
@@ -289,6 +307,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Infinity Edge', "Guinsoo's Rageblade", 'Last Whisper'],
+    validated: false,
   },
   {
     name: 'Kalista',
@@ -306,6 +325,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ["Faerie Queen's Crown", "Guinsoo's Rageblade", 'Last Whisper'],
+    validated: false,
   },
   {
     name: 'Karma',
@@ -323,6 +343,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Hand of Justice', 'Ionic Spark', 'Jeweled Gauntlet'],
+    validated: false,
   },
   {
     name: 'Kassadin',
@@ -340,6 +361,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Hand of Justice', 'Ionic Spark', 'Jeweled Gauntlet'],
+    validated: false,
   },
   {
     name: 'Katarina',
@@ -357,6 +379,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Hand of Justice', 'Ionic Spark', 'Jeweled Gauntlet'],
+    validated: false,
   },
   {
     name: "Kog'Maw",
@@ -374,6 +397,7 @@ const CURRENT_CHAMPIONS = [
       range: 5,
     },
     bestItems: ["Guinsoo's Rageblade", 'Last Whisper', 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Lillia',
@@ -390,6 +414,7 @@ const CURRENT_CHAMPIONS = [
       range: 3,
     },
     bestItems: ['Morellonomicon', "Rabadon's Deathcap", 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Milio',
@@ -406,6 +431,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ["Warmog's Armor", 'Hand of Justice', "Dragon's Claw"],
+    validated: false,
   },
   {
     name: 'Mordekaiser',
@@ -422,6 +448,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ["Warmog's Armor", "Dragon's Claw", 'Steadfast Heart'],
+    validated: false,
   },
   {
     name: 'Morgana',
@@ -438,6 +465,7 @@ const CURRENT_CHAMPIONS = [
       range: 3,
     },
     bestItems: ['Bloodthirster', 'Crownguard', 'Redemption'],
+    validated: false,
   },
   {
     name: 'Nami',
@@ -454,6 +482,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Morellonomicon', "Rabadon's Deathcap", 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Nasus',
@@ -470,6 +499,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
+    validated: false,
   },
   {
     name: 'Neeko',
@@ -486,6 +516,7 @@ const CURRENT_CHAMPIONS = [
       range: 3,
     },
     bestItems: ['Morellonomicon', "Rabadon's Deathcap", 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Nilah',
@@ -502,6 +533,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ["Warmog's Armor", "Dragon's Claw", 'Steadfast Heart'],
+    validated: false,
   },
   {
     name: 'Nomsy',
@@ -517,6 +549,7 @@ const CURRENT_CHAMPIONS = [
       mana: [10, 50],
     },
     bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
+    validated: false,
   },
   {
     name: 'Norra & Yuumi',
@@ -534,6 +567,7 @@ const CURRENT_CHAMPIONS = [
       mana: [30, 90],
     },
     bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
+    validated: false,
   },
   {
     name: 'Nunu',
@@ -549,6 +583,7 @@ const CURRENT_CHAMPIONS = [
       mana: [60, 150],
     },
     bestItems: ['Sunfire Cape', "Warmog's Armor", 'Bramble Vest'],
+    validated: false,
   },
   {
     name: 'Olaf',
@@ -562,6 +597,7 @@ const CURRENT_CHAMPIONS = [
       atkSpd: 0.85,
     },
     bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
+    validated: false,
   },
   {
     name: 'Poppy',
@@ -575,6 +611,7 @@ const CURRENT_CHAMPIONS = [
       atkSpd: 0.65,
     },
     bestItems: ['Gargoyle Stoneplate', 'Sunfire Cape', "Warmog's Armor"],
+    validated: false,
   },
   {
     name: 'Rumble',
@@ -588,6 +625,7 @@ const CURRENT_CHAMPIONS = [
       atkSpd: 0.65,
     },
     bestItems: ['Gargoyle Stoneplate', 'Redemption', "Warmog's Armor"],
+    validated: false,
   },
   {
     name: 'Ryze',
@@ -617,6 +655,7 @@ const CURRENT_CHAMPIONS = [
       mana: [60, 140],
     },
     bestItems: ['Ionic Spark', "Protector's Vow", 'Steadfast Heart'],
+    validated: false,
   },
   {
     name: 'Seraphine',
@@ -631,6 +670,7 @@ const CURRENT_CHAMPIONS = [
       range: 3,
     },
     bestItems: ['Blue Buff', 'Jeweled Gauntlet', "Archangel's Staff"],
+    validated: false,
   },
   {
     name: 'Shen',
@@ -645,6 +685,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Sunfire Cape', 'Redemption', 'Evenshroud'],
+    validated: false,
   },
   {
     name: 'Shyvana',
@@ -659,6 +700,7 @@ const CURRENT_CHAMPIONS = [
       range: 2,
     },
     bestItems: ["Warmog's Armor", 'Hextech Gunblade', 'Morellonomicon'],
+    validated: false,
   },
   {
     name: 'Smolder',
@@ -673,6 +715,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Sunfire Cape', 'Bramble Vest', "Warmog's Armor"],
+    validated: false,
   },
   {
     name: 'Soraka',
@@ -687,6 +730,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Blue Buff', 'Spear of Shojin', 'Morellonomicon'],
+    validated: false,
   },
   {
     name: 'Swain',
@@ -701,6 +745,7 @@ const CURRENT_CHAMPIONS = [
       range: 2,
     },
     bestItems: ['Gargoyle Stoneplate', 'Bloodthirster', "Archangel's Staff"],
+    validated: false,
   },
   {
     name: 'Syndra',
@@ -715,6 +760,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Blue Buff', 'Jeweled Gauntlet', "Rabadon's Deathcap"],
+    validated: false,
   },
   {
     name: 'Tahm Kench',
@@ -729,6 +775,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ['Sunfire Cape', "Warmog's Armor", 'Gargoyle Stoneplate'],
+    validated: false,
   },
   {
     name: 'Taric',
@@ -745,6 +792,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.67,
     },
     bestItems: ['Gargoyle Stoneplate', "Warmog's Armor", 'Redemption'],
+    validated: false,
   },
   {
     name: 'Tristana',
@@ -761,6 +809,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.75,
     },
     bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Last Whisper'],
+    validated: false,
   },
   {
     name: 'Twitch',
@@ -777,6 +826,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.7,
     },
     bestItems: ['Red Buff', "Guinsoo's Rageblade", 'Infinity Edge'],
+    validated: false,
   },
   {
     name: 'Varus',
@@ -793,6 +843,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.7,
     },
     bestItems: ["Runaan's Hurricane", "Guinsoo's Rageblade", 'Deathblade'],
+    validated: false,
   },
   {
     name: 'Veigar',
@@ -809,6 +860,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.65,
     },
     bestItems: ["Archangel's Staff", 'Jeweled Gauntlet', "Rabadon's Deathcap"],
+    validated: false,
   },
   {
     name: 'Vex',
@@ -825,6 +877,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.6,
     },
     bestItems: ['Ionic Spark', 'Blue Buff', 'Sunfire Cape'],
+    validated: false,
   },
   {
     name: 'Warwick',
@@ -841,6 +894,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.75,
     },
     bestItems: ['Bloodthirster', "Guinsoo's Rageblade", 'Quicksilver'],
+    validated: false,
   },
   {
     name: 'Wukong',
@@ -857,6 +911,7 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.7,
     },
     bestItems: ["Titan's Resolve", 'Sunfire Cape', 'Gargoyle Stoneplate'],
+    validated: false,
   },
   {
     name: 'Xerath',
@@ -875,6 +930,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Spear of Shojin', "Archangel's Staff", 'Adaptive Helm'],
+    validated: false,
   },
   {
     name: 'Ziggs',
@@ -893,6 +949,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
+    validated: false,
   },
   {
     name: 'Zilean',
@@ -911,6 +968,7 @@ const CURRENT_CHAMPIONS = [
       range: 4,
     },
     bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
+    validated: false,
   },
   {
     name: 'Zoe',
@@ -928,6 +986,7 @@ const CURRENT_CHAMPIONS = [
       range: 3,
     },
     bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Statikk Shiv'],
+    validated: false,
   },
 ];
 
