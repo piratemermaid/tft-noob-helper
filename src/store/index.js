@@ -19,6 +19,12 @@ export const useStore = create(
           return set({ selectedChampions: newSelectedChampions });
         }
 
+        // TODO: clean up after data is validated
+        console.log(
+          champion,
+          `- https://tftactics.gg/champions/${champion.replaceAll(' ', '_')}`
+        );
+
         return set({ selectedChampions: [...selectedChampions, champion] });
       },
       setSelectedChampions: (selectedChampions) => set({ selectedChampions }),
