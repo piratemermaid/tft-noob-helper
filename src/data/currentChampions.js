@@ -1,4 +1,4 @@
-const CHAMPIONS = [
+const CURRENT_CHAMPIONS = [
   {
     name: 'Ahri',
     cost: 3,
@@ -928,4 +928,4 @@ const CHAMPIONS = [
   },
 ];
 
-export default CHAMPIONS;
+export default CURRENT_CHAMPIONS;
