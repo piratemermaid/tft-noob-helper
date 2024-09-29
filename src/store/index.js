@@ -28,8 +28,8 @@ export const useStore = create(
         const revivalUrl = `https://leagueoflegends.fandom.com/wiki/${name}/TFT#Set_5.5`;
 
         // Change this for set
-        // const url = currentUrl
-        const url = revivalUrl;
+        const url = currentUrl;
+        // const url = revivalUrl;
 
         console.log(champion, '-', url);
 

@@ -2,6 +2,8 @@ import TRAITS from './traits.js';
 import CURRENT_ITEMS from './currentItems';
 import { validateItems, validateTraits } from '../scripts/dataValidation.js';
 
+// stats not validated
+
 const CURRENT_CHAMPIONS = [
   {
     name: 'Ahri',
@@ -148,18 +150,21 @@ const CURRENT_CHAMPIONS = [
   },
   {
     name: 'Elise',
-    cost: 2,
+    cost: 1,
     traits: ['Eldritch', 'Shapeshifter'],
     stats: {
-      health: [550, 990, 1782],
-      damage: [45, 81, 146],
-      armor: 25,
-      magicRes: 25,
-      attackSpeed: 0.75,
-      range: 1,
+      health: [650, 1170, 2106, 3790.8],
+      mana: 90,
+      startingMana: 30,
+      attackDamage: [50, 90, 162, 291.6],
+      attackSpeed: 0.6,
+      dps: [30, 54, 97.2, 174.96],
+      attackRange: 'Melee',
+      armor: 40,
+      magicResist: 40,
     },
     bestItems: ["Archangel's Staff", 'Bloodthirster', "Warmog's Armor"],
-    validated: false,
+    validated: true,
   },
   {
     name: 'Ezreal',
@@ -293,8 +298,8 @@ const CURRENT_CHAMPIONS = [
   },
   {
     name: 'Jinx',
-    cost: 4,
-    traits: ['Multistriker', 'Faerie'],
+    cost: 3,
+    traits: ['Sugarcraft', 'Hunter'],
     stats: {
       health: 800,
       mana: 100,
@@ -306,7 +311,7 @@ const CURRENT_CHAMPIONS = [
       critRate: 25,
       range: 4,
     },
-    bestItems: ['Infinity Edge', "Guinsoo's Rageblade", 'Last Whisper'],
+    bestItems: ["Guinsoo's Rageblade", 'Last Whisper', "Runaan's Hurricane"],
     validated: false,
   },
   {
@@ -486,8 +491,8 @@ const CURRENT_CHAMPIONS = [
   },
   {
     name: 'Nasus',
-    cost: 2,
-    traits: ['Vanguard', 'Preserver'],
+    cost: 4,
+    traits: ['Pyro', 'Shapeshifter'],
     stats: {
       health: [950, 1710, 3078],
       damage: [50, 75, 112],
@@ -499,7 +504,7 @@ const CURRENT_CHAMPIONS = [
       range: 1,
     },
     bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
-    validated: false,
+    validated: true,
   },
   {
     name: 'Neeko',
@@ -549,7 +554,7 @@ const CURRENT_CHAMPIONS = [
       mana: [10, 50],
     },
     bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
-    validated: false,
+    validated: true,
   },
   {
     name: 'Norra & Yuumi',
@@ -684,13 +689,13 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.7,
       range: 1,
     },
-    bestItems: ['Sunfire Cape', 'Redemption', 'Evenshroud'],
-    validated: false,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
+    validated: true,
   },
   {
     name: 'Shyvana',
-    cost: 4,
-    traits: ['Shapeshifter', 'Pyro'],
+    cost: 2,
+    traits: ['Dragon', 'Pyro'],
     stats: {
       health: 900,
       armor: 50,
@@ -699,8 +704,8 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.7,
       range: 2,
     },
-    bestItems: ["Warmog's Armor", 'Hextech Gunblade', 'Morellonomicon'],
-    validated: false,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
+    validated: true,
   },
   {
     name: 'Smolder',
@@ -744,8 +749,8 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.6,
       range: 2,
     },
-    bestItems: ['Gargoyle Stoneplate', 'Bloodthirster', "Archangel's Staff"],
-    validated: false,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
+    validated: true,
   },
   {
     name: 'Syndra',
