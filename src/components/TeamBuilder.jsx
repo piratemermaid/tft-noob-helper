@@ -17,6 +17,7 @@ import { useActiveTraits } from '../hooks/useActiveTraits';
 
 export default function TeamBuilder({ championList }) {
   const [checkedTraits, setCheckedTraits] = React.useState([]);
+  const [nameFilterInput, setNameFilterInput] = React.useState('');
 
   const selectedChampions = useStore((state) => state.selectedChampions);
 
@@ -26,11 +27,29 @@ export default function TeamBuilder({ championList }) {
     selectedChampions?.includes(champion.name)
   );
 
-  const filteredChampionsList = checkedTraits?.length
-    ? championList.filter((champion) => {
-        return champion.traits.some((trait) => checkedTraits.includes(trait));
-      })
-    : championList;
+  const filterByTraits = (champion) => {
+    return champion.traits.some((trait) => checkedTraits.includes(trait));
+  };
+
+  const filterByName = (champion) => {
+    return champion.name.toLowerCase().includes(nameFilterInput.toLowerCase());
+  };
+
+  const filteredChampionsList = championList.filter((champion) => {
+    if (!checkedTraits.length && !nameFilterInput) {
+      return true;
+    }
+
+    if (checkedTraits.length && !nameFilterInput) {
+      return filterByTraits(champion);
+    }
+
+    if (!checkedTraits.length && nameFilterInput) {
+      return filterByName(champion);
+    }
+
+    return filterByTraits(champion) && filterByName(champion);
+  });
 
   const handleCheck = (e, trait) => {
     if (e.target.checked) {
@@ -46,6 +65,10 @@ export default function TeamBuilder({ championList }) {
   React.useEffect(() => {
     setCheckedTraits([]);
   }, []);
+
+  React.useEffect(() => {
+    setNameFilterInput('');
+  }, [selectedChampions]);
 
   return (
     <SimpleGrid columns={2}>
@@ -65,7 +88,11 @@ export default function TeamBuilder({ championList }) {
           <SimpleGrid columns={2} sx={{ mb: 4 }} spacing={4}>
             <Box>
               <Text sx={{ mb: 1.5 }}>Search Champs</Text>
-              <Input placeholder="Champion name (no worky yet)" />
+              <Input
+                placeholder="Champion name"
+                value={nameFilterInput}
+                onChange={(e) => setNameFilterInput(e.target.value)}
+              />
             </Box>
             <Box>
               <Text sx={{ mb: 1.5 }}>Filter by Current Traits</Text>
