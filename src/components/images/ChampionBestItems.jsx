@@ -1,9 +1,12 @@
 import { HStack, SimpleGrid, Text } from '@chakra-ui/react';
 
-import CURRENT_ITEMS from '../../data/currentItems';
 import ItemImage from './ItemImage';
+import CURRENT_ITEMS from '../../data/currentItems';
+import { useStore } from '../../store';
 
 export default function ChampionBestItems({ items }) {
+  const selectedComponents = useStore((state) => state.selectedComponents);
+
   if (!items) return null;
 
   return (

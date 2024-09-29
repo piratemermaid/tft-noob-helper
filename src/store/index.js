@@ -36,6 +36,22 @@ export const useStore = create(
         return set({ selectedChampions: [...selectedChampions, champion] });
       },
       setSelectedChampions: (selectedChampions) => set({ selectedChampions }),
+      selectedComponents: [],
+      setSelectedComponents: (selectedComponents) =>
+        set({ selectedComponents }),
+      toggleSelectedComponent: (component) => {
+        const selectedComponents = get().selectedComponents;
+
+        if (selectedComponents.includes(component)) {
+          return set({
+            selectedComponents: selectedComponents.filter(
+              (selectedComponent) => selectedComponent !== component
+            ),
+          });
+        }
+
+        return set({ selectedComponents: [...selectedComponents, component] });
+      },
     }),
     {
       name: 'persistedState',
