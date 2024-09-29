@@ -87,8 +87,6 @@ export default function ChampionList({
           )}
         </Box>
       ))}
-
-      {includeItems ? 'put emblem recipes here!' : ''}
     </>
   );
 }
