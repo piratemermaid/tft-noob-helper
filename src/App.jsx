@@ -8,11 +8,15 @@ import './App.css';
 
 export default function App() {
   const setSelectedChampions = useStore((state) => state.setSelectedChampions);
+  const setSelectedComponents = useStore(
+    (state) => state.setSelectedComponents
+  );
 
   const location = useLocation();
 
   React.useEffect(() => {
     setSelectedChampions([]);
+    setSelectedComponents([]);
   }, [location]);
 
   return (
