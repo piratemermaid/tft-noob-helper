@@ -79,6 +79,9 @@ const magCastItems = [
   purpleHelmet,
 ];
 
+// TODO: Brand
+const magCastBlueBuffItems = [];
+
 const magFgtrItems = [
   blood,
   blueScytheyThing,
@@ -142,10 +145,20 @@ const revivalChampions = [
     name: 'Brand',
     cost: 2,
     traits: ['Abomination', 'Spellweaver'],
-    role: null,
-    position: null,
+    role: magCst,
+    position: back,
     ability: 'Sear',
-    bestItems: [],
+    bestItems: [
+      //   blueBuff,//
+      //   greenSpear,
+      //   archangelStaff,
+      //   magicHat,
+      //   pinkFist,
+      //   blueScytheyThing,
+      //   "Nashor's Tooth",
+      //   scorpionTailLookingThing,
+      //   purpleHelmet,
+    ],
   },
   {
     name: 'Diana',
@@ -376,19 +389,19 @@ const revivalChampions = [
     name: 'Miss Fortune',
     cost: 3,
     traits: ['Forgotten', 'Cannoneer'],
-    role: null,
-    position: null,
+    role: magCst,
+    position: back,
     ability: 'Make It Rain',
-    bestItems: [],
+    bestItems: magCastItems,
   },
   {
     name: 'Nautilus',
     cost: 2,
     traits: ['Ironclad', 'Knight'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Depth Charge',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Nidalee',
@@ -430,10 +443,10 @@ const revivalChampions = [
     name: 'Poppy',
     cost: 1,
     traits: ['Hellion', 'Knight'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Iron Ambassador',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Pyke',
@@ -484,10 +497,10 @@ const revivalChampions = [
     name: 'Senna',
     cost: 1,
     traits: ['Sentinel', 'Cannoneer'],
-    role: null,
-    position: null,
+    role: magCst,
+    position: back,
     ability: 'Last Embrace',
-    bestItems: [],
+    bestItems: magCastItems,
   },
   {
     name: 'Sett',
@@ -529,10 +542,10 @@ const revivalChampions = [
     name: 'Thresh',
     cost: 2,
     traits: ['Forgotten', 'Knight'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Death Sentence',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Tristana',
