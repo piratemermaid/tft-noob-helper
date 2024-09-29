@@ -16,7 +16,7 @@ import TraitSummary from './TraitSummmary';
 import { useStore } from '../store';
 import { useActiveTraits } from '../hooks/useActiveTraits';
 
-export default function TeamBuilder({ championList }) {
+export default function TeamBuilder({ championList, type }) {
   const [checkedTraits, setCheckedTraits] = React.useState([]);
   const [nameFilterInput, setNameFilterInput] = React.useState('');
 
@@ -80,6 +80,7 @@ export default function TeamBuilder({ championList }) {
           <ComponentsHave />
           <ChampionList
             champions={selectedChampionData}
+            type={type}
             checkedTraits={checkedTraits}
             includeItems
             sortBy="name"
@@ -122,6 +123,7 @@ export default function TeamBuilder({ championList }) {
           </SimpleGrid>
           <ChampionList
             champions={filteredChampionsList}
+            type={type}
             checkedTraits={checkedTraits}
           />
         </VStack>

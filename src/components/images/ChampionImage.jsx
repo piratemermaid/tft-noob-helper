@@ -1,16 +1,7 @@
-import { Image } from '@chakra-ui/react';
+import Image from './Image';
 
-export default function ChampionImage({ name, ...rest }) {
+export default function ChampionImage({ name, type, ...rest }) {
   return (
-    <Image
-      src={`/images/${name
-        .replaceAll(' ', '')
-        .replace('&', '')
-        .replace("'", '')}.png`}
-      title={name}
-      alt={name}
-      sx={{ width: 50, height: 50 }}
-      {...rest}
-    />
+    <Image name={name} type={type} sx={{ width: 50, height: 50 }} {...rest} />
   );
 }

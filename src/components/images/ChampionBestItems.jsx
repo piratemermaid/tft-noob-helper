@@ -14,7 +14,8 @@ export default function ChampionBestItems({ items }) {
     return (
       <ItemImage
         name={name}
-        sx={{ opacity: selectedComponents.includes(name) ? 1 : 0.5 }}
+        type="component"
+        sx={{ opacity: selectedComponents.includes(name) ? 1 : 0.3 }}
       />
     );
   };
@@ -51,6 +52,7 @@ export default function ChampionBestItems({ items }) {
                 <MathText>=</MathText>
                 <ItemImage
                   name={item}
+                  type="item"
                   sx={{
                     opacity:
                       selectedComponents.includes(recipe[0]) &&
@@ -61,7 +63,7 @@ export default function ChampionBestItems({ items }) {
                 />
               </SimpleGrid>
             ) : (
-              <Image name={item} />
+              <Image type="item" name={item} />
             )}
           </>
         );

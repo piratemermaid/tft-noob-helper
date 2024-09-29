@@ -16,6 +16,7 @@ export default function ComponentsHave() {
         <Image
           name={component.name}
           key={component.name}
+          type="component"
           sx={{
             opacity: selectedComponents.includes(component.name) ? 1 : 0.6,
             '&:hover': {

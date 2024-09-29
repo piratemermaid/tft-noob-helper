@@ -13,6 +13,7 @@ import costColors from '../styles/costColors';
 
 export default function ChampionList({
   champions,
+  type,
   checkedTraits,
   includeItems = false,
   sortBy = 'cost',
@@ -71,7 +72,7 @@ export default function ChampionList({
             >
               {champion.cost}
             </Text>
-            <ChampionImage name={champion.name} />
+            <ChampionImage type={type} name={champion.name} />
           </SimpleGrid>
           {!includeItems && !champion.role ? <p>needs role</p> : ''}
           {!includeItems && !champion.bestItems.length ? (

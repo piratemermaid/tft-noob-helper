@@ -679,6 +679,12 @@ const CURRENT_ITEMS = [
     effect: '?',
     rating: '?',
   },
+  {
+    recipe: [],
+    combinesInto: "Queenguard's Armor",
+    effect: '?',
+    rating: '?',
+  },
 ];
 
 export default CURRENT_ITEMS;
