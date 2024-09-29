@@ -15,12 +15,13 @@ export default function ChampionList({
   champions,
   checkedTraits,
   includeItems = false,
+  sortBy = 'cost',
 }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
   const getIsSelected = (name) => selectedChampions.includes(name);
 
-  const sortedChampions = [...champions].sort((a, b) => a.cost - b.cost);
+  const sortedChampions = [...champions].sort((a, b) => a[sortBy] - b[sortBy]);
 
   return (
     <>

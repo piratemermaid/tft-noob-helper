@@ -82,6 +82,7 @@ export default function TeamBuilder({ championList }) {
             champions={selectedChampionData}
             checkedTraits={checkedTraits}
             includeItems
+            sortBy="name"
           />
         </SimpleGrid>
       </GridItem>
