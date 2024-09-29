@@ -21,7 +21,7 @@ export default function ChampionBestItems({ items }) {
   };
 
   return (
-    <HStack>
+    <SimpleGrid columns={3} spacing={1}>
       {items.map((item) => {
         const itemData = CURRENT_ITEMS.find(
           (itemb) => itemb.combinesInto === item
@@ -68,7 +68,7 @@ export default function ChampionBestItems({ items }) {
           </>
         );
       })}
-    </HStack>
+    </SimpleGrid>
   );
 }
 
