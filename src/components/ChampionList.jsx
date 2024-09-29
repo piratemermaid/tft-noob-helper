@@ -30,12 +30,12 @@ export default function ChampionList({
         <Box
           key={champion.name}
           sx={{
-            outline: `1px solid ${costColors[champion.cost]}`,
+            outline: `2px solid ${costColors[champion.cost]}`,
             p: 1,
             borderRadius: '5px',
             backgroundColor: !getIsSelected(champion.name)
               ? 'none'
-              : 'blue.700',
+              : 'gray.700',
             '&:hover': {
               cursor: 'pointer',
               outline: '1px solid teal',
