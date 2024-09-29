@@ -1,5 +1,6 @@
 import { HStack, SimpleGrid, Text } from '@chakra-ui/react';
 
+import Image from './Image';
 import ItemImage from './ItemImage';
 import CURRENT_ITEMS from '../../data/currentItems';
 import { useStore } from '../../store';
@@ -32,18 +33,18 @@ export default function ChampionBestItems({ items }) {
         const { recipe } = itemData ?? null;
 
         return (
-          <SimpleGrid
-            key={item}
-            columns={5}
-            alignItems={'center'}
-            mx={2}
-            sx={{
-              outline: '1px solid gray',
-              borderRadius: '5px',
-            }}
-          >
+          <>
             {recipe.length ? (
-              <>
+              <SimpleGrid
+                key={item}
+                columns={5}
+                alignItems={'center'}
+                mx={2}
+                sx={{
+                  outline: '1px solid gray',
+                  borderRadius: '5px',
+                }}
+              >
                 <ComponentImage name={recipe[0]} />
                 <MathText>+</MathText>
                 <ComponentImage name={recipe[1]} />
@@ -58,11 +59,11 @@ export default function ChampionBestItems({ items }) {
                         : 0.5,
                   }}
                 />
-              </>
+              </SimpleGrid>
             ) : (
-              <ItemImage name={item} />
+              <Image name={item} />
             )}
-          </SimpleGrid>
+          </>
         );
       })}
     </HStack>
