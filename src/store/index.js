@@ -19,19 +19,6 @@ export const useStore = create(
           return set({ selectedChampions: newSelectedChampions });
         }
 
-        // TODO: clean up after data is validated
-
-        const name = champion.replaceAll(' ', '_');
-
-        const currentUrl = `https://tftactics.gg/champions/${name}`;
-        const revivalUrl = `https://leagueoflegends.fandom.com/wiki/${name}/TFT#Set_5.5`;
-
-        // Change this for set
-        const url = currentUrl;
-        // const url = revivalUrl;
-
-        console.log(champion, '-', url);
-
         return set({ selectedChampions: [...selectedChampions, champion] });
       },
       setSelectedChampions: (selectedChampions) => set({ selectedChampions }),
