@@ -1,6 +1,6 @@
 import Image from './Image';
 
-export default function ItemImage({ name }) {
+export default function ItemImage({ name, ...rest }) {
   return (
     <Image
       name={name}
@@ -9,6 +9,7 @@ export default function ItemImage({ name }) {
         width: '28px',
         height: '28px',
       }}
+      {...rest}
     />
   );
 }

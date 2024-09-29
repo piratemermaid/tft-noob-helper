@@ -9,6 +9,15 @@ export default function ChampionBestItems({ items }) {
 
   if (!items) return null;
 
+  const ComponentImage = ({ name, sx }) => {
+    return (
+      <ItemImage
+        name={name}
+        sx={{ opacity: selectedComponents.includes(name) ? 1 : 0.5 }}
+      />
+    );
+  };
+
   return (
     <HStack>
       {items.map((item) => {
@@ -35,11 +44,20 @@ export default function ChampionBestItems({ items }) {
           >
             {recipe ? (
               <>
-                <ItemImage name={recipe[0]} />
+                <ComponentImage name={recipe[0]} />
                 <MathText>+</MathText>
-                <ItemImage name={recipe[1]} />
+                <ComponentImage name={recipe[1]} />
                 <MathText>=</MathText>
-                <ItemImage name={item} />
+                <ItemImage
+                  name={item}
+                  sx={{
+                    opacity:
+                      selectedComponents.includes(recipe[0]) &&
+                      selectedComponents.includes(recipe[1])
+                        ? 1
+                        : 0.5,
+                  }}
+                />
               </>
             ) : (
               <ItemImage name={item} />
