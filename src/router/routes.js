@@ -12,10 +12,10 @@ const ROUTES = [
     path: '/revival_set',
     Component: RevivalSetTeamBuilder,
   },
-  {
-    label: 'Item Builder',
-    path: '/item_builder',
-  },
+  // {
+  //   label: 'Item Builder',
+  //   path: '/item_builder',
+  // },
 ];
 
 export default ROUTES;
