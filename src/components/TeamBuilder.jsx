@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 import ChampionList from './ChampionList';
+import ComponentsHave from './ComponentsHave';
 import TraitSummary from './TraitSummmary';
 import { useStore } from '../store';
 import { useActiveTraits } from '../hooks/useActiveTraits';
@@ -18,6 +19,7 @@ import { useActiveTraits } from '../hooks/useActiveTraits';
 export default function TeamBuilder({ championList }) {
   const [checkedTraits, setCheckedTraits] = React.useState([]);
   const [nameFilterInput, setNameFilterInput] = React.useState('');
+  const [selectedComponents, setSelectedComponents] = React.useState([]);
 
   const selectedChampions = useStore((state) => state.selectedChampions);
 
@@ -76,6 +78,10 @@ export default function TeamBuilder({ championList }) {
         <SimpleGrid spacing={4}>
           <Text sx={{ fontSize: 18, color: 'blue.300' }}>My Team</Text>
           <TraitSummary champions={selectedChampionData} />
+          <ComponentsHave
+            selectedComponents={selectedComponents}
+            setSelectedComponents={setSelectedComponents}
+          />
           <ChampionList
             champions={selectedChampionData}
             checkedTraits={checkedTraits}
