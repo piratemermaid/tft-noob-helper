@@ -16,8 +16,6 @@ export default function ChampionList({
   checkedTraits,
   includeItems = false,
 }) {
-  console.log('>> checkedTraits', checkedTraits);
-
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
   const getIsSelected = (name) => selectedChampions.includes(name);
