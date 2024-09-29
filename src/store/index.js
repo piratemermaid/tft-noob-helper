@@ -23,8 +23,7 @@ export const useStore = create(
 
         const name = champion.replaceAll(' ', '_');
 
-        const currentUrl = `https://tftactics.gg/champions/${name}
-        )}`;
+        const currentUrl = `https://tftactics.gg/champions/${name}`;
         const revivalUrl = `https://leagueoflegends.fandom.com/wiki/${name}/TFT#Set_5.5`;
 
         // Change this for set
