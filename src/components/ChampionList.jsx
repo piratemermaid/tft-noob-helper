@@ -73,6 +73,7 @@ export default function ChampionList({
             </Text>
             <ChampionImage name={champion.name} />
           </SimpleGrid>
+          {!includeItems && !champion.validated ? 'needs validation' : ''}
           {includeItems ? (
             <ChampionBestItems items={champion.bestItems} />
           ) : (
