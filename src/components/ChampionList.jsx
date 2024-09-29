@@ -30,7 +30,7 @@ export default function ChampionList({
         <Box
           key={champion.name}
           sx={{
-            outline: '1px solid gray',
+            outline: `1px solid ${costColors[champion.cost]}`,
             p: 1,
             borderRadius: '5px',
             backgroundColor: !getIsSelected(champion.name)
@@ -43,14 +43,14 @@ export default function ChampionList({
           }}
         >
           <SimpleGrid
-            columns={4}
+            columns={3}
             spacing={1}
             justifyContent={'center'}
             alignContent={'center'}
             onClick={() => handleSelectChampion(champion.name)}
           >
             <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
-            <UnorderedList sx={{ width: '96px' }}>
+            <UnorderedList sx={{ minWidth: '120px' }}>
               {champion.traits.map((trait) => (
                 <ListItem key={trait} sx={{ textAlign: 'left' }}>
                   <Text
@@ -63,15 +63,6 @@ export default function ChampionList({
                 </ListItem>
               ))}
             </UnorderedList>
-            <Text
-              sx={{
-                fontSize: 18,
-                fontWeight: 600,
-                color: costColors[champion.cost],
-              }}
-            >
-              {champion.cost}
-            </Text>
             <ChampionImage type={type} name={champion.name} />
           </SimpleGrid>
           {!includeItems && !champion.role ? <p>needs role</p> : ''}
