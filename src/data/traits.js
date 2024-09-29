@@ -9,7 +9,6 @@ const TRAITS = [
   { name: 'Dragon', activeOn: [] },
   { name: 'Druid', activeOn: [] },
   { name: 'Eldritch', activeOn: [] },
-  { name: 'Encantor', activeOn: [] },
   { name: 'Faerie', activeOn: [] },
   { name: 'Frost', activeOn: [] },
   { name: 'Guardian', activeOn: [] },
