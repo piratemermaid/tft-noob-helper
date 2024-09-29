@@ -20,7 +20,7 @@ export default function Image({ name, type = 'current', ...rest }) {
       case 'component':
         return `/images/components/${formattedName}.png`;
       case 'revival':
-        return `/images/champions/revival/${formattedName}.png`;
+        return `/images/champions/revival/${formattedName}.webp`;
       default:
         return `/images/champions/current/${formattedName}.png`;
     }
