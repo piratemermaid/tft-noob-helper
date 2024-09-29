@@ -42,7 +42,7 @@ export default function ChampionBestItems({ items }) {
               borderRadius: '5px',
             }}
           >
-            {recipe ? (
+            {recipe.length ? (
               <>
                 <ComponentImage name={recipe[0]} />
                 <MathText>+</MathText>
