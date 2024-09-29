@@ -20,17 +20,26 @@ export default function ChampionBestItems({ items }) {
         const { recipe } = itemData ?? null;
 
         return (
-          <SimpleGrid key={item} columns={5} alignItems={'center'} mx={2}>
-            <ItemImage name={item} />
+          <SimpleGrid
+            key={item}
+            columns={5}
+            alignItems={'center'}
+            mx={2}
+            sx={{
+              outline: '1px solid gray',
+              borderRadius: '5px',
+            }}
+          >
             {recipe ? (
               <>
-                <MathText>=</MathText>
                 <ItemImage name={recipe[0]} />
                 <MathText>+</MathText>
                 <ItemImage name={recipe[1]} />
+                <MathText>=</MathText>
+                <ItemImage name={item} />
               </>
             ) : (
-              <></>
+              <ItemImage name={item} />
             )}
           </SimpleGrid>
         );
