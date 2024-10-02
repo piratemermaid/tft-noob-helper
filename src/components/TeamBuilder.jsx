@@ -41,15 +41,15 @@ export default function TeamBuilder({ championList, type }) {
       return true;
     }
 
-    if (checkedTraits.length && !nameFilterInput) {
-      return filterByTraits(champion);
-    }
-
-    if (!checkedTraits.length && nameFilterInput) {
+    if (nameFilterInput) {
       return filterByName(champion);
     }
 
-    return filterByTraits(champion) && filterByName(champion);
+    if (checkedTraits.length) {
+      return filterByTraits(champion);
+    }
+
+    return filterByTraits(champion);
   });
 
   const handleCheck = (e, trait) => {

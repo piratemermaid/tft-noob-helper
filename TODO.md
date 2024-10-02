@@ -1,5 +1,5 @@
 [] Track champs' built items
-[] Any champ name can be searched regardless of checked traits
+[x] Any champ name can be searched regardless of checked traits
 [x] Remove cost from champ cards and use colors to indicate cost instead
 [] Pin champs in team comp
 [] Add role to champ cards
