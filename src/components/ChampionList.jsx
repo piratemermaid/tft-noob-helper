@@ -49,7 +49,12 @@ export default function ChampionList({
             alignContent={'center'}
             onClick={() => handleSelectChampion(champion.name)}
           >
-            <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
+            <Box>
+              <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
+              <Text sx={{ fontSize: 13, color: 'gray.400' }}>
+                {champion.role}
+              </Text>
+            </Box>
             <UnorderedList sx={{ minWidth: '120px' }}>
               {champion.traits.map((trait) => (
                 <ListItem key={trait} sx={{ textAlign: 'left' }}>
