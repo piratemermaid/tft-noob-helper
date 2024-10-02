@@ -5,10 +5,12 @@ const atkTank = 'Attack Tank';
 const atkFgtr = 'Attack Fighter';
 const atkCarry = 'Attack Carry';
 const atkCst = 'Attack Caster';
+const atkRpr = 'Attack Reaper';
 const magCst = 'Magic Caster';
 const magTank = 'Magic Tank';
 const magRpr = 'Magic Reaper';
 const magFgtr = 'Magic Fighter';
+const magCarry = 'Magic Carry';
 
 const greenSpear = 'Spear of Shojin';
 const blood = 'Bloodthirster';
@@ -45,9 +47,10 @@ const spellBook = 'Morellonomicon';
 const fieryArmor = 'Sunfire Cape';
 const blueArmor = "Protector's Vow";
 const redBuff = 'Red Buff';
+const electricSword = 'Statikk Shiv';
 
 const atkTankItems = [
-  blueScytheyThing,
+  scorpionTailLookingThing,
   armorWithGreen,
   orangeSpikyArmor,
   orangeMetalArmor,
@@ -55,6 +58,28 @@ const atkTankItems = [
   redGreenJewel,
   blueArmor,
   metalCircles,
+];
+
+const atkFgtrItems = [
+  blood,
+  fieryFist,
+  bow,
+  blueScytheyThing,
+  scorpionTailLookingThing,
+  helmetWithRedEyes,
+  murderCloak,
+  arthurFist,
+];
+
+const atkRprItems = [
+  fierySword,
+  blueScytheyThing,
+  bow,
+  murderCloak,
+  fieryFist,
+  infinityEdge,
+  runaanHurricane,
+  blood,
 ];
 
 const magTankItems = [
@@ -79,8 +104,30 @@ const magCastItems = [
   purpleHelmet,
 ];
 
+const magRprItems = [
+  magicHat,
+  pinkFist,
+  blueScytheyThing,
+  blueLitThing,
+  crown,
+  fieryFist,
+  hextechGunblade,
+  scorpionTailLookingThing,
+];
+
 // TODO: Brand
 const magCastBlueBuffItems = [];
+
+const magCarryItems = [
+  fierySword,
+  pinkFist,
+  archangelStaff,
+  magicHat,
+  blueScytheyThing,
+  electricSword,
+  scorpionTailLookingThing,
+  nashorsTooth,
+];
 
 const magFgtrItems = [
   blood,
@@ -118,10 +165,10 @@ const revivalChampions = [
     name: 'Akshan',
     cost: 5,
     traits: ['Sentinel', 'Ranger'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'Heroic Swing',
-    bestItems: [],
+    bestItems: atkCarryItems,
   },
   {
     name: 'Aphelios',
@@ -209,10 +256,10 @@ const revivalChampions = [
     name: 'Gragas',
     cost: 1,
     traits: ['Dawnbringer', 'Brawler'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Drunken Rage',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Gwen',
@@ -245,10 +292,10 @@ const revivalChampions = [
     name: 'Irelia',
     cost: 2,
     traits: ['Sentinel', 'Skirmisher', 'Legionnaire'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Defiant Dance',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Ivern',
@@ -317,10 +364,10 @@ const revivalChampions = [
     name: "Kha'Zix",
     cost: 1,
     traits: ['Dawnbringer', 'Assassin'],
-    role: null,
-    position: null,
+    role: magRpr,
+    position: front,
     ability: 'Taste Their Fear',
-    bestItems: [],
+    bestItems: magRprItems,
   },
   {
     name: 'Kled',
@@ -381,9 +428,9 @@ const revivalChampions = [
     cost: 3,
     traits: ['Redeemed', 'Mystic'],
     role: magCst,
-    position: null,
+    position: back,
     ability: 'Prismatic Barrier',
-    bestItems: [],
+    bestItems: magCastItems,
   },
   {
     name: 'Miss Fortune',
@@ -407,19 +454,19 @@ const revivalChampions = [
     name: 'Nidalee',
     cost: 3,
     traits: ['Dawnbringer', 'Skirmisher'],
-    role: null,
-    position: null,
+    role: atkFgtr,
+    position: back,
     ability: 'Aspect of the Cougar',
-    bestItems: [],
+    bestItems: atkFgtrItems,
   },
   {
     name: 'Nocturne',
     cost: 3,
     traits: ['Revenant', 'Assassin'],
-    role: null,
-    position: null,
+    role: atkRpr,
+    position: front,
     ability: 'Umbra Blades',
-    bestItems: [],
+    bestItems: atkRprItems,
   },
   {
     name: 'Nunu & Willump',
@@ -435,9 +482,9 @@ const revivalChampions = [
     cost: 1,
     traits: ['Sentinel', 'Skirmisher'],
     role: atkFgtr,
-    position: null,
+    position: front,
     ability: 'Berserker Rage',
-    bestItems: [],
+    bestItems: atkFgtrItems,
   },
   {
     name: 'Poppy',
@@ -452,10 +499,10 @@ const revivalChampions = [
     name: 'Pyke',
     cost: 2,
     traits: ['Sentinel', 'Assassin'],
-    role: null,
-    position: null,
+    role: magRpr,
+    position: front,
     ability: 'Phantom Undertow',
-    bestItems: [],
+    bestItems: magRprItems,
   },
   {
     name: 'Rakan',
@@ -470,10 +517,10 @@ const revivalChampions = [
     name: 'Rell',
     cost: 4,
     traits: ['Redeemed', 'Ironclad', 'Cavalier'],
-    role: null,
-    position: null,
+    role: atkTank,
+    position: front,
     ability: 'Attract and Repel',
-    bestItems: [],
+    bestItems: atkTankItems,
   },
   {
     name: 'Riven',
@@ -524,10 +571,10 @@ const revivalChampions = [
     name: 'Syndra',
     cost: 2,
     traits: ['Redeemed', 'Invoker'],
-    role: null,
+    role: magCst,
     position: null,
     ability: 'Force of Will',
-    bestItems: [],
+    bestItems: magCastItems,
   },
   {
     name: 'Teemo',
@@ -561,27 +608,27 @@ const revivalChampions = [
     cost: 1,
     traits: ['Draconic', 'Skirmisher'],
     role: atkFgtr,
-    position: null,
+    position: front,
     ability: "Monkey's Agility",
-    bestItems: [],
+    bestItems: atkFgtrItems,
   },
   {
     name: 'Varus',
     cost: 2,
     traits: ['Redeemed', 'Ranger'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'Hail of Arrows',
-    bestItems: [],
+    bestItems: atkCarryItems,
   },
   {
     name: 'Vayne',
     cost: 1,
     traits: ['Forgotten', 'Ranger'],
-    role: null,
+    role: magCarry,
     position: null,
     ability: 'Silver Bolts',
-    bestItems: [],
+    bestItems: magCarryItems,
   },
   {
     name: "Vel'Koz",
@@ -596,10 +643,10 @@ const revivalChampions = [
     name: 'Viego',
     cost: 5,
     traits: ['Forgotten', 'Skirmisher', 'Assassin'],
-    role: null,
-    position: null,
+    role: magRpr,
+    position: front,
     ability: "Sovereign's Domination",
-    bestItems: [],
+    bestItems: magRprItems,
   },
   {
     name: 'Vladimir',
