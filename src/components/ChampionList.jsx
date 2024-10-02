@@ -52,7 +52,7 @@ export default function ChampionList({
             <Box>
               <Text sx={{ mr: 1.5 }}>{champion.name}</Text>
               <Text sx={{ fontSize: 13, color: 'gray.400' }}>
-                {champion.role}
+                {champion.role ?? <i>!! unknown</i>}
               </Text>
             </Box>
             <UnorderedList sx={{ minWidth: '120px' }}>
@@ -68,14 +68,15 @@ export default function ChampionList({
                 </ListItem>
               ))}
             </UnorderedList>
-            <ChampionImage type={type} name={champion.name} />
+            <Box>
+              <ChampionImage type={type} name={champion.name} />
+              {!champion.bestItems.length ? (
+                <Text sx={{ position: 'relative', top: -10, left: 4 }}>
+                  !! items
+                </Text>
+              ) : null}
+            </Box>
           </SimpleGrid>
-          {!includeItems && !champion.role ? <p>needs role</p> : ''}
-          {!includeItems && !champion.bestItems.length ? (
-            <p>needs items</p>
-          ) : (
-            ''
-          )}
           {includeItems ? (
             <ChampionBestItems items={champion.bestItems} />
           ) : (
