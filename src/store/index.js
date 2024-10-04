@@ -9,7 +9,9 @@ export const useStore = create(
         const selectedChampions = get().selectedChampions;
 
         if (!selectedChampions?.length) {
-          return set({ selectedChampions: [{ name: championName }] });
+          return set({
+            selectedChampions: [{ name: championName, pinned: false }],
+          });
         }
 
         if (selectedChampions.find((champ) => champ.name === championName)) {
@@ -20,10 +22,21 @@ export const useStore = create(
         }
 
         return set({
-          selectedChampions: [...selectedChampions, { name: championName }],
+          selectedChampions: [
+            ...selectedChampions,
+            { name: championName, pinned: false },
+          ],
         });
       },
       setSelectedChampions: (selectedChampions) => set({ selectedChampions }),
+      togglePinChampion: (championName) =>
+        set({
+          selectedChampions: get().selectedChampions.map((champion) =>
+            champion.name === championName
+              ? { ...champion, pinned: !champion.pinned }
+              : champion
+          ),
+        }),
       selectedComponents: [],
       setSelectedComponents: (selectedComponents) =>
         set({ selectedComponents }),

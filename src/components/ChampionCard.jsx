@@ -5,6 +5,7 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons';
 
 import ChampionBestItems from './images/ChampionBestItems';
 import ChampionImage from './images/ChampionImage';
@@ -19,9 +20,16 @@ export default function ChampionCard({
 }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
+  const togglePinChampion = useStore((state) => state.togglePinChampion);
 
-  const getIsSelected = (name) =>
-    selectedChampions.find((selectedChamp) => selectedChamp.name === name);
+  const champ = selectedChampions.find(
+    (selectedChamp) => selectedChamp.name === champion.name
+  );
+
+  const handleTogglePin = (event) => {
+    event.stopPropagation();
+    togglePinChampion(champion.name);
+  };
 
   return (
     <Box
@@ -30,7 +38,7 @@ export default function ChampionCard({
         outline: `2px solid ${costColors[champion.cost]}`,
         p: 1,
         borderRadius: '5px',
-        backgroundColor: !getIsSelected(champion.name) ? 'none' : 'gray.700',
+        backgroundColor: !champ ? 'none' : 'gray.700',
         '&:hover': {
           cursor: 'pointer',
           outline: '1px solid teal',
@@ -70,6 +78,18 @@ export default function ChampionCard({
               !! items
             </Text>
           ) : null}
+          {includeItems && (
+            <Box
+              onClick={handleTogglePin}
+              sx={{ position: 'relative', top: -12, right: -12 }}
+            >
+              {!champ.pinned ? (
+                <StarIcon color="gray.500" />
+              ) : (
+                <StarIcon color="blue.400" />
+              )}
+            </Box>
+          )}
         </Box>
       </SimpleGrid>
       {includeItems ? <ChampionBestItems items={champion.bestItems} /> : <></>}
