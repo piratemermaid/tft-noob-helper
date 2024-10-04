@@ -25,7 +25,9 @@ export default function TeamBuilder({ championList, type }) {
   const activeTraits = useActiveTraits(championList);
 
   const selectedChampionData = championList.filter((champion) =>
-    selectedChampions?.includes(champion.name)
+    selectedChampions?.find(
+      (selectedChamp) => selectedChamp.name === champion.name
+    )
   );
 
   const filterByTraits = (champion) => {

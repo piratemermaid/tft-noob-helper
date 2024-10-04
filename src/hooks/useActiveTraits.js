@@ -5,7 +5,9 @@ import { useStore } from '../store';
 export const useActiveTraits = (championList) => {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const selectedChampionData = championList.filter((champion) =>
-    selectedChampions?.includes(champion.name)
+    selectedChampions?.find(
+      (selectedChamp) => selectedChamp.name === champion.name
+    )
   );
 
   return React.useMemo(() => {

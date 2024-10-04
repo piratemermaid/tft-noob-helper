@@ -5,21 +5,23 @@ export const useStore = create(
   persist(
     (set, get) => ({
       selectedChampions: [],
-      handleSelectChampion: (champion) => {
+      handleSelectChampion: (championName) => {
         const selectedChampions = get().selectedChampions;
 
         if (!selectedChampions?.length) {
-          return set({ selectedChampions: [champion] });
+          return set({ selectedChampions: [{ name: championName }] });
         }
 
-        if (selectedChampions.includes(champion)) {
+        if (selectedChampions.find((champ) => champ.name === championName)) {
           const newSelectedChampions = selectedChampions.filter(
-            (selectedChamp) => selectedChamp !== champion
+            (selectedChamp) => selectedChamp.name !== championName
           );
           return set({ selectedChampions: newSelectedChampions });
         }
 
-        return set({ selectedChampions: [...selectedChampions, champion] });
+        return set({
+          selectedChampions: [...selectedChampions, { name: championName }],
+        });
       },
       setSelectedChampions: (selectedChampions) => set({ selectedChampions }),
       selectedComponents: [],

@@ -20,7 +20,8 @@ export default function ChampionList({
 }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
-  const getIsSelected = (name) => selectedChampions.includes(name);
+  const getIsSelected = (name) =>
+    selectedChampions.find((selectedChamp) => selectedChamp.name === name);
 
   const sortedChampions = [...champions].sort((a, b) => a[sortBy] - b[sortBy]);
 
