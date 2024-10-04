@@ -1,3 +1,4 @@
+import { useStore } from '../store';
 import ChampionCard from './ChampionCard';
 
 export default function ChampionList({
@@ -7,7 +8,27 @@ export default function ChampionList({
   isSelectedList = false,
   sortBy = 'cost',
 }) {
-  const sortedChampions = [...champions].sort((a, b) => a[sortBy] - b[sortBy]);
+  const selectedChampions = useStore((state) => state.selectedChampions);
+
+  const sortedChampions = champions?.sort((a, b) => {
+    if (isSelectedList) {
+      const aSelected = selectedChampions.find(
+        (champ) => champ.name === a.name
+      );
+      const bSelected = selectedChampions.find(
+        (champ) => champ.name === b.name
+      );
+      if (aSelected.pinned && !bSelected.pinned) {
+        return -1;
+      }
+
+      if (bSelected.pinned && !aSelected.pinned) {
+        return 1;
+      }
+    }
+
+    return a[sortBy] - b[sortBy];
+  });
 
   return (
     <>
