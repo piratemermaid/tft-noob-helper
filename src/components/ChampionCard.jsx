@@ -16,7 +16,7 @@ export default function ChampionCard({
   champion,
   checkedTraits,
   type,
-  includeItems = false,
+  isSelectedList,
 }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
@@ -78,7 +78,7 @@ export default function ChampionCard({
               !! items
             </Text>
           ) : null}
-          {includeItems && (
+          {isSelectedList && (
             <Box
               onClick={handleTogglePin}
               sx={{ position: 'relative', top: -12, right: -12 }}
@@ -92,7 +92,11 @@ export default function ChampionCard({
           )}
         </Box>
       </SimpleGrid>
-      {includeItems ? <ChampionBestItems items={champion.bestItems} /> : <></>}
+      {isSelectedList ? (
+        <ChampionBestItems items={champion.bestItems} />
+      ) : (
+        <></>
+      )}
     </Box>
   );
 }

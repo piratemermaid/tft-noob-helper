@@ -4,7 +4,7 @@ export default function ChampionList({
   champions,
   type,
   checkedTraits,
-  includeItems = false,
+  isSelectedList = false,
   sortBy = 'cost',
 }) {
   const sortedChampions = [...champions].sort((a, b) => a[sortBy] - b[sortBy]);
@@ -17,7 +17,7 @@ export default function ChampionList({
           champion={champion}
           checkedTraits={checkedTraits}
           type={type}
-          includeItems={includeItems}
+          isSelectedList={isSelectedList}
         />
       ))}
     </>
