@@ -1,4 +1,4 @@
-import { HStack, SimpleGrid, Text } from '@chakra-ui/react';
+import { SimpleGrid, Text } from '@chakra-ui/react';
 
 import Image from './Image';
 import ItemImage from './ItemImage';
@@ -10,7 +10,7 @@ export default function ChampionBestItems({ items }) {
 
   if (!items) return null;
 
-  const ComponentImage = ({ name, sx }) => {
+  const ComponentImage = ({ name }) => {
     return (
       <ItemImage
         name={name}

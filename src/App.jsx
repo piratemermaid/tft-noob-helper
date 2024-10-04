@@ -17,7 +17,7 @@ export default function App() {
   React.useEffect(() => {
     setSelectedChampions([]);
     setSelectedComponents([]);
-  }, [location]);
+  }, [location, setSelectedChampions, setSelectedComponents]);
 
   return (
     <SimpleGrid columns={1} spacing={4}>
