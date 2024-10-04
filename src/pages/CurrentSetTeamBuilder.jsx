@@ -4,7 +4,7 @@ import CURRENT_CHAMPIONS from '../data/currentChampions';
 
 export default function CurrentSetTeamBuilder() {
   return (
-    <PageLayout title="Current Set Team Builder">
+    <PageLayout>
       <TeamBuilder championList={CURRENT_CHAMPIONS} type="current" />
     </PageLayout>
   );

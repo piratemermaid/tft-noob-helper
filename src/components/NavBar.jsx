@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -14,6 +14,8 @@ import ROUTES from '../router/routes';
 export default function NavBar() {
   const { toggleColorMode } = useColorMode();
 
+  const { pathname } = useLocation();
+
   return (
     <Flex>
       <Box>
@@ -21,7 +23,15 @@ export default function NavBar() {
           {ROUTES.map((route) => {
             return (
               <Link to={route.path} key={route.path}>
-                <Button variant="link" sx={{ mr: 4 }}>
+                <Button
+                  variant="link"
+                  sx={{
+                    mr: 4,
+                    color: pathname === route.path ? 'teal.300' : 'gray.300',
+                    textDecoration:
+                      pathname === route.path ? 'underline' : 'none',
+                  }}
+                >
                   {route.label}
                 </Button>
               </Link>

@@ -4,7 +4,7 @@ import REVIVAL_CHAMPIONS from '../data/revivalChampions';
 
 export default function RevivalSetTeamBuilder() {
   return (
-    <PageLayout title="Revival Set Team Builder">
+    <PageLayout>
       <TeamBuilder championList={REVIVAL_CHAMPIONS} type="revival" />
     </PageLayout>
   );

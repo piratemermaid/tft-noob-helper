@@ -1,21 +1,8 @@
-import { Box, SimpleGrid, Text } from '@chakra-ui/react';
-import { useColorMode } from '@chakra-ui/react';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 
-export default function PageLayout({ title, children }) {
-  const { colorMode } = useColorMode();
-
+export default function PageLayout({ children }) {
   return (
-    <SimpleGrid spacing={4}>
-      <Box>
-        <Text
-          fontSize="xl"
-          sx={{ fontSize: '2rem' }}
-          color={colorMode === 'dark' ? 'green.300' : 'green.500'}
-        >
-          {title}
-        </Text>
-      </Box>
-
+    <SimpleGrid spacing={4} sx={{ mt: 4 }}>
       <Box>{children}</Box>
     </SimpleGrid>
   );

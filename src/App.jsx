@@ -12,12 +12,12 @@ export default function App() {
     (state) => state.setSelectedComponents
   );
 
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   React.useEffect(() => {
     setSelectedChampions([]);
     setSelectedComponents([]);
-  }, [location, setSelectedChampions, setSelectedComponents]);
+  }, [pathname, setSelectedChampions, setSelectedComponents]);
 
   return (
     <SimpleGrid columns={1} spacing={4}>
