@@ -1,5 +1,6 @@
 import CurrentSetTeamBuilder from '../pages/CurrentSetTeamBuilder';
 import RevivalSetTeamBuilder from '../pages/RevivalSetTeamBuilder';
+import LowEloTierList from '../pages/LowEloTierList';
 
 const ROUTES = [
   {
@@ -12,10 +13,11 @@ const ROUTES = [
     path: '/revival_set',
     Component: RevivalSetTeamBuilder,
   },
-  // {
-  //   label: 'Item Builder',
-  //   path: '/item_builder',
-  // },
+  {
+    label: 'LoL Tier List',
+    path: '/lol_tier_list',
+    Component: LowEloTierList,
+  },
 ];
 
 export default ROUTES;

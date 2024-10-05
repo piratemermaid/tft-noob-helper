@@ -173,7 +173,7 @@ const LOW_ELO_TIER_LIST = {
       'Ziggs',
     ],
   },
-  Supports: {
+  Support: {
     S: ['Janna', 'Lulu', 'Nami', 'Poppy', 'Senna'],
     A: ['Bard', 'Brand', 'Braum', 'Pyke', 'Rell', 'Seraphine', 'Sona', 'Taric'],
     B: [
@@ -198,3 +198,5 @@ const LOW_ELO_TIER_LIST = {
     ],
   },
 };
+
+export default LOW_ELO_TIER_LIST;
