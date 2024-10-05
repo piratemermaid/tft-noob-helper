@@ -137,6 +137,18 @@ const magCarryItems = [
   nashorsTooth,
 ];
 
+// TODO
+const magCarryItemsAshe = [
+  fierySword,
+  pinkFist,
+  archangelStaff,
+  magicHat,
+  blueScytheyThing,
+  electricSword,
+  scorpionTailLookingThing,
+  nashorsTooth,
+];
+
 const magFgtrItems = [
   blood,
   blueScytheyThing,
@@ -202,7 +214,7 @@ const revivalChampions = [
     name: 'Ashe',
     cost: 3,
     traits: ['Draconic', 'Ranger'],
-    role: null,
+    role: magCarry,
     position: null,
     ability: 'Enchanted Crystal Arrow',
     bestItems: [],
@@ -481,10 +493,10 @@ const revivalChampions = [
     name: 'Nunu & Willump',
     cost: 3,
     traits: ['Abomination', 'Brawler'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Consume',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Olaf',
