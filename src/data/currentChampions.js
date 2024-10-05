@@ -10,6 +10,10 @@ const atkCarry = 'Attack Carry';
 const atkCst = 'Attack Caster';
 const magCst = 'Magic Caster';
 const magTank = 'Magic Tank';
+const magCarry = 'Magic Carry';
+
+const front = 'front';
+const back = 'back';
 
 const CURRENT_CHAMPIONS = [
   {
@@ -121,6 +125,13 @@ const CURRENT_CHAMPIONS = [
     name: 'Cassiopeia',
     cost: 2,
     traits: ['Witchcraft', 'Incantor'],
+    role: magCarry,
+    position: back,
+    bestItems: [
+      "Guinsoo's Rageblade",
+      "Guinsoo's Rageblade",
+      'Hextech Gunblade',
+    ],
     stats: {
       health: [700, 1260, 2268],
       damage: [65, 95, 135],
@@ -130,11 +141,6 @@ const CURRENT_CHAMPIONS = [
       speed: 0.75,
       mana: [0, 100],
     },
-    bestItems: [
-      "Guinsoo's Rageblade",
-      "Guinsoo's Rageblade",
-      'Hextech Gunblade',
-    ],
   },
   {
     name: 'Diana',
@@ -260,6 +266,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Jax',
     cost: 1,
     traits: ['Chrono', 'Multistriker'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: 800,
       mana: 0,
@@ -271,7 +280,6 @@ const CURRENT_CHAMPIONS = [
       critRate: 25,
       range: 1,
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Jayce',
@@ -492,6 +500,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Neeko',
     cost: 3,
     traits: ['Witchcraft', 'Shapeshifter'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: [850, 1530, 2754],
       damage: [60, 80, 100],
@@ -502,7 +513,6 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 40],
       range: 3,
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Nilah',
@@ -585,6 +595,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Poppy',
     cost: 1,
     traits: ['Witchcraft', 'Bastion'],
+    role: atkTank,
+    position: front,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
     stats: {
       health: '650 / 1170 / 2106',
       armor: 45,
@@ -592,7 +605,6 @@ const CURRENT_CHAMPIONS = [
       damage: '60 / 90 / 135',
       atkSpd: 0.65,
     },
-    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
     name: 'Rumble',
@@ -722,8 +734,11 @@ const CURRENT_CHAMPIONS = [
   },
   {
     name: 'Syndra',
-    cost: 4,
+    cost: 2,
     traits: ['Eldritch', 'Incantor'],
+    role: magCst,
+    position: back,
+    bestItems: ["Guinsoo's Rageblade", "Nashor's Tooth", 'Spear of Shojin'],
     stats: {
       health: 850,
       armor: 25,
@@ -732,7 +747,6 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.75,
       range: 4,
     },
-    bestItems: ["Guinsoo's Rageblade", "Nashor's Tooth", 'Spear of Shojin'],
   },
   {
     name: 'Tahm Kench',
@@ -898,6 +912,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Ziggs',
     cost: 1,
     traits: ['Honeymancy', 'Incantor'],
+    role: magCst,
+    position: back,
+    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
     stats: {
       health: [450, 810, 1458],
       mana: 50,
@@ -910,7 +927,6 @@ const CURRENT_CHAMPIONS = [
       crit_rate: 25,
       range: 4,
     },
-    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
   },
   {
     name: 'Zilean',
@@ -934,6 +950,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Zoe',
     cost: 1,
     traits: ['Portal', 'Witchcraft', 'Scholar'],
+    role: magCst,
+    position: back,
+    bestItems: ['Blue Buff', "Nashor's Tooth", 'Spear of Shojin'],
     stats: {
       health: [750, 1350, 2430],
       mana: [0, 60],
@@ -945,7 +964,6 @@ const CURRENT_CHAMPIONS = [
       crit_rate: 25,
       range: 3,
     },
-    bestItems: ['Blue Buff', "Nashor's Tooth", 'Spear of Shojin'],
   },
 ];
 

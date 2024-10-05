@@ -17,7 +17,7 @@ const blood = 'Bloodthirster';
 const purpleCloak = 'Edge of Night';
 const blueBuff = 'Blue Buff';
 const orangeMetalArmor = 'Gargoyle Stoneplate';
-const orangeSpikyArmor = 'Gargoyle Stoneplate';
+const orangeSpikyArmor = 'Bramble Vest';
 const blueLitThing = 'Ionic Spark';
 const metalCircles = 'Evenshroud';
 const hextechGunblade = 'Hextech Gunblade';
@@ -115,8 +115,16 @@ const magRprItems = [
   scorpionTailLookingThing,
 ];
 
-// TODO: Brand
-const magCastBlueBuffItems = [];
+const magCastBlueBuffItems = [
+  blueBuff,
+  archangelStaff,
+  magicHat,
+  pinkFist,
+  blueScytheyThing,
+  nashorsTooth,
+  greenSpear,
+  purpleHelmet,
+];
 
 const magCarryItems = [
   fierySword,
@@ -151,15 +159,26 @@ const atkCarryItems = [
   redBuff,
 ];
 
+const atkCarryInfinityEdgeItems = [
+  infinityEdge,
+  bow,
+  scorpionTailLookingThing,
+  blueScytheyThing,
+  rageblade,
+  runaanHurricane,
+  murderCloak,
+  fieryFist,
+];
+
 const revivalChampions = [
   {
     name: 'Aatrox',
     cost: 1,
     traits: ['Redeemed', 'Legionnaire'],
-    role: null,
-    position: null,
+    role: atkFgtr,
+    position: front,
     ability: 'Deathbringer Stance',
-    bestItems: [],
+    bestItems: atkFgtrItems,
   },
   {
     name: 'Akshan',
@@ -174,10 +193,10 @@ const revivalChampions = [
     name: 'Aphelios',
     cost: 4,
     traits: ['Nightbringer', 'Ranger'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'Moonlight Vigil',
-    bestItems: [],
+    bestItems: atkCarryItems,
   },
   {
     name: 'Ashe',
@@ -195,17 +214,7 @@ const revivalChampions = [
     role: magCst,
     position: back,
     ability: 'Sear',
-    bestItems: [
-      //   blueBuff,//
-      //   greenSpear,
-      //   archangelStaff,
-      //   magicHat,
-      //   pinkFist,
-      //   blueScytheyThing,
-      //   "Nashor's Tooth",
-      //   scorpionTailLookingThing,
-      //   purpleHelmet,
-    ],
+    bestItems: magCastBlueBuffItems,
   },
   {
     name: 'Diana',
@@ -220,28 +229,28 @@ const revivalChampions = [
     name: 'Draven',
     cost: 4,
     traits: ['Forgotten', 'Legionnaire'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'Spinning Axe',
-    bestItems: [],
+    bestItems: atkCarryInfinityEdgeItems,
   },
   {
     name: 'Fiddlesticks',
     cost: 4,
     traits: ['Abomination', 'Revenant', 'Mystic'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Crowstorm',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Galio',
     cost: 4,
     traits: ['Draconic', 'Sentinel', 'Knight'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Shield of Durand',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Garen',
@@ -265,19 +274,19 @@ const revivalChampions = [
     name: 'Gwen',
     cost: 5,
     traits: ['Inanimate', 'Mystic'],
-    role: null,
-    position: null,
+    role: magFgtr,
+    position: front,
     ability: "Skip 'n Slash",
-    bestItems: [],
+    bestItems: magFgtrItems,
   },
   {
     name: 'Hecarim',
     cost: 2,
     traits: ['Forgotten', 'Cavalier'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     ability: 'Spirit of Dread',
-    bestItems: [],
+    bestItems: magTankItems,
   },
   {
     name: 'Heimerdinger',
@@ -319,8 +328,8 @@ const revivalChampions = [
     name: 'Jax',
     cost: 4,
     traits: ['Ironclad', 'Skirmisher'],
-    role: null,
-    position: null,
+    role: atkFgtr,
+    position: front,
     ability: 'Empowered Strike',
     bestItems: [],
   },
@@ -328,10 +337,10 @@ const revivalChampions = [
     name: 'Kalista',
     cost: 1,
     traits: ['Abomination', 'Legionnaire'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'Pierce',
-    bestItems: [],
+    bestItems: atkCarryItems,
   },
   {
     name: 'Karma',
@@ -346,10 +355,10 @@ const revivalChampions = [
     name: 'Kayle',
     cost: 5,
     traits: ['Redeemed', 'Legionnaire'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'Divine Ascent',
-    bestItems: [],
+    bestItems: atkCarryItems,
   },
   {
     name: 'Kennen',
@@ -374,9 +383,9 @@ const revivalChampions = [
     cost: 1,
     traits: ['Hellion', 'Cavalier'],
     role: atkFgtr,
-    position: null,
+    position: front,
     ability: 'Violent Tendencies',
-    bestItems: [],
+    bestItems: atkFgtrItems,
   },
   {
     name: 'Lee Sin',
@@ -409,10 +418,10 @@ const revivalChampions = [
     name: 'Lucian',
     cost: 4,
     traits: ['Sentinel', 'Cannoneer'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     ability: 'The Culling',
-    bestItems: [],
+    bestItems: atkCarryItems,
   },
   {
     name: 'Lulu',
@@ -554,9 +563,9 @@ const revivalChampions = [
     cost: 2,
     traits: ['Draconic', 'Brawler'],
     role: atkFgtr,
-    position: null,
+    position: front,
     ability: 'Haymaker',
-    bestItems: [],
+    bestItems: atkFgtrItems,
   },
   {
     name: 'Soraka',
@@ -580,10 +589,10 @@ const revivalChampions = [
     name: 'Teemo',
     cost: 5,
     traits: ['Hellion', 'Cruel', 'Invoker'],
-    role: null,
-    position: null,
+    role: magCst,
+    position: back,
     ability: "Teemo's Cruelty",
-    bestItems: [],
+    bestItems: magCastBlueBuffItems,
   },
   {
     name: 'Thresh',
@@ -634,10 +643,10 @@ const revivalChampions = [
     name: "Vel'Koz",
     cost: 4,
     traits: ['Redeemed', 'Spellweaver'],
-    role: null,
-    position: null,
+    role: magCst,
+    position: back,
     ability: 'Life Form Disintegration Ray',
-    bestItems: [],
+    bestItems: magCastItems,
   },
   {
     name: 'Viego',
@@ -680,10 +689,10 @@ const revivalChampions = [
     name: 'Yasuo',
     cost: 3,
     traits: ['Nightbringer', 'Legionnaire'],
-    role: null,
-    position: null,
+    role: magFgtr,
+    position: front,
     ability: 'Last Breath',
-    bestItems: [],
+    bestItems: magFgtrItems,
   },
   {
     name: 'Ziggs',
