@@ -4,7 +4,7 @@ import { Text, VStack } from '@chakra-ui/react';
 
 import MY_CHAMPS from '../data/myChamps';
 
-export default function TierListColumn({ title, tierList }) {
+export default function TierListColumn({ title, tierList, showOwned }) {
   const tierColors = {
     S: 'purple.300',
     A: 'blue.300',
@@ -17,18 +17,24 @@ export default function TierListColumn({ title, tierList }) {
       <>
         {_.map(tierList, (champions, tier) => (
           <Fragment key={tier}>
-            {champions.map((champion) => (
-              <Text
-                key={champion}
-                sx={{
-                  color: tierColors[tier],
-                  my: -1,
-                  fontWeight: MY_CHAMPS.includes(champion) ? 'bold' : 'normal',
-                }}
-              >
-                {champion}
-              </Text>
-            ))}
+            {champions.map((champion) => {
+              const isOwned = MY_CHAMPS.includes(champion);
+
+              if (showOwned && !isOwned) return null;
+
+              return (
+                <Text
+                  key={champion}
+                  sx={{
+                    color: tierColors[tier],
+                    my: -1,
+                    fontWeight: isOwned ? 'bold' : 'normal',
+                  }}
+                >
+                  {champion}
+                </Text>
+              );
+            })}
           </Fragment>
         ))}
       </>
