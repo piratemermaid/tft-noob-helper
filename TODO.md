@@ -7,3 +7,4 @@
 [x] Remove page headers and style active header link - more page real estate
 [] Button to clear instead of clearing on route change
 [] Remove selected champs from all list? - try it out
+[] Sort items by amount of components have
