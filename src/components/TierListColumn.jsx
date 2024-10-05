@@ -23,16 +23,24 @@ export default function TierListColumn({ title, tierList, showOwned }) {
               if (showOwned && !isOwned) return null;
 
               return (
-                <Text
-                  key={champion}
-                  sx={{
-                    color: tierColors[tier],
-                    my: -1,
-                    fontWeight: isOwned ? 'bold' : 'normal',
-                  }}
+                <a
+                  href={`https://mobalytics.gg/lol/champions/${champion
+                    .toLowerCase()
+                    .replaceAll(' ', '')
+                    .replaceAll('’', '')}/build`}
+                  target="_blank"
                 >
-                  {champion}
-                </Text>
+                  <Text
+                    key={champion}
+                    sx={{
+                      color: tierColors[tier],
+                      my: -1,
+                      fontWeight: isOwned ? 'bold' : 'normal',
+                    }}
+                  >
+                    {champion}
+                  </Text>
+                </a>
               );
             })}
           </Fragment>
