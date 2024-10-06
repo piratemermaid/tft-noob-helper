@@ -7,16 +7,19 @@ const ROUTES = [
     label: 'Current Set Team Builder',
     path: '/',
     Component: CurrentSetTeamBuilder,
+    type: 'tft',
   },
   {
     label: 'Revival Set Team Builder',
     path: '/revival_set',
     Component: RevivalSetTeamBuilder,
+    type: 'tft',
   },
   {
-    label: 'LoL Tier List',
+    label: 'Tier List',
     path: '/lol_tier_list',
     Component: LowEloTierList,
+    type: 'lol',
   },
 ];
 

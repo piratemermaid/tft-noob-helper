@@ -21,7 +21,7 @@ export default function LowEloTierList() {
   return (
     <PageLayout>
       <Text sx={{ color: 'purple.300', fontSize: 20, mb: 4 }}>
-        League Low Elo Tier List
+        Low Elo Tier List
       </Text>
       <Center>
         <HStack>
