@@ -1,6 +1,7 @@
 import CurrentSetTeamBuilder from '../pages/CurrentSetTeamBuilder';
 import RevivalSetTeamBuilder from '../pages/RevivalSetTeamBuilder';
 import LowEloTierList from '../pages/LowEloTierList';
+import Cheatsheets from '../pages/Cheatsheets';
 
 const ROUTES = [
   {
@@ -19,6 +20,12 @@ const ROUTES = [
     label: 'Tier List',
     path: '/lol_tier_list',
     Component: LowEloTierList,
+    type: 'lol',
+  },
+  {
+    label: 'Cheatsheets',
+    path: '/lol_cheatsheets',
+    Component: Cheatsheets,
     type: 'lol',
   },
 ];
