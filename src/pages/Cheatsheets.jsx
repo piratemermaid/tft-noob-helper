@@ -1,8 +1,9 @@
+import React from 'react';
 import { SimpleGrid, Text } from '@chakra-ui/react';
 
 import PageLayout from '../components/PageLayout';
+import ChampCheatsheet from '../components/ChampCheatsheet';
 import MY_CHAMPS from '../data/myChamps';
-import React from 'react';
 
 export default function Cheatsheets() {
   const [selectedChamp, setSelectedChamp] = React.useState(null);
@@ -36,6 +37,8 @@ export default function Cheatsheets() {
           );
         })}
       </SimpleGrid>
+
+      {selectedChamp && <ChampCheatsheet champName={selectedChamp} />}
     </PageLayout>
   );
 }
