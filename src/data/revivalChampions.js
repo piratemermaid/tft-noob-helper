@@ -137,16 +137,15 @@ const magCarryItems = [
   nashorsTooth,
 ];
 
-// TODO
 const magCarryItemsAshe = [
   fierySword,
   pinkFist,
   archangelStaff,
   magicHat,
   blueScytheyThing,
-  electricSword,
+  greenSpear,
   scorpionTailLookingThing,
-  nashorsTooth,
+  purpleHelmet,
 ];
 
 const magFgtrItems = [
@@ -217,7 +216,7 @@ const revivalChampions = [
     role: magCarry,
     position: null,
     ability: 'Enchanted Crystal Arrow',
-    bestItems: [],
+    bestItems: magCarryItemsAshe,
   },
   {
     name: 'Brand',
