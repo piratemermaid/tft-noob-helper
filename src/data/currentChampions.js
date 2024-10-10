@@ -80,6 +80,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Blitzcrank',
     cost: 1,
     traits: ['Honeymancy', 'Vanguard'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: [600, 1080, 1944],
       damage: [60, 90, 120],
@@ -89,7 +92,6 @@ const CURRENT_CHAMPIONS = [
       speed: 0.7,
       mana: [0, 90],
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Briar',
@@ -206,6 +208,13 @@ const CURRENT_CHAMPIONS = [
     name: 'Galio',
     cost: 2,
     traits: ['Portal', 'Mage', 'Vanguard'],
+    role: magTank,
+    position: front,
+    bestItems: [
+      "Guinsoo's Rageblade",
+      "Guinsoo's Rageblade",
+      'Hextech Gunblade',
+    ],
     stats: {
       health: [900, 1620, 2925],
       damage: [65, 117, 210],
@@ -214,11 +223,6 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.65,
       range: 1,
     },
-    bestItems: [
-      "Guinsoo's Rageblade",
-      "Guinsoo's Rageblade",
-      'Hextech Gunblade',
-    ],
   },
   {
     name: 'Gwen',
@@ -387,6 +391,9 @@ const CURRENT_CHAMPIONS = [
     name: "Kog'Maw",
     cost: 2,
     traits: ['Honeymancy', 'Hunter'],
+    role: atkCarry,
+    position: back,
+    bestItems: ['Spear of Shojin', 'Last Whisper', 'Infinity Edge'],
     stats: {
       health: 900,
       mana: 100,
@@ -398,7 +405,6 @@ const CURRENT_CHAMPIONS = [
       critRate: 25,
       range: 5,
     },
-    bestItems: ['Spear of Shojin', 'Last Whisper', 'Infinity Edge'],
   },
   {
     name: 'Lillia',
@@ -436,6 +442,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Mordekaiser',
     cost: 3,
     traits: ['Vanguard', 'Eldritch'],
+    role: magTank,
+    pos: front,
+    bestItems: ["Warmog's Armor", "Dragon's Claw", 'Gargoyle Stoneplate'],
     stats: {
       health: [850, 1530, 2754],
       damage: [60, 90, 135],
@@ -446,7 +455,6 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 40],
       range: 1,
     },
-    bestItems: ["Warmog's Armor", "Dragon's Claw", 'Gargoyle Stoneplate'],
   },
   {
     name: 'Morgana',
@@ -610,6 +618,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Rumble',
     cost: 2,
     traits: ['Blaster', 'Sugarcraft', 'Vanguard'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: '800 / 1440 / 2592',
       armor: 45,
@@ -617,7 +628,6 @@ const CURRENT_CHAMPIONS = [
       damage: '50 / 75 / 113',
       atkSpd: 0.65,
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Ryze',
@@ -752,6 +762,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Tahm Kench',
     cost: 4,
     traits: ['Arcana', 'Vanguard'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: 700,
       armor: 40,
@@ -760,7 +773,6 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.6,
       range: 1,
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Taric',
@@ -830,6 +842,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Veigar',
     cost: 3,
     traits: ['Honeymancy', 'Mage'],
+    role: magCst,
+    position: back,
+    bestItems: ['Blue Buff', 'Jeweled Gauntlet', "Nashor's Tooth"],
     stats: {
       health: 800,
       mana: 90,
@@ -840,7 +855,6 @@ const CURRENT_CHAMPIONS = [
       range: 4,
       attackSpeed: 0.65,
     },
-    bestItems: ['Blue Buff', 'Jeweled Gauntlet', "Nashor's Tooth"],
   },
   {
     name: 'Vex',
