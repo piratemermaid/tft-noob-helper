@@ -24,9 +24,14 @@ export const validateTraits = (champions, traits) => {
 export const validateItems = (champions, items) => {
   const itemNames = items.map((item) => item.combinesInto);
 
-  const invalidChampions = champions.filter((champion) =>
-    champion.bestItems.some((item) => !itemNames.includes(item))
-  );
+  const invalidChampions = champions.filter((champion) => {
+    if (!champion.bestItems) {
+      console.error('NO BEST ITEMS:', champion.name);
+      return;
+    }
+
+    return champion.bestItems.some((item) => !itemNames.includes(item));
+  });
 
   if (invalidChampions.length > 0) {
     console.error('INVALID ITEMS FOUND:');
