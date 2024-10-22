@@ -6,6 +6,7 @@ const MY_CHAMPS = [
   'Caitlyn',
   'Camille',
   'Garen',
+  'Lulu',
   'Lux',
   'Miss Fortune',
   'Morgana',
