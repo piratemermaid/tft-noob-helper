@@ -1,6 +1,5 @@
-import { Text } from '@chakra-ui/react';
-
 import CheatsheetUL from './CheatsheetUL';
+import { SubHeader } from './Headers';
 
 export default function GamePlan({ cheatsheet }) {
   return (
@@ -23,7 +22,3 @@ const GamePlanTiming = ({ title, items }) => {
     </>
   );
 };
-
-const SubHeader = ({ children }) => (
-  <Text sx={{ fontSize: 16.5, color: 'teal.200', mt: 2 }}>{children}</Text>
-);

@@ -9,6 +9,7 @@ import SituationalItems from './SituationalItems';
 import CheatsheetUL from './CheatsheetUL';
 import GamePlan from './GamePlan';
 import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
+import { Header } from './Headers';
 
 export default function ChampCheatsheet({ champName }) {
   const cheatsheet = CHAMP_CHEETSHEATS[champName];
@@ -56,7 +57,3 @@ export default function ChampCheatsheet({ champName }) {
     </VStack>
   );
 }
-
-const Header = ({ children }) => (
-  <Text sx={{ fontSize: 18, color: 'blue.200', mt: 2 }}>{children}</Text>
-);
