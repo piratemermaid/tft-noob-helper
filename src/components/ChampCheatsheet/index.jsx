@@ -13,10 +13,9 @@ import {
   UnorderedList,
   VStack,
 } from '@chakra-ui/react';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
 
-import CHAMP_CHEETSHEATS from '../data/champCheatsheets';
-import abilityColors from '../styles/abilityColors';
+import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
+import abilityColors from '../../styles/abilityColors';
 
 export default function ChampCheatsheet({ champName }) {
   const cheatsheet = CHAMP_CHEETSHEATS[champName];
