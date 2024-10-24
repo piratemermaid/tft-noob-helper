@@ -1,8 +1,18 @@
-// TODO: ability order in table with levels
 // TODO: table for situational items for quick viewing, item images
 // TODO: make it look nice
 
-import { Box, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Center,
+  ListItem,
+  Table,
+  Td,
+  Text,
+  Th,
+  Tr,
+  UnorderedList,
+  VStack,
+} from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 import CHAMP_CHEETSHEATS from '../data/champCheatsheets';
@@ -10,6 +20,8 @@ import abilityColors from '../styles/abilityColors';
 
 export default function ChampCheatsheet({ champName }) {
   const cheatsheet = CHAMP_CHEETSHEATS[champName];
+
+  const levels = Array.from({ length: 18 }, (_, i) => i + 1);
 
   if (!cheatsheet) {
     return (
@@ -29,33 +41,43 @@ export default function ChampCheatsheet({ champName }) {
 
       <Box>
         <Header>Ability Order</Header>
-        {cheatsheet.abilityOrder.map((ability, index) => (
-          <>
-            <Text
-              key={index}
-              sx={{
-                fontSize: 18,
-                fontWeight: 600,
-                color: abilityColors[ability],
-                display: 'inline-block',
-              }}
-            >
-              {ability}
-            </Text>
-
-            {index < cheatsheet.abilityOrder.length - 1 && (
-              <Text
-                sx={{
-                  fontSize: 18,
-                  display: 'inline-block',
-                  mx: 0.5,
-                }}
-              >
-                <ArrowForwardIcon sx={{ position: 'relative', bottom: 0.5 }} />
-              </Text>
-            )}
-          </>
-        ))}
+        <Table size="small" sx={{ mt: 2, width: '560px' }}>
+          <Tr sx={{ width: '20px' }}>
+            {levels.map((level) => (
+              <Td sx={{ border: '1px solid gray' }}>
+                <Center>
+                  <Text
+                    key={level}
+                    sx={{
+                      fontSize: 18,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {level}
+                  </Text>
+                </Center>
+              </Td>
+            ))}
+          </Tr>
+          <Tr>
+            {cheatsheet.abilityOrder.map((ability, index) => (
+              <Td sx={{ border: '1px solid gray', width: '20px' }}>
+                <Center>
+                  <Text
+                    key={index}
+                    sx={{
+                      fontSize: 18,
+                      fontWeight: 600,
+                      color: abilityColors[ability],
+                    }}
+                  >
+                    {ability}
+                  </Text>
+                </Center>
+              </Td>
+            ))}
+          </Tr>
+        </Table>
       </Box>
 
       <Box>
