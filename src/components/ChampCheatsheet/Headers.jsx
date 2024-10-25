@@ -3,7 +3,8 @@ import { Text } from '@chakra-ui/react';
 export const Header = ({ children }) => (
   <Text
     sx={{
-      my: 2,
+      my: 5,
+      mb: 2,
       fontSize: 20,
       textTransform: 'uppercase',
       color: 'blue.200',
