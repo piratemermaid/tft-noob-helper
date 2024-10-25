@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Center,
-  FormControl,
-  FormLabel,
-  HStack,
-  SimpleGrid,
-  Switch,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Center, HStack, SimpleGrid, Switch, Text } from '@chakra-ui/react';
 
 import PageLayout from '../components/PageLayout';
 import TierListColumn from '../components/TierListColumn';

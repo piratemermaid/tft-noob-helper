@@ -24,6 +24,7 @@ export default function TierListColumn({ title, tierList, showOwned }) {
 
               return (
                 <a
+                  key={champion.name}
                   href={`https://mobalytics.gg/lol/champions/${champion
                     .toLowerCase()
                     .replaceAll(' ', '')

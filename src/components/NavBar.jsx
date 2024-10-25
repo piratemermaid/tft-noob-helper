@@ -9,7 +9,6 @@ import {
   Spacer,
   Text,
   useColorMode,
-  VStack,
 } from '@chakra-ui/react';
 import { MoonIcon } from '@chakra-ui/icons';
 
