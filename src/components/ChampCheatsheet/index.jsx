@@ -2,11 +2,10 @@
 // TODO: make it look nice
 // TODO: add descriptions of abilities
 
-import { Box, Text, VStack } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 
 import AbilityOrderTable from './AbilityOrderTable';
 import SituationalItems from './SituationalItems';
-import CheatsheetUL from './CheatsheetCardUL';
 import GamePlan from './GamePlan';
 import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
 import { Header } from './Headers';
@@ -26,30 +25,38 @@ export default function ChampCheatsheet({ champName }) {
   }
 
   return (
-    <VStack>
+    <>
       <Text sx={{ fontSize: 24, color: 'purple.300' }}>
         {champName} Cheatsheet
       </Text>
-
-      <Box>
-        <Header>Ability Order</Header>
-        <AbilityOrderTable cheatsheet={cheatsheet} />
-      </Box>
-
-      <Box>
-        <Header>Situational Items</Header>
-        <SituationalItems cheatsheet={cheatsheet} />
-      </Box>
-
-      <Box>
-        <Header>Overview</Header>
-        <Overview cheatsheet={cheatsheet} />
-      </Box>
-
-      <Box>
-        <Header>Game Plan</Header>
-        <GamePlan cheatsheet={cheatsheet} />
-      </Box>
-    </VStack>
+      <Grid
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(2,1fr)"
+        gap={5}
+      >
+        <GridItem sx={10}>
+          <Box>
+            <Header>Ability Order</Header>
+            <AbilityOrderTable cheatsheet={cheatsheet} />
+          </Box>
+          <Box>
+            <Header>Game Plan</Header>
+            <GamePlan cheatsheet={cheatsheet} />
+          </Box>
+        </GridItem>
+        <GridItem sx={2}>
+          <Box>
+            <Header>Overview</Header>
+            <Overview cheatsheet={cheatsheet} />
+          </Box>
+          <Box>
+            <Box>
+              <Header>Situational Items</Header>
+              <SituationalItems cheatsheet={cheatsheet} />
+            </Box>
+          </Box>
+        </GridItem>
+      </Grid>
+    </>
   );
 }
