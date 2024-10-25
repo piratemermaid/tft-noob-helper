@@ -1,8 +1,10 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid, Text } from '@chakra-ui/react';
 
 import CheatsheetCardUL from './CheatsheetCardUL';
 
 export default function GamePlan({ cheatsheet }) {
+  if (!cheatsheet.gamePlan) return <Text>- -</Text>;
+
   return (
     <SimpleGrid columns={3} spacing={2}>
       <CheatsheetCardUL

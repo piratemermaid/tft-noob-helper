@@ -1,6 +1,8 @@
 import { Text } from '@chakra-ui/react';
 
 export default function SituationalItems({ cheatsheet }) {
+  if (!cheatsheet.situationalItems) return <Text>- -</Text>;
+
   return (
     <>
       {cheatsheet.situationalItems.map((item) => (

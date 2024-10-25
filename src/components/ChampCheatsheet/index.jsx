@@ -7,9 +7,9 @@ import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 import AbilityOrderTable from './AbilityOrderTable';
 import SituationalItems from './SituationalItems';
 import GamePlan from './GamePlan';
+import Overview from './Overview';
 import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
 import { Header } from './Headers';
-import Overview from './Overview';
 
 export default function ChampCheatsheet({ champName }) {
   const cheatsheet = CHAMP_CHEETSHEATS[champName];
