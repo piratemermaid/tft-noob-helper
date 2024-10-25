@@ -8,6 +8,8 @@ const AA = 'AA';
 
 const CHAMP_CHEETSHEATS = {
   Lulu: {
+    abilityPriorities: [E, W, Q],
+    abilityStart: [E, Q, W],
     abilityOrder: [E, Q, W, E, E, R, E, W, E, W, R, W, W, Q, Q, R, Q, Q],
     situationalItems: [
       {

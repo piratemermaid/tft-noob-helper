@@ -1,4 +1,5 @@
-import { Box, ListItem, UnorderedList, VStack } from '@chakra-ui/react';
+import { ListItem, UnorderedList, VStack } from '@chakra-ui/react';
+
 import { SubHeader } from './Headers';
 
 export default function CheatsheetCardUL({ title, items }) {
