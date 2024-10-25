@@ -8,6 +8,7 @@ import AbilityOrderTable from './AbilityOrderTable';
 import SituationalItems from './SituationalItems';
 import GamePlan from './GamePlan';
 import Overview from './Overview';
+import TipsAndTricks from './TipsAndTricks';
 import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
 import { Header } from './Headers';
 
@@ -54,6 +55,12 @@ export default function ChampCheatsheet({ champName }) {
               <Header>Situational Items</Header>
               <SituationalItems cheatsheet={cheatsheet} />
             </Box>
+          </Box>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Box>
+            <Header>Tips And Tricks</Header>
+            <TipsAndTricks cheatsheet={cheatsheet} />
           </Box>
         </GridItem>
       </Grid>

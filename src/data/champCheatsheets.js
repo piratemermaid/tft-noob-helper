@@ -131,6 +131,16 @@ const CHAMP_CHEETSHEATS = {
         },
       ],
     },
+    tipsAndTricks: [
+      'Use E to shield when enemy is about to attack',
+      'Use W to polymorph enemy when they go all-in - go for adc/jg',
+      'Use R on ADC when fight starts',
+      'Use Q to slow chasers',
+      'Q poke + autoattack does mean damage',
+      'If not likely to be engaged, can use Q + E + AA to poke, otherwise save E for shielding',
+      "Rule of W: If ADC is engaging, W them - if you're engaging, W enemy",
+      '?Faerie charm or tear as throaway for laning phase?',
+    ],
     counters: [
       'Ziggs',
       'Renata Glasc',
