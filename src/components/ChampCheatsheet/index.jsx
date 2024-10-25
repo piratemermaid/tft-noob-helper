@@ -6,10 +6,11 @@ import { Box, Text, VStack } from '@chakra-ui/react';
 
 import AbilityOrderTable from './AbilityOrderTable';
 import SituationalItems from './SituationalItems';
-import CheatsheetUL from './CheatsheetUL';
+import CheatsheetUL from './CheatsheetCardUL';
 import GamePlan from './GamePlan';
 import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
 import { Header } from './Headers';
+import Overview from './Overview';
 
 export default function ChampCheatsheet({ champName }) {
   const cheatsheet = CHAMP_CHEETSHEATS[champName];
@@ -41,13 +42,8 @@ export default function ChampCheatsheet({ champName }) {
       </Box>
 
       <Box>
-        <Header>Strengths</Header>
-        <CheatsheetUL items={cheatsheet.strengths} />
-      </Box>
-
-      <Box>
-        <Header>Weaknesses</Header>
-        <CheatsheetUL items={cheatsheet.weaknesses} />
+        <Header>Overview</Header>
+        <Overview cheatsheet={cheatsheet} />
       </Box>
 
       <Box>

@@ -1,24 +1,19 @@
-import CheatsheetUL from './CheatsheetUL';
-import { SubHeader } from './Headers';
+import { SimpleGrid } from '@chakra-ui/react';
+
+import CheatsheetCardUL from './CheatsheetCardUL';
 
 export default function GamePlan({ cheatsheet }) {
   return (
-    <>
-      <GamePlanTiming
+    <SimpleGrid columns={3} spacing={2}>
+      <CheatsheetCardUL
         title="Early Game"
         items={cheatsheet.gamePlan.earlyGame}
       />
-      <GamePlanTiming title="Mid Game" items={cheatsheet.gamePlan.midGame} />
-      <GamePlanTiming title="Late Game" items={cheatsheet.gamePlan.lateGame} />
-    </>
+      <CheatsheetCardUL title="Mid Game" items={cheatsheet.gamePlan.midGame} />
+      <CheatsheetCardUL
+        title="Late Game"
+        items={cheatsheet.gamePlan.lateGame}
+      />
+    </SimpleGrid>
   );
 }
-
-const GamePlanTiming = ({ title, items }) => {
-  return (
-    <>
-      <SubHeader>{title}</SubHeader>
-      <CheatsheetUL items={items} />
-    </>
-  );
-};
