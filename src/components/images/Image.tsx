@@ -21,6 +21,8 @@ export default function Image({ name, type = 'current', ...rest }) {
         return `/images/components/${formattedName}.png`;
       case 'revival':
         return `/images/champions/revival/${formattedName}.webp`;
+      case 'leagueItem':
+        return `/images/league/items/${formattedName}.webp`;
       default:
         return `/images/champions/current/${formattedName}.png`;
     }

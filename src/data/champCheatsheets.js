@@ -1,3 +1,5 @@
+import LEAGUE_ITEMS from './leagueItems';
+
 const Q = 'Q';
 const W = 'W';
 const E = 'E';
@@ -13,43 +15,28 @@ const CHAMP_CHEETSHEATS = {
     abilityOrder: [E, Q, W, E, E, R, E, W, E, W, R, W, W, Q, Q, R, Q, Q],
     situationalItems: [
       {
-        name: "Mikael's Blessing",
+        ...LEAGUE_ITEMS.mikaelsBlessing,
         alternativeFor: 'Ardent Censer',
-        description: 'Helps to cleanse an ally from CC',
-        goodAgainst: {
-          types: ['CC'],
-          exampleChamps: ['Ashe', 'Leona', 'Morgana'],
-        },
       },
       {
-        name: 'Morellonomicon',
+        ...LEAGUE_ITEMS.locketIronSolari,
         alternativeFor: 'Ardent Censer',
-        description: 'Grievous Wounds to enemies',
-        goodAgainst: {
-          types: ['Healing', 'Sustain'],
-          exampleChamps: ['Soraka', 'Sona', 'Yuumi'],
-        },
       },
       {
-        name: 'Locket of the Iron Solari',
+        ...LEAGUE_ITEMS.morellonomicon,
         alternativeFor: 'Ardent Censer',
-        description: 'Shield allies',
-        goodAgainst: { types: ['AP'] },
       },
       {
-        name: 'Imperial Mandate',
+        ...LEAGUE_ITEMS.staffOfFlowingWater,
         alternativeFor: 'Moonstone Renewer',
-        description: 'AP for shielding ally',
       },
       {
-        name: 'Imperial Mandate',
-        alternativeFor: 'Moonstone Renewer',
-        description: 'Bonus ally damage on slowed enemy',
-      },
-      {
-        name: 'Vigilant Wardstone',
+        ...LEAGUE_ITEMS.vigilantWardstone,
         alternativeFor: 'Redemption',
-        description: 'Store 3 Control Wards',
+      },
+      {
+        ...LEAGUE_ITEMS.imperialMandate,
+        alternativeFor: 'Moonstone Renewer',
       },
     ],
     strengths: ['E & R keep allies alive', 'Q and E poke'],
@@ -180,6 +167,35 @@ const CHAMP_CHEETSHEATS = {
         ],
       },
     },
+    situationalItems: [
+      {
+        ...LEAGUE_ITEMS.rylaiCrystalScepter,
+        alternativeFor: "Zhonya's Hourglass",
+        goodAgainst: {
+          types: ['AOE'],
+        },
+      },
+      {
+        ...LEAGUE_ITEMS.blackfireTorch,
+        alternativeFor: "Zhonya's Hourglass",
+      },
+      {
+        ...LEAGUE_ITEMS.horizonFocus,
+        alternativeFor: "Zhonya's Hourglass",
+      },
+      {
+        ...LEAGUE_ITEMS.mikaelsBlessing,
+        alternativeFor: 'Redemption',
+      },
+      {
+        ...LEAGUE_ITEMS.imperialMandate,
+        alternativeFor: 'Redemption',
+      },
+      {
+        ...LEAGUE_ITEMS.cryptBloom,
+        alternativeFor: 'Morellonomicon',
+      },
+    ],
   },
 };
 
