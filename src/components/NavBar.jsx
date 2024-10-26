@@ -4,14 +4,12 @@ import {
   Button,
   Flex,
   HStack,
-  IconButton,
   SimpleGrid,
   Spacer,
   Text,
-  useColorMode,
 } from '@chakra-ui/react';
-import { MoonIcon } from '@chakra-ui/icons';
 
+import GameTimer from './League/ChampCheatsheet/GameTimer';
 import ROUTES from '../router/routes';
 
 export default function NavBar() {
@@ -71,6 +69,7 @@ export default function NavBar() {
               })}
             </HStack>
           </Box>
+          <GameTimer />
         </SimpleGrid>
       </Box>
     </Flex>
