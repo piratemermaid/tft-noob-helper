@@ -15,8 +15,6 @@ import { MoonIcon } from '@chakra-ui/icons';
 import ROUTES from '../router/routes';
 
 export default function NavBar() {
-  const { toggleColorMode } = useColorMode();
-
   const { pathname } = useLocation();
 
   const tftRoutes = ROUTES.filter((route) => route.type === 'tft');
@@ -72,13 +70,6 @@ export default function NavBar() {
                 );
               })}
             </HStack>
-          </Box>
-          <Box sx={{ position: 'absolute', right: 10 }}>
-            <IconButton
-              aria-label="Toggle dark mode"
-              onClick={toggleColorMode}
-              icon={<MoonIcon />}
-            />
           </Box>
         </SimpleGrid>
       </Box>
