@@ -1,4 +1,4 @@
-import { useStore } from '../store';
+import { useStore } from '../../store';
 import ChampionCard from './ChampionCard';
 
 export default function ChampionList({

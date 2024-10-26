@@ -18,7 +18,7 @@ import SituationalItems from './SituationalItems';
 import GamePlan from './GamePlan';
 import Overview from './Overview';
 import TipsAndTricks from './TipsAndTricks';
-import CHAMP_CHEETSHEATS from '../../data/champCheatsheets';
+import CHAMP_CHEETSHEATS from '../../../data/league/champCheatsheets';
 import { Header } from './Headers';
 
 export default function ChampCheatsheet({ champName }) {

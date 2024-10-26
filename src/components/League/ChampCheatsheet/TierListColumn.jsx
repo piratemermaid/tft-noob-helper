@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { Fragment } from 'react';
 import { Text, VStack } from '@chakra-ui/react';
 
-import MY_CHAMPS from '../data/league/myChamps';
+import MY_CHAMPS from '../../../data/league/myChamps';
 
 export default function TierListColumn({ title, tierList, showOwned }) {
   const tierColors = {

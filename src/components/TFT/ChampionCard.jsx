@@ -7,10 +7,10 @@ import {
 } from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons';
 
-import ChampionBestItems from './images/ChampionBestItems';
-import ChampionImage from './images/ChampionImage';
-import costColors from '../styles/costColors';
-import { useStore } from '../store';
+import ChampionBestItems from '../images/ChampionBestItems';
+import ChampionImage from '../images/ChampionImage';
+import costColors from '../../styles/costColors';
+import { useStore } from '../../store';
 
 export default function ChampionCard({
   champion,

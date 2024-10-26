@@ -1,5 +1,5 @@
-import LEAGUE_ITEMS from './leagueItems';
-import ROLES from './leagueRoles';
+import LEAGUE_ITEMS from './items';
+import ROLES from './roles';
 
 const Q = 'Q';
 const W = 'W';

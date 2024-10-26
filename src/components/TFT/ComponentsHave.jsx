@@ -1,8 +1,8 @@
 import { SimpleGrid } from '@chakra-ui/react';
 
-import Image from './images/Image';
-import ITEM_COMPONENTS from '../data/components';
-import { useStore } from '../store';
+import Image from '../images/Image';
+import ITEM_COMPONENTS from '../../data/tft/components';
+import { useStore } from '../../store';
 
 export default function ComponentsHave() {
   const selectedComponents = useStore((state) => state.selectedComponents);

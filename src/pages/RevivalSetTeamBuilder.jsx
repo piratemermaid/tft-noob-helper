@@ -1,6 +1,6 @@
 import PageLayout from '../components/PageLayout';
-import TeamBuilder from '../components/TeamBuilder';
-import REVIVAL_CHAMPIONS from '../data/revivalChampions';
+import TeamBuilder from '../components/TFT/TeamBuilder';
+import REVIVAL_CHAMPIONS from '../data/tft/revivalChampions';
 
 export default function RevivalSetTeamBuilder() {
   return (

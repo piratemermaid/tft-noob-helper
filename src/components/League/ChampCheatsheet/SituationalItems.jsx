@@ -1,5 +1,5 @@
 import { Box, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react';
-import Image from '../images/Image';
+import Image from '../../images/Image';
 
 export default function SituationalItems({ cheatsheet }) {
   if (!cheatsheet.situationalItems) return <Text>- -</Text>;

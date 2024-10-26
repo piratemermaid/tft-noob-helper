@@ -1,6 +1,6 @@
 import PageLayout from '../components/PageLayout';
-import TeamBuilder from '../components/TeamBuilder';
-import CURRENT_CHAMPIONS from '../data/currentChampions';
+import TeamBuilder from '../components/TFT/TeamBuilder';
+import CURRENT_CHAMPIONS from '../data/tft/currentChampions';
 
 export default function CurrentSetTeamBuilder() {
   return (

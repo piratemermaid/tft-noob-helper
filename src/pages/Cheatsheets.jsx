@@ -2,8 +2,8 @@ import React from 'react';
 import { SimpleGrid, Text } from '@chakra-ui/react';
 
 import PageLayout from '../components/PageLayout';
-import ChampCheatsheet from '../components/ChampCheatsheet';
-import MY_CHAMPS from '../data/myChamps';
+import ChampCheatsheet from '../components/League/ChampCheatsheet';
+import MY_CHAMPS from '../data/league/myChamps';
 
 export default function Cheatsheets() {
   const [selectedChamp, setSelectedChamp] = React.useState(null);

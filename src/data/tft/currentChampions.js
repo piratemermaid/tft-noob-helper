@@ -1,6 +1,6 @@
-import TRAITS from './traits.js';
+import TRAITS from './traits';
 import CURRENT_ITEMS from './currentItems';
-import { validateItems, validateTraits } from '../scripts/dataValidation.js';
+import { validateItems, validateTraits } from '../../scripts/dataValidation';
 
 // stats not validated
 

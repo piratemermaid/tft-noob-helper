@@ -2,8 +2,8 @@ import React from 'react';
 import { Center, HStack, SimpleGrid, Switch, Text } from '@chakra-ui/react';
 
 import PageLayout from '../components/PageLayout';
-import TierListColumn from '../components/TierListColumn';
-import LOW_ELO_TIER_LIST from '../data/leagueLowEloTierList';
+import TierListColumn from '../components/League/ChampCheatsheet/TierListColumn';
+import LOW_ELO_TIER_LIST from '../data/league/lowEloTierList';
 
 export default function LowEloTierList() {
   const [showOwned, setShowOwned] = React.useState(true);

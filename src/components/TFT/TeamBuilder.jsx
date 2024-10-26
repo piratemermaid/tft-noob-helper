@@ -13,8 +13,8 @@ import {
 import ChampionList from './ChampionList';
 import ComponentsHave from './ComponentsHave';
 import TraitSummary from './TraitSummmary';
-import { useStore } from '../store';
-import { useActiveTraits } from '../hooks/useActiveTraits';
+import { useStore } from '../../store';
+import { useActiveTraits } from '../../hooks/useActiveTraits';
 
 export default function TeamBuilder({ championList, type }) {
   const [checkedTraits, setCheckedTraits] = React.useState([]);

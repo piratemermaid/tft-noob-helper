@@ -1,6 +1,6 @@
 import { Center, Text } from '@chakra-ui/react';
 
-import abilityColors from '../../styles/abilityColors';
+import abilityColors from '../../../styles/abilityColors';
 
 export default function AbilityLetter({ ability, centerProps = {} }) {
   return (
