@@ -2,6 +2,8 @@ import { SimpleGrid } from '@chakra-ui/react';
 import CheatsheetCardUL from './CheatsheetCardUL';
 
 export default function Overview({ cheatsheet }) {
+  if (!cheatsheet.strengths && !cheatsheet.weaknesses) return '- -';
+
   return (
     <SimpleGrid columns={2} spacing={2}>
       {cheatsheet.strengths && (
