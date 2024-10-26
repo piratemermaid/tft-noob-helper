@@ -59,6 +59,59 @@ const LEAGUE_ITEMS = {
   vigilantWardstone: {
     name: 'Vigilant Wardstone',
     description: 'Store 3 Control Wards',
+    summary: 'Control Wards',
+  },
+  malignance: {
+    name: 'Malignance',
+    description: 'Good for champs with combat Ults as it burns and shreds',
+    summary: 'Ult burns enemies',
+  },
+  liandrysTorment: {
+    name: "Liandry's Torment",
+    description:
+      'Burn with abilities and deal bonus damage. Good against tanks.',
+    summary: 'Burn and bonus damage',
+    goodAgainst: {
+      types: ['Tank'],
+    },
+  },
+  voidStaff: {
+    name: 'Void Staff',
+    description:
+      'Magic penetration, good against teams with lots of magic resist',
+    summary: 'Magic penetration',
+    goodAgainst: {
+      types: ['Magic Resist'],
+    },
+  },
+  bansheesVeil: {
+    name: "Banshee's Veil",
+    description: 'Spell shield',
+    summary: 'Spell shield',
+    goodAgainst: {
+      types: ['CC'],
+    },
+  },
+  archangelsStaff: {
+    name: "Archangel's Staff",
+    description: 'Gain AP based on bonus mana, and gain bonus mana',
+    summary: 'AP and bonus mana',
+  },
+  rabadonsDeathcap: {
+    name: "Rabadon's Deathcap",
+    description: 'Huge AP increase',
+    summary: 'Huge AP increase',
+    goodAgainst: {
+      types: ['Low Magic Resist', 'Squishy'],
+    },
+  },
+  zhonyasHourglass: {
+    name: "Zhonya's Hourglass",
+    description: 'Stasis',
+    summary: 'Stasis',
+    goodAgainst: {
+      types: ['Assassin', 'Burst Damage'],
+    },
   },
 };
 

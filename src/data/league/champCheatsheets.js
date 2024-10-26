@@ -1,4 +1,5 @@
-import LEAGUE_ITEMS from './items';
+import GAME_PLANS from './cheatsheetGamePlans';
+import ITEMS from './items';
 import ROLES from './roles';
 
 const Q = 'Q';
@@ -18,49 +19,33 @@ const CHAMP_CHEETSHEATS = {
       abilityOrder: [E, Q, W, E, E, R, E, W, E, W, R, W, W, Q, Q, R, Q, Q],
       situationalItems: [
         {
-          ...LEAGUE_ITEMS.mikaelsBlessing,
+          ...ITEMS.mikaelsBlessing,
           alternativeFor: 'Ardent Censer',
         },
         {
-          ...LEAGUE_ITEMS.locketIronSolari,
+          ...ITEMS.locketIronSolari,
           alternativeFor: 'Ardent Censer',
         },
         {
-          ...LEAGUE_ITEMS.morellonomicon,
+          ...ITEMS.morellonomicon,
           alternativeFor: 'Ardent Censer',
         },
         {
-          ...LEAGUE_ITEMS.staffOfFlowingWater,
+          ...ITEMS.staffOfFlowingWater,
           alternativeFor: 'Moonstone Renewer',
         },
         {
-          ...LEAGUE_ITEMS.vigilantWardstone,
+          ...ITEMS.vigilantWardstone,
           alternativeFor: 'Redemption',
         },
         {
-          ...LEAGUE_ITEMS.imperialMandate,
+          ...ITEMS.imperialMandate,
           alternativeFor: 'Moonstone Renewer',
         },
       ],
       strengths: ['E & R keep allies alive', 'Q and E poke'],
       weaknesses: ['Squishy', 'Prone to CC', 'Immobile'],
-      gamePlan: {
-        earlyGame: [
-          'Poke enemy with Q & E, commit to all-in when low',
-          'Keep ADC alive as long as possible, shield',
-          'Rotate mid after destroying bot tower',
-        ],
-        midGame: [
-          'Stick with team at all times',
-          'Keep eye on next objective spawn, place vision',
-          'Look for picks',
-        ],
-        lateGame: [
-          'Vision at objectives and high traffic areas',
-          'Stay with team at all times',
-          'Peel for allies',
-        ],
-      },
+      gamePlan: GAME_PLANS[ROLES.SUPPORT],
       combos: {
         easy: [
           {
@@ -185,53 +170,158 @@ const CHAMP_CHEETSHEATS = {
         'Easy to misuse E',
         'Missing Q can be punishing',
       ],
-      gamePlan: {
-        earlyGame: [
-          'Poke enemy for health advantage, commit to all-in when low',
-          'Only use Q if you have a guaranteed hit',
-          'After destroying bot tower, rotate mid',
-        ],
-        midGame: [
-          'Try to stay with team at all times',
-          'Keep an eye on next objective spawn, place vision',
-          'Look for picks',
-        ],
-        lateGame: [
-          'Vision at objectives and high traffic areas',
-          'Stay with team at all times',
-          'Peel for allies',
-        ],
-      },
+      gamePlan: GAME_PLANS[ROLES.SUPPORT],
       situationalItems: [
         {
-          ...LEAGUE_ITEMS.rylaiCrystalScepter,
+          ...ITEMS.rylaiCrystalScepter,
           alternativeFor: "Zhonya's Hourglass",
           goodAgainst: {
             types: ['AOE'],
           },
         },
         {
-          ...LEAGUE_ITEMS.blackfireTorch,
+          ...ITEMS.blackfireTorch,
           alternativeFor: "Zhonya's Hourglass",
         },
         {
-          ...LEAGUE_ITEMS.horizonFocus,
+          ...ITEMS.horizonFocus,
           alternativeFor: "Zhonya's Hourglass",
         },
         {
-          ...LEAGUE_ITEMS.mikaelsBlessing,
+          ...ITEMS.mikaelsBlessing,
           alternativeFor: 'Redemption',
         },
         {
-          ...LEAGUE_ITEMS.imperialMandate,
+          ...ITEMS.imperialMandate,
           alternativeFor: 'Redemption',
         },
         {
-          ...LEAGUE_ITEMS.cryptBloom,
+          ...ITEMS.cryptBloom,
           alternativeFor: 'Morellonomicon',
         },
       ],
       tipsAndTricks: ["R + Zhonya's for invulnerability"],
+    },
+  ],
+  Lux: [
+    {
+      role: ROLES.SUPPORT,
+      abilityPriorities: [E, Q, W],
+      abilityStart: [E, Q, W],
+      abilityOrder: [E, Q, W, E, E, R, E, Q, E, Q, R, Q, Q, W, W, R, W, W],
+      strengths: [
+        'Burst potential with Q -> E -> Ult combo',
+        `Strong W shield, can protect all team from poke`,
+        `Q can be used to secure picks inside the enemy Jungle or
+          from blind areas. Especially beneficial if the picked
+          target happens to be jg or adc`,
+      ],
+      weaknesses: [
+        `Very immobile and killed quick if caught out without Q`,
+        `Somewhat item reliant, so camping and killing her a lot 
+          during the early game will put her behind`,
+        `She can be picked off easily by the enemy team if she wanders too far 
+          from her team, or when she is trying to take the Blue Buff.
+          Also very weak against enemy all-ins`,
+      ],
+      gamePlan: GAME_PLANS[ROLES.SUPPORT],
+      situationalItems: [
+        {
+          ...ITEMS.malignance,
+          alternativeFor: 'Stormsurge',
+        },
+        {
+          ...ITEMS.horizonFocus,
+          alternativeFor: 'Stormsurge',
+        },
+        {
+          ...ITEMS.rabadonsDeathcap,
+          alternativeFor: 'Stormsurge',
+        },
+        {
+          ...ITEMS.zhonyasHourglass,
+          alternativeFor: 'Shadowflame',
+        },
+        {
+          ...ITEMS.liandrysTorment,
+          alternativeFor: 'Shadowflame',
+        },
+        {
+          ...ITEMS.voidStaff,
+          alternativeFor: 'Morellonomicon',
+        },
+      ],
+    },
+    {
+      role: ROLES.MID,
+      abilityPriorities: [E, Q, W],
+      abilityStart: [E, Q, W],
+      abilityOrder: [E, Q, W, E, E, R, E, Q, E, Q, R, Q, Q, W, W, R, W, W],
+      strengths: [
+        'Burst potential with Q -> E -> Ult combo',
+        `Strong W shield, can protect all team from poke`,
+        `Q can be used to secure picks inside the enemy Jungle or
+          from blind areas. Especially beneficial if the picked
+          target happens to be jg or adc`,
+      ],
+      weaknesses: [
+        `Very immobile and killed quick if caught out without Q`,
+        `Somewhat item reliant, so camping and killing her a lot 
+          during the early game will put her behind`,
+        `She can be picked off easily by the enemy team if she wanders too far 
+          from her team, or when she is trying to take the Blue Buff.
+          Also very weak against enemy all-ins`,
+      ],
+      gamePlan: {
+        earlyGame: [
+          `Harass and poke enemy`,
+          `Play safe for the first few levels while poking with E, 
+            commit to all-in once they are low enough`,
+          `After lv 6 and getting key component items, look to harass
+            and constantly push enemy into their tower. Get turret
+            plating for gold.`,
+        ],
+        midGame: [
+          `After bot has rotated mid, rotate to bot or somewhere else 
+            to keep farming for XP.`,
+          `Seige objectives with team. Poke enemy as much as possible while 
+            team is on towers or objectives.`,
+          `Delay team fights for as long as possible while you harass 
+            enemy and poke with E. Look to blow up any enemy hit by Q.`,
+        ],
+        lateGame: [
+          `Stick with team.`,
+          `Look for picks, especially on isolated targets.`,
+          `Keep a constant eye on positioning. Do not get picked off while 
+            harassing.`,
+        ],
+      },
+      situationalItems: [
+        {
+          ...ITEMS.zhonyasHourglass,
+          alternativeFor: 'Shadowflame',
+        },
+        {
+          ...ITEMS.horizonFocus,
+          alternativeFor: 'Shadowflame',
+        },
+        {
+          ...ITEMS.malignance,
+          alternativeFor: 'Shadowflame',
+        },
+        {
+          ...ITEMS.morellonomicon,
+          alternativeFor: "Rabadon's Deathcap",
+        },
+        {
+          ...ITEMS.bansheesVeil,
+          alternativeFor: "Rabadon's Deathcap",
+        },
+        {
+          ...ITEMS.archangelsStaff,
+          alternativeFor: 'Void Staff',
+        },
+      ],
     },
   ],
   Teemo: [
@@ -239,60 +329,60 @@ const CHAMP_CHEETSHEATS = {
       role: ROLES.TOP,
       strengths: [
         `His Passive can be really obnoxious to deal with, 
-      especially when he is hiding in a brush and moving in and out 
-      while pelting his laner.`,
+          especially when he is hiding in a brush and moving in and out 
+          while pelting his laner.`,
         `Makes ADCs miss their auto-attacks. This can reduce the 
-      effectiveness of the carry for a while, which gives his 
-      team some time to engage/disengage freely.`,
+          effectiveness of the carry for a while, which gives his 
+          team some time to engage/disengage freely.`,
         `His Ult can act as a substitution for vision, as well as 
-      deal a lot of damage when kept in the right spots. This is 
-      especially useful when it comes to avoiding ganks.`,
+          deal a lot of damage when kept in the right spots. This is 
+          especially useful when it comes to avoiding ganks.`,
       ],
       weaknesses: [
         `Very squishy and layered crowd control can get rid of him
-      immediately. He is vulnerable when his is down, and can be engaged
-      upon if his movement speed is reduced.`,
+          immediately. He is vulnerable when his is down, and can be engaged
+          upon if his movement speed is reduced.`,
         `His Ultimate can easily be gotten rid of by the enemy by purchasing
-      Control Wards. Enemy Junglers with leaps and dashes can also bypass
-      these mushrooms by taking odd routes.`,
+          Control Wards. Enemy Junglers with leaps and dashes can also bypass
+          these mushrooms by taking odd routes.`,
         `He falls off quite drastically during the late game and can only
-      resort to split pushing. This puts his team in a disadvantageous
-      state and causes a lot of tension to build up within the team.`,
+          resort to split pushing. This puts his team in a disadvantageous
+          state and causes a lot of tension to build up within the team.`,
       ],
       gamePlan: {
         earlyGame: [
           `Your goal in the early game is to play safe, pick up gold and XP
-        and avoid dying to the enemy laner. You are rather weak in the early
-        game and need time to come online.`,
+            and avoid dying to the enemy laner. You are rather weak in the early
+            game and need time to come online.`,
           `Once you have quite a few levels under your belt, you should look for
-        short favourable trades. As you’re not strong in the early game, you
-        may wish to wait for the enemy to waste an ability before playing
-        aggressive.`,
+            short favourable trades. As you’re not strong in the early game, you
+            may wish to wait for the enemy to waste an ability before playing
+            aggressive.`,
           `Keep the minion wave closer to your side of the map in the early game.
-        This will ensure safety and reduce your chances of dying in lane.`,
+            This will ensure safety and reduce your chances of dying in lane.`,
         ],
       },
       midGame: [
         `Split push during the mid-game and try to secure side objectives.
-        Avoid grouping if possible.`,
+          Avoid grouping if possible.`,
         `Use your strong duelling potential in the mid-game to fight and duel
-        anyone who tries to stop you from split pushing.`,
+          anyone who tries to stop you from split pushing.`,
         `Although you’re a really strong split pusher in the mid-game, be
-        prepared to group with your team and fight 5v5. You should usually
-        start grouping when there are no nearby objectives to take.`,
+          prepared to group with your team and fight 5v5. You should usually
+          start grouping when there are no nearby objectives to take.`,
       ],
       lateGame: [
         `Peel for your carries in late game team fights to increase the
-        chances of your team winning the fight. If they die at the beginning,
-        you will not be able to win the fight alone.`,
+          chances of your team winning the fight. If they die at the beginning,
+          you will not be able to win the fight alone.`,
         `Stick with your team in the late game. Do not split up or walk away
-        from them otherwise the enemy may try to pick you off or initiate a
-        4v5 fight when you’re away from your team.`,
+          from them otherwise the enemy may try to pick you off or initiate a
+          4v5 fight when you’re away from your team.`,
         `Focus the nearest enemy champion to your carries and work as a team
-        to take down the enemy one by one. If you focus the backline alone,
-        you may be an easy target for the enemy and may die quickly. By
-        focusing on the nearest champion, you will survive for longer and
-        keep your carries alive.`,
+          to take down the enemy one by one. If you focus the backline alone,
+          you may be an easy target for the enemy and may die quickly. By
+          focusing on the nearest champion, you will survive for longer and
+          keep your carries alive.`,
       ],
     },
     {
