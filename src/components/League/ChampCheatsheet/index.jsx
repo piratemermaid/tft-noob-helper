@@ -23,9 +23,9 @@ import { Header } from './Headers';
 
 export default function ChampCheatsheet({ champName }) {
   const cheatsheet = CHAMP_CHEETSHEATS[champName];
-  const champRoles = Object.keys(cheatsheet).map(
-    (index) => cheatsheet[index].role
-  );
+  const champRoles = cheatsheet
+    ? Object.keys(cheatsheet).map((index) => cheatsheet[index].role)
+    : null;
 
   const [selectedRole, setSelectedRole] = React.useState(
     champRoles ? champRoles[0] : null
