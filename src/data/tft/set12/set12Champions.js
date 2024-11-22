@@ -1,6 +1,6 @@
-import TRAITS from './set12Traits';
+import TRAITS from '../set12Traits';
 import CURRENT_ITEMS from './set12Items';
-import { validateItems, validateTraits } from '../../scripts/dataValidation';
+import { validateItems, validateTraits } from '../../../scripts/dataValidation';
 
 // stats not validated
 

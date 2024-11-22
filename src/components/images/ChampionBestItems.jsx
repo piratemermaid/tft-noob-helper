@@ -2,7 +2,7 @@ import { SimpleGrid, Text } from '@chakra-ui/react';
 
 import Image from './Image';
 import ItemImage from './ItemImage';
-import CURRENT_ITEMS from '../../data/tft/set12Items';
+import CURRENT_ITEMS from '../../data/tft/set12/set12Items';
 import { useStore } from '../../store';
 
 export default function ChampionBestItems({ items }) {

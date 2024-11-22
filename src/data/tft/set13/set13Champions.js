@@ -1,6 +1,9 @@
 import TRAITS from './set13Traits.js';
-import CURRENT_ITEMS from './set12Items.js';
-import { validateItems, validateTraits } from '../../scripts/dataValidation';
+import CURRENT_ITEMS from '../set12/set12Items.js';
+import {
+  validateItems,
+  validateTraits,
+} from '../../../scripts/dataValidation.js';
 
 const atkTank = 'Attack Tank';
 const atkFgt = 'Attack Fighter';
