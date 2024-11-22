@@ -27,7 +27,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Rebel', 'Sentinel'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Rell',
@@ -35,7 +35,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Conqueror', 'Sentinel', 'Visionary'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Renata Glasc',
@@ -43,7 +43,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Chem-Baron', 'Visionary'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Sett',
@@ -51,7 +51,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Enforcer', 'Bruiser'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Zeri',
@@ -59,7 +59,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Firelight', 'Sniper'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Violet',
@@ -67,15 +67,15 @@ const CURRENT_CHAMPIONS = [
     traits: ['Family', 'Pit Fighter'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Elise',
     cost: 4,
-    traits: ['Black Rose'], // TODO
+    traits: ['Black Rose'], //TODO
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Trundle',
@@ -83,7 +83,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Bruiser'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Nocturne',
@@ -91,7 +91,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Quickstriker'],
     role: atkRpr,
     position: front,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Ziggs',
@@ -99,7 +99,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Dominator'],
     role: magCast,
     position: back,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Gangplank',
@@ -107,7 +107,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Form Swapper', 'Pit Fighter'],
     role: atkCast,
     position: both,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Darius',
@@ -115,7 +115,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Conqueror', 'Watcher'],
     role: atkFgt,
     position: front,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Swain',
@@ -123,7 +123,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Conqueror', 'Form Swapper', 'Sorceror'],
     role: magCast,
     position: both,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Morgana',
@@ -131,7 +131,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Black Rose', 'Visionary'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Cassiopeia',
@@ -139,7 +139,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Black Rose', 'Dominator'],
     role: magCast,
     position: back,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Blitzcrank',
@@ -147,7 +147,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Dominator'],
     role: magTank,
     position: front,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: "Kog'Maw",
@@ -155,7 +155,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Sniper'],
     role: magCarry,
     position: back,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Loris',
@@ -163,7 +163,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Enforcer', 'Sentinel'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Ezreal',
@@ -171,7 +171,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Academy', 'Rebel', 'Artilerist'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Zoe',
@@ -179,7 +179,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Rebel', 'Sorcerer'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Ambessa',
@@ -187,7 +187,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Emissary', 'Conqueror', 'Quickstriker'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Twisted Fate',
@@ -195,7 +195,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Enforcer', 'Quickstriker'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Corki',
@@ -203,7 +203,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Artilerist'],
     role: atkCast,
     position: back,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Ekko',
@@ -211,7 +211,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Firelight', 'Scrap', 'Ambusher'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: 'Maddie',
@@ -219,7 +219,15 @@ const CURRENT_CHAMPIONS = [
     traits: ['Enforcer', 'Sniper'],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
+  },
+  {
+    name: 'Caitlyn',
+    cost: 5, //TODO
+    traits: ['Enforcer', 'Sniper'],
+    role: null,
+    position: null,
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -227,7 +235,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -235,7 +243,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -243,7 +251,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -251,7 +259,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -259,7 +267,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -267,7 +275,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -275,7 +283,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -283,7 +291,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -291,7 +299,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -299,7 +307,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -307,7 +315,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -315,7 +323,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -323,7 +331,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -331,7 +339,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -339,7 +347,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -347,7 +355,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -355,7 +363,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
   {
     name: '',
@@ -363,15 +371,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [],
-  },
-  {
-    name: '',
-    cost: 1,
-    traits: [],
-    role: null,
-    position: null,
-    bestItems: [],
+    bestItems: [], //TODO
   },
 ];
 

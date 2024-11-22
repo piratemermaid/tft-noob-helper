@@ -24,7 +24,7 @@ export default function Image({ name, type = 'current', ...rest }) {
       case 'leagueItem':
         return `/images/league/items/${formattedName}.webp`;
       default:
-        return `/images/champions/current/${formattedName}.png`;
+        return `/images/champions/current/${formattedName.toLowerCase()}.png`;
     }
   };
 
