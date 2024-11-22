@@ -35,7 +35,7 @@ const blueArmor = "Protector's Vow";
 const redBuff = 'Red Buff';
 const electricSword = 'Statikk Shiv';
 
-export const atkTankItems = [
+export const attacktank = [
   scorpionTailLookingThing,
   armorWithGreen,
   orangeSpikyArmor,
@@ -46,7 +46,7 @@ export const atkTankItems = [
   metalCircles,
 ];
 
-export const atkFgtrItems = [
+export const attackfighter = [
   blood,
   fieryFist,
   bow,
@@ -68,7 +68,7 @@ export const attackreaper = [
   blood,
 ];
 
-export const magTankItems = [
+export const magictank = [
   metalyClawBlue,
   fieryArmor,
   orangeMetalArmor,
@@ -79,7 +79,7 @@ export const magTankItems = [
   blueArmor,
 ];
 
-export const magCastItems = [
+export const magiccaster = [
   greenSpear,
   archangelStaff,
   magicHat,
@@ -90,7 +90,7 @@ export const magCastItems = [
   purpleHelmet,
 ];
 
-export const magRprItems = [
+export const magicreaper = [
   magicHat,
   pinkFist,
   blueScytheyThing,
@@ -112,7 +112,7 @@ export const magCastBlueBuffItems = [
   purpleHelmet,
 ];
 
-export const magCarryItems = [
+export const magicarry = [
   fierySword,
   pinkFist,
   archangelStaff,
@@ -123,18 +123,7 @@ export const magCarryItems = [
   nashorsTooth,
 ];
 
-export const magCarryItemsAshe = [
-  fierySword,
-  pinkFist,
-  archangelStaff,
-  magicHat,
-  blueScytheyThing,
-  greenSpear,
-  scorpionTailLookingThing,
-  purpleHelmet,
-];
-
-export const magFgtrItems = [
+export const magicfighter = [
   blood,
   blueScytheyThing,
   pinkFist,
@@ -145,7 +134,7 @@ export const magFgtrItems = [
   crown,
 ];
 
-export const atkCarryItems = [
+export const attackcarry = [
   rageblade,
   blueScytheyThing,
   fierySword,
