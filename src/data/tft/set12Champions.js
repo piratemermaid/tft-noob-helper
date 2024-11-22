@@ -1,4 +1,4 @@
-import TRAITS from './traits';
+import TRAITS from './set12Traits';
 import CURRENT_ITEMS from './set12Items';
 import { validateItems, validateTraits } from '../../scripts/dataValidation';
 
