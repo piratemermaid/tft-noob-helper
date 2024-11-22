@@ -1,14 +1,16 @@
+import { Fragment } from 'react';
 import { SimpleGrid, Text } from '@chakra-ui/react';
 
 import Image from './Image';
 import ItemImage from './ItemImage';
 import CURRENT_ITEMS from '../../data/tft/set12/set12Items';
+import * as defaultItems from '../../data/tft/defaultItems';
 import { useStore } from '../../store';
 
-export default function ChampionBestItems({ items }) {
+export default function ChampionBestItems({ items, role }) {
   const selectedComponents = useStore((state) => state.selectedComponents);
 
-  if (!items) return null;
+  if (!items?.length && !role) return null;
 
   const ComponentImage = ({ name }) => {
     return (
@@ -20,9 +22,13 @@ export default function ChampionBestItems({ items }) {
     );
   };
 
+  const bestItems = items?.length
+    ? items
+    : defaultItems[`${role.toLowerCase().replaceAll(' ', '')}`];
+
   return (
     <SimpleGrid columns={3} spacing={1}>
-      {items.map((item) => {
+      {bestItems.map((item, index) => {
         const itemData = CURRENT_ITEMS.find(
           (itemb) => itemb.combinesInto === item
         );
@@ -34,7 +40,7 @@ export default function ChampionBestItems({ items }) {
         const { recipe } = itemData ?? null;
 
         return (
-          <>
+          <Fragment key={index}>
             {recipe.length ? (
               <SimpleGrid
                 key={item}
@@ -65,7 +71,7 @@ export default function ChampionBestItems({ items }) {
             ) : (
               <Image type="item" name={item} />
             )}
-          </>
+          </Fragment>
         );
       })}
     </SimpleGrid>

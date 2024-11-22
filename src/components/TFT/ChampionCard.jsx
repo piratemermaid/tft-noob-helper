@@ -93,7 +93,7 @@ export default function ChampionCard({
         </Box>
       </SimpleGrid>
       {isSelectedList ? (
-        <ChampionBestItems items={champion.bestItems} />
+        <ChampionBestItems items={champion.bestItems} role={champion.role} />
       ) : (
         <></>
       )}
