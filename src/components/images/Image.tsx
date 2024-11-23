@@ -23,6 +23,8 @@ export default function Image({ name, type = 'current', ...rest }) {
         return `/images/champions/revival/${formattedName}.webp`;
       case 'leagueItem':
         return `/images/league/items/${formattedName}.webp`;
+      case 'champwebp':
+        return `/images/champions/current/${formattedName.toLowerCase()}.webp`;
       default:
         return `/images/champions/current/${formattedName.toLowerCase()}.png`;
     }

@@ -23,67 +23,67 @@ const both = 'both';
 const CURRENT_CHAMPIONS = [
   {
     name: 'Irelia',
-    cost: 1, //TODO
+    cost: 1,
     traits: ['Rebel', 'Sentinel'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magTank,
+    position: front,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
     name: 'Rell',
     cost: 2,
     traits: ['Conqueror', 'Sentinel', 'Visionary'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magTank,
+    position: front,
+    bestItems: ['Bramble Vest', "Dragon's Claw", 'Gargoyle Stoneplate'],
   },
   {
     name: 'Renata Glasc',
     cost: 2,
     traits: ['Chem-Baron', 'Visionary'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
   },
   {
     name: 'Sett',
-    cost: 1, //TODO
+    cost: 2,
     traits: ['Enforcer', 'Bruiser'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magTank,
+    position: front,
+    bestItems: ["Warmog's Armor", 'Bramble Vest', "Dragon's Claw"],
   },
   {
     name: 'Zeri',
-    cost: 1, //TODO
+    cost: 2,
     traits: ['Firelight', 'Sniper'],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Last Whisper'],
   },
   {
     name: 'Violet',
     cost: 1,
     traits: ['Family', 'Pit Fighter'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: atkFgt,
+    position: front,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
     name: 'Elise',
     cost: 4,
-    traits: ['Black Rose'], //TODO
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    traits: ['Black Rose', 'Form Swapper', 'Bruiser'],
+    role: magTank,
+    position: both,
+    bestItems: ['Gargoyle Stoneplate', "Dragon's Claw", "Warmog's Armor"],
   },
   {
     name: 'Trundle',
     cost: 1,
     traits: ['Scrap', 'Bruiser'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: atkTank,
+    position: front,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
     name: 'Nocturne',
@@ -91,7 +91,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Quickstriker'],
     role: atkRpr,
     position: front,
-    bestItems: [], //TODO
+    bestItems: ['Bloodthirster', "Guinsoo's Rageblade", 'Edge of Night'],
   },
   {
     name: 'Ziggs',
@@ -99,7 +99,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Dominator'],
     role: magCast,
     position: back,
-    bestItems: [], //TODO
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
   },
   {
     name: 'Gangplank',
@@ -107,7 +107,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Form Swapper', 'Pit Fighter'],
     role: atkCast,
     position: both,
-    bestItems: [], //TODO
+    bestItems: ['Spear of Shojin', 'Infinity Edge', 'Last Whisper'],
   },
   {
     name: 'Darius',
@@ -115,23 +115,23 @@ const CURRENT_CHAMPIONS = [
     traits: ['Conqueror', 'Watcher'],
     role: atkFgt,
     position: front,
-    bestItems: [], //TODO
+    bestItems: ['Bloodthirster', "Titan's Resolve", "Sterak's Gage"],
   },
   {
     name: 'Swain',
     cost: 3,
     traits: ['Conqueror', 'Form Swapper', 'Sorceror'],
-    role: magCast,
+    role: magTank,
     position: both,
-    bestItems: [], //TODO
+    bestItems: ['Gargoyle Stoneplate', "Warmog's Armor", 'Crownguard'],
   },
   {
     name: 'Morgana',
     cost: 1,
     traits: ['Black Rose', 'Visionary'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
   },
   {
     name: 'Cassiopeia',
@@ -139,7 +139,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Black Rose', 'Dominator'],
     role: magCast,
     position: back,
-    bestItems: [], //TODO
+    bestItems: ['Blue Buff', "Nashor's Tooth", 'Jeweled Gauntlet'],
   },
   {
     name: 'Blitzcrank',
@@ -147,7 +147,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Dominator'],
     role: magTank,
     position: front,
-    bestItems: [], //TODO
+    bestItems: ['Gargoyle Stoneplate', 'Ionic Spark', "Warmor's Armor"],
   },
   {
     name: "Kog'Maw",
@@ -155,47 +155,47 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Sniper'],
     role: magCarry,
     position: back,
-    bestItems: [], //TODO
+    bestItems: ['Blue Buff', "Archangel's Staff", 'Hextech Gunblade'],
   },
   {
     name: 'Loris',
     cost: 3,
     traits: ['Enforcer', 'Sentinel'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magTank,
+    position: front,
+    bestItems: ["Warmog's Armor", 'Redemption', 'Gargoyle Stoneplate'],
   },
   {
     name: 'Ezreal',
     cost: 3,
     traits: ['Academy', 'Rebel', 'Artilerist'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: atkCast,
+    position: back,
+    bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
   },
   {
     name: 'Zoe',
     cost: 4,
     traits: ['Rebel', 'Sorcerer'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
   },
   {
     name: 'Ambessa',
     cost: 4,
     traits: ['Emissary', 'Conqueror', 'Quickstriker'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: atkFgt,
+    position: front,
+    bestItems: ['Bloodthirster', "Titan's Resolve", "Sterak's Gage"],
   },
   {
     name: 'Twisted Fate',
     cost: 3,
     traits: ['Enforcer', 'Quickstriker'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', 'Jeweled Gauntlet', "Nashor's Tooth"],
   },
   {
     name: 'Corki',
@@ -203,7 +203,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Scrap', 'Artilerist'],
     role: atkCast,
     position: back,
-    bestItems: [], //TODO
+    bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
   },
   {
     name: 'Ekko',
@@ -211,23 +211,287 @@ const CURRENT_CHAMPIONS = [
     traits: ['Firelight', 'Scrap', 'Ambusher'],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: ['Hand of Justice', 'Ionic Spark', 'Crownguard'],
   },
   {
     name: 'Maddie',
     cost: 1,
     traits: ['Enforcer', 'Sniper'],
-    role: null,
-    position: null,
-    bestItems: [], //TODO
+    role: atkCast,
+    position: back,
+    bestItems: ["Guinsoo's Rageblade", 'Last Whisper', 'Infinity Edge'],
   },
   {
     name: 'Caitlyn',
-    cost: 5, //TODO
+    cost: 5,
     traits: ['Enforcer', 'Sniper'],
+    role: atkCast,
+    position: back,
+    bestItems: ['Spear of Shojin', 'Infinity Edge', 'Last Whisper'],
+  },
+  {
+    name: 'Lux',
+    cost: 1,
+    traits: ['Academy', 'Sorcerer'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
+  },
+  {
+    name: 'Steb',
+    cost: 1,
+    traits: ['Enforcer', 'Bruiser'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Bramble Vest', "Warmog's Armor"],
+  },
+  {
+    name: 'Tristana',
+    cost: 2,
+    traits: ['Emissary', 'Artillerist'],
+    role: atkCast,
+    position: back,
+    bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Last Whisper'],
+  },
+  {
+    name: 'Leona',
+    cost: 2,
+    traits: ['Academy', 'Sentinel'],
+    role: magTank,
+    position: front,
+    bestItems: ['Bramble Vest', "Warmog's Armor", "Dragon's Claw"],
+  },
+  {
+    name: 'Vladimir',
+    cost: 2,
+    traits: ['Black Rose', 'Watcher', 'Sorceror'],
+    role: magTank,
+    position: front,
+    bestItems: ["Warmog's Armor", 'Redemption', 'Gargoyle Stoneplate'],
+  },
+  {
+    name: 'Nami',
+    cost: 3,
+    traits: ['Emissary', 'Sorceror'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Guantlet'],
+  },
+  {
+    name: 'Zyra',
+    cost: 1,
+    traits: ['Experiment', 'Sorceror'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Statikk Shiv'],
+  },
+  {
+    name: 'Vex',
+    cost: 1,
+    traits: ['Rebel', 'Visionary'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
+  },
+  {
+    name: 'Amumu',
+    cost: 1,
+    traits: ['Automata', 'Watcher'],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: ["Warmog's Armor", "Dragon's Claw", 'Gargoyle Stoneplate'],
+  },
+  {
+    name: 'Singed',
+    cost: 1,
+    traits: ['Chem-Baron', 'Sentinel'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
+  },
+  {
+    name: 'Renni',
+    cost: 3,
+    traits: ['Chem-Baron', 'Bruiser'],
+    role: atkTank,
+    position: front,
+    bestItems: ['Bloodthirster', "Titan's Resolve", "Sterak's Gage"],
+  },
+  {
+    name: 'Smeech',
+    cost: 3,
+    traits: ['Chem-Baron', 'Ambusher'],
+    role: atkRpr,
+    position: front,
+    bestItems: ['Bloodthirster', "Titan's Resolve", "Sterak's Gage"],
+  },
+  {
+    name: 'Sevika',
+    cost: 5,
+    traits: ['High Roller', 'Chem-Baron', 'Pit Fighter'],
+    role: null,
+    position: null,
+    bestItems: ['Bloodthirster', "Titan's Resolve", "Sterak's Gage"],
+  },
+  {
+    name: 'Akali',
+    cost: 2,
+    traits: ['Rebel', 'Quickstriker'],
+    role: magRpr,
+    position: front,
+    bestItems: ['Bloodthirster', 'Hand of Justice', 'Jeweled Gauntlet'],
+  },
+  {
+    name: 'Nunu & Willump',
+    cost: 3,
+    traits: ['Experiment', 'Bruiser', 'Visionary'],
+    role: magTank,
+    position: front,
+    bestItems: ['Bloodthirster', "Warmog's Armor", "Archangel's Staff"],
+  },
+  {
+    name: 'Camille',
+    cost: 2,
+    traits: ['Enforcer', 'Ambusher'],
+    role: atkFgt,
+    position: front,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
+  },
+  {
+    name: 'Illaoi',
+    cost: 4,
+    traits: ['Rebel', 'Sentinel'],
+    role: magTank,
+    position: front,
+    bestItems: ["Warmog's Armor", 'Gargoyle Stoneplate', 'Redemption'],
+  },
+  {
+    name: 'Garen',
+    cost: 4,
+    traits: ['Emissary', 'Watcher'],
+    role: atkTank,
+    position: front,
+    bestItems: ["Warmog's Armor", 'Redemption', "Protector's Vow"],
+  },
+  {
+    name: 'Heimerdinger',
+    cost: 4,
+    traits: ['Academy', 'Visionary'],
+    role: magCast,
+    position: back,
+    bestItems: ['Blue Buff', "Archangel's Staff", 'Hextech Gunblade'],
+  },
+  {
+    name: 'Malzahar',
+    cost: 5,
+    traits: ['Automata', 'Visionary'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', 'Morellonomicon', "Rabadon's Deathcap"],
+  },
+  {
+    name: 'Vi',
+    cost: 4,
+    traits: ['Enforcer', 'Pit Fighter'],
+    role: null,
+    position: null,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
+  },
+  {
+    name: 'Twitch',
+    cost: 4,
+    traits: ['Experiment', 'Sniper'],
+    role: atkCarry,
+    position: back,
+    bestItems: ["Guinsoo's Rageblade", "Runaan's Hurricane", 'Last Whisper'],
+  },
+  {
+    name: 'Rumble',
+    cost: 5,
+    traits: ['Junker King', 'Scrap', 'Sentinel'],
+    role: magFgt,
+    position: front,
+    bestItems: ['Bloodthirster', "Titan's Resolve", 'Crownguard'],
+  },
+  {
+    name: 'Silco',
+    cost: 4,
+    traits: ['Chem-Baron', 'Dominator'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Statikk Shiv'],
+  },
+  {
+    name: 'Jayce',
+    cost: 5,
+    traits: ['Academy', 'Form Swapper'],
+    role: atkFgt,
+    position: front,
+    bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Giant Slayer'],
+  },
+  {
+    name: 'LeBlanc',
+    cost: 5,
+    traits: ['Black Rose', 'Sorceror'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', 'Morellonomicon', 'Jeweled Gauntlet'],
+  },
+  {
+    name: 'Powder',
+    cost: 1,
+    traits: ['Family', 'Scrap', 'Ambusher'],
+    role: magCast,
+    position: back,
+    bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
+  },
+  {
+    name: 'Vander',
+    cost: 2,
+    traits: ['Family', 'Watcher'],
+    role: atkTank,
+    position: front,
+    bestItems: ['Gargoyle Stoneplate', "Warmog's Armor", 'Redemption'],
+  },
+  {
+    name: 'Jinx',
+    cost: 5,
+    traits: ['Rebel', 'Ambusher'],
+    role: atkCast,
+    position: back,
+    bestItems: ['Spear of Shojin', 'Infinity Edge', 'Last Whisper'],
+  },
+  {
+    name: 'Mordekaiser',
+    cost: 5,
+    traits: ['Conqueror', 'Dominator'],
+    role: null,
+    position: null,
+    bestItems: ['Bloodthirster', 'Crownguard', 'Jeweled Gauntlet'],
+  },
+  {
+    name: 'Scar',
+    cost: 3,
+    traits: ['Firelight', 'Watcher'],
+    role: magTank,
+    position: front,
+    bestItems: ["Guinsoo's Rageblade", 'Last Whisper', 'Infinity Edge'],
+  },
+  {
+    name: 'Draven',
+    cost: 1,
+    traits: ['Conqueror', 'Pit Fighter'],
+    role: atkCarry,
+    position: back,
+    bestItems: ["Guinsoo's Rageblade", 'Last Whisper', 'Infinity Edge'],
+  },
+  {
+    name: 'Urgot',
+    cost: 2,
+    traits: ['Experiment', 'Pit Fighter', 'Artillerist'],
+    role: null,
+    position: null,
+    bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
     name: '',
@@ -235,7 +499,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -243,7 +507,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -251,7 +515,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -259,7 +523,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -267,7 +531,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -275,7 +539,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -283,7 +547,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -291,7 +555,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -299,7 +563,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -307,7 +571,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -315,7 +579,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -323,7 +587,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -331,7 +595,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -339,7 +603,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -347,7 +611,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -355,7 +619,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -363,7 +627,7 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
   },
   {
     name: '',
@@ -371,7 +635,231 @@ const CURRENT_CHAMPIONS = [
     traits: [],
     role: null,
     position: null,
-    bestItems: [], //TODO
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
+  },
+  {
+    name: '',
+    cost: 1,
+    traits: [],
+    role: null,
+    position: null,
+    bestItems: [],
   },
 ];
 

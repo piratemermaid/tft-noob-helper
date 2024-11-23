@@ -28,7 +28,7 @@ export default function ChampionBestItems({ items, role }) {
 
   return (
     <SimpleGrid columns={3} spacing={1}>
-      {bestItems.map((item, index) => {
+      {bestItems?.map((item, index) => {
         const itemData = CURRENT_ITEMS.find(
           (itemb) => itemb.combinesInto === item
         );
