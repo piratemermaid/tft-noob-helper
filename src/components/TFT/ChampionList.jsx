@@ -10,9 +10,7 @@ export default function ChampionList({
 }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
 
-  const existingChampions = champions.filter((champ) => champ.name);
-
-  const sortedChampions = existingChampions?.sort((a, b) => {
+  const sortedChampions = champions?.sort((a, b) => {
     if (isSelectedList) {
       const aSelected = selectedChampions.find(
         (champ) => champ.name === a.name

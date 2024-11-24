@@ -20,6 +20,7 @@ export default function ChampSearch({ champs }) {
   const [nameFilterInput, setNameFilterInput] = useState('');
 
   const selectedChampions = useStore((state) => state.selectedChampions);
+  const handleSelectChampion = useStore((state) => state.handleSelectChampion);
 
   const activeTraits = useActiveTraits(champs);
 
@@ -103,13 +104,20 @@ export default function ChampSearch({ champs }) {
 
       <SimpleGrid columns={10}>
         {filteredChamps.map((champion) => {
+          const isSelected = selectedChampions.some(
+            (champ) => champ.name === champion.name
+          );
+
           return (
             <VStack
               key={champion.name}
+              onClick={() => handleSelectChampion(champion.name)}
               sx={{
                 m: 1,
                 border: `3px solid ${costColors[champion.cost]}`,
                 borderRadius: 5,
+                '&:hover': { cursor: 'pointer' },
+                backgroundColor: isSelected ? 'gray.500' : 'gray.700',
               }}
             >
               <Center>
