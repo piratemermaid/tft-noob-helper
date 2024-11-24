@@ -1,25 +1,36 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import {
   Box,
+  Button,
   Checkbox,
   CheckboxGroup,
   GridItem,
   Input,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   SimpleGrid,
   Text,
+  useDisclosure,
   VStack,
 } from '@chakra-ui/react';
 
 import ChampionList from './ChampionList';
+import ChampSearch from './ChampionSearch';
 import ComponentsHave from './ComponentsHave';
 import TraitSummary from './TraitSummmary';
 import { useStore } from '../../store';
 import { useActiveTraits } from '../../hooks/useActiveTraits';
-import ChampSearch from './ChampionSearch';
 
 export default function TeamBuilder({ championList, type }) {
-  const [checkedTraits, setCheckedTraits] = React.useState([]);
-  const [nameFilterInput, setNameFilterInput] = React.useState('');
+  const [checkedTraits, setCheckedTraits] = useState([]);
+  const [nameFilterInput, setNameFilterInput] = useState('');
+  const [showChampSearch, setShowChampSearch] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const selectedChampions = useStore((state) => state.selectedChampions);
 
@@ -66,19 +77,49 @@ export default function TeamBuilder({ championList, type }) {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     setCheckedTraits([]);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setNameFilterInput('');
   }, [selectedChampions]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key === 'd') {
+        onOpen();
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
   return (
     <>
-      <Box>
-        <ChampSearch champs={championList} checkedTraits={checkedTraits} />
-      </Box>
+      <Button onClick={onOpen}>Open Modal</Button>
+
+      <Modal isOpen={isOpen} onClose={onClose} size="full">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <ChampSearch champs={championList} checkedTraits={checkedTraits} />
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant="ghost">Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 
