@@ -97,6 +97,7 @@ export default function ChampSearch({ champs }) {
               onClick={() => handleSelectChampion(champion.name)}
               sx={{
                 m: 1,
+                p: 1,
                 border: `3px solid ${costColors[champion.cost]}`,
                 borderRadius: 5,
                 '&:hover': { cursor: 'pointer' },
@@ -108,7 +109,20 @@ export default function ChampSearch({ champs }) {
                   <Center>
                     <ChampionImage name={champion.name} />
                   </Center>
-                  <Text sx={{ fontSize: 13 }}>{champion.name}</Text>
+                  <Text sx={{ fontSize: 12 }}>{champion.name}</Text>
+                  {champion.traits.map((trait) => (
+                    <Text
+                      key={trait}
+                      sx={{
+                        textAlign: 'left',
+                        fontSize: 14,
+                        color: activeTraits.includes(trait) ? 'teal.400' : '',
+                        fontWeight: activeTraits.includes(trait) ? 600 : 400,
+                      }}
+                    >
+                      {trait}
+                    </Text>
+                  ))}
                 </Box>
               </Center>
             </VStack>
