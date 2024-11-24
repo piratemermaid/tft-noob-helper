@@ -6,6 +6,7 @@ export default function ChampionImage({ name, type, ...rest }) {
     'Gangplank',
     'Nami',
     'Nunu & Willump',
+    'Scar',
     'Sevika',
     'Singed',
     'Steb',

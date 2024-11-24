@@ -147,7 +147,7 @@ const CURRENT_CHAMPIONS = [
     traits: ['Automata', 'Dominator'],
     role: magTank,
     position: front,
-    bestItems: ['Gargoyle Stoneplate', 'Ionic Spark', "Warmor's Armor"],
+    bestItems: ['Gargoyle Stoneplate', 'Ionic Spark', "Warmog's Armor"],
   },
   {
     name: "Kog'Maw",
@@ -297,8 +297,8 @@ const CURRENT_CHAMPIONS = [
     name: 'Amumu',
     cost: 1,
     traits: ['Automata', 'Watcher'],
-    role: null,
-    position: null,
+    role: magTank,
+    position: front,
     bestItems: ["Warmog's Armor", "Dragon's Claw", 'Gargoyle Stoneplate'],
   },
   {
@@ -489,8 +489,8 @@ const CURRENT_CHAMPIONS = [
     name: 'Urgot',
     cost: 2,
     traits: ['Experiment', 'Pit Fighter', 'Artillerist'],
-    role: null,
-    position: null,
+    role: atkFgt,
+    position: front,
     bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
