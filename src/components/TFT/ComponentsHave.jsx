@@ -22,7 +22,6 @@ export default function ComponentsHave() {
             '&:hover': {
               cursor: 'pointer',
             },
-            width: '30px',
           }}
           onClick={() => toggleSelectedComponent(component.name)}
         />
