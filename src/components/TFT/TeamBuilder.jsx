@@ -106,7 +106,7 @@ export default function TeamBuilder({ championList, type }) {
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Search Champs</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <ChampSearch champs={championList} checkedTraits={checkedTraits} />

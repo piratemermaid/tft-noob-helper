@@ -4,6 +4,7 @@ import {
   Center,
   Checkbox,
   CheckboxGroup,
+  Flex,
   Input,
   SimpleGrid,
   Text,
@@ -84,55 +85,71 @@ export default function ChampSearch({ champs }) {
   }, [activeTraits]);
 
   return (
-    <>
-      <SimpleGrid columns={5} sx={{ width: '68vw', float: 'left' }}>
-        {filteredChamps.map((champion) => {
-          const isSelected = selectedChampions.some(
-            (champ) => champ.name === champion.name
-          );
+    <Flex gap={4}>
+      <Box flex={1}>
+        <SimpleGrid columns={5}>
+          {filteredChamps.map((champion) => {
+            const isSelected = selectedChampions.some(
+              (champ) => champ.name === champion.name
+            );
 
-          return (
-            <VStack
-              key={champion.name}
-              onClick={() => handleSelectChampion(champion.name)}
-              sx={{
-                m: 1,
-                p: 1,
-                border: `3px solid ${costColors[champion.cost]}`,
-                borderRadius: 5,
-                '&:hover': { cursor: 'pointer' },
-                backgroundColor: isSelected ? 'gray.500' : 'gray.700',
-              }}
-            >
-              <Center>
-                <Box>
-                  <Center>
-                    <ChampionImage name={champion.name} />
-                  </Center>
-                  <Text sx={{ fontSize: 12 }}>{champion.name}</Text>
-                  {champion.traits.map((trait) => (
+            return (
+              <VStack
+                key={champion.name}
+                onClick={() => handleSelectChampion(champion.name)}
+                sx={{
+                  m: 1,
+                  py: 1,
+                  border: `3px solid ${costColors[champion.cost]}`,
+                  borderRadius: 5,
+                  '&:hover': { cursor: 'pointer' },
+                  bg: isSelected ? 'gray.500' : 'gray.700',
+                }}
+              >
+                <Center>
+                  <Box>
                     <Text
-                      key={trait}
                       sx={{
-                        textAlign: 'left',
-                        fontSize: 14,
-                        color: activeTraits.includes(trait) ? 'teal.400' : '',
-                        fontWeight: activeTraits.includes(trait) ? 600 : 400,
+                        textAlign: 'center',
+                        fontSize: 13,
+                        color: 'gray.200',
                       }}
                     >
-                      {trait}
+                      {champion.name}
                     </Text>
-                  ))}
-                </Box>
-              </Center>
-            </VStack>
-          );
-        })}
-      </SimpleGrid>
+                    <Center>
+                      <ChampionImage name={champion.name} />
+                    </Center>
+                    {champion.traits.map((trait) => (
+                      <Text
+                        key={trait}
+                        sx={{
+                          textAlign: 'left',
+                          fontSize: 14,
+                          color: activeTraits.includes(trait) ? 'teal.400' : '',
+                          fontWeight: activeTraits.includes(trait) ? 600 : 400,
+                        }}
+                      >
+                        {trait}
+                      </Text>
+                    ))}
+                  </Box>
+                </Center>
+              </VStack>
+            );
+          })}
+        </SimpleGrid>
+      </Box>
 
-      <VStack sx={{ width: '20vw', float: 'right', textAlign: 'left' }}>
+      <VStack>
         <Box>
-          <Text sx={{ mb: 1.5, fontSize: 20, color: 'blue.300' }}>
+          <Text
+            sx={{
+              mb: 1.5,
+              fontSize: 20,
+              color: selectedChampions?.length === 10 ? 'red.500' : 'blue.300',
+            }}
+          >
             Team Size: <b>{selectedChampions?.length ?? 0}</b>
           </Text>
         </Box>
@@ -179,6 +196,6 @@ export default function ChampSearch({ champs }) {
           </CheckboxGroup>
         </Box>
       </VStack>
-    </>
+    </Flex>
   );
 }
