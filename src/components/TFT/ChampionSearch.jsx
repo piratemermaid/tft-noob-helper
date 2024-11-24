@@ -132,6 +132,12 @@ export default function ChampSearch({ champs }) {
 
       <VStack sx={{ width: '20vw', float: 'right', textAlign: 'left' }}>
         <Box>
+          <Text sx={{ mb: 1.5, fontSize: 20, color: 'blue.300' }}>
+            Team Size: <b>{selectedChampions?.length ?? 0}</b>
+          </Text>
+        </Box>
+
+        <Box>
           <Text sx={{ mb: 1.5, color: 'purple.300' }}>Search by Name</Text>
           <Input
             placeholder="Champion name"
