@@ -15,7 +15,6 @@ import ComponentsHave from './ComponentsHave';
 import TraitSummary from './TraitSummmary';
 import { useStore } from '../../store';
 import { useActiveTraits } from '../../hooks/useActiveTraits';
-import ChampSearch from './ChampionSearch';
 
 export default function TeamBuilder({ championList, type }) {
   const [checkedTraits, setCheckedTraits] = React.useState([]);
@@ -73,14 +72,6 @@ export default function TeamBuilder({ championList, type }) {
   React.useEffect(() => {
     setNameFilterInput('');
   }, [selectedChampions]);
-
-  return (
-    <>
-      <Box>
-        <ChampSearch champs={championList} checkedTraits={checkedTraits} />
-      </Box>
-    </>
-  );
 
   return (
     <SimpleGrid columns={2}>
