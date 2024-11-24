@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { Center, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 
 import Image from './Image';
@@ -7,10 +7,43 @@ import CURRENT_ITEMS from '../../data/tft/set12/set12Items';
 import { useStore } from '../../store';
 import * as defaultItems from '../../data/tft/defaultItems';
 
-export default function ChampionBestItems({ items, role }) {
+export default function ChampionBestItems({ items, role, champName }) {
+  const [builtItems, setBuiltItems] = useState({});
+
   const selectedComponents = useStore((state) => state.selectedComponents);
+  const setSelectedComponents = useStore(
+    (state) => state.setSelectedComponents
+  );
 
   if (!items?.length && !role) return null;
+
+  const removeComponentsOnBuild = (recipe) => {
+    setSelectedComponents(
+      selectedComponents.filter((component) => !recipe.includes(component))
+    );
+  };
+
+  const handleBuildItem = (event, item, recipe) => {
+    event.stopPropagation();
+
+    const newBuiltItems = { ...builtItems };
+
+    if (!builtItems[champName]) {
+      newBuiltItems[champName] = [item];
+      removeComponentsOnBuild(recipe);
+    } else {
+      if (!builtItems[champName].includes(item)) {
+        newBuiltItems[champName].push(item);
+        removeComponentsOnBuild(recipe);
+      } else {
+        newBuiltItems[champName] = builtItems[champName].filter(
+          (builtItem) => builtItem !== item
+        );
+      }
+    }
+
+    setBuiltItems(newBuiltItems);
+  };
 
   const ComponentImage = ({ name }) => {
     const size = 26;
@@ -20,7 +53,11 @@ export default function ChampionBestItems({ items, role }) {
         name={name}
         type="component"
         sx={{
-          opacity: selectedComponents.includes(name) ? 1 : 0.3,
+          opacity:
+            selectedComponents.includes(name) ||
+            builtItems[champName]?.includes(name)
+              ? 1
+              : 0.3,
           height: size,
           width: size,
         }}
@@ -45,6 +82,8 @@ export default function ChampionBestItems({ items, role }) {
 
         const { recipe } = itemData ?? null;
 
+        const isBuilt = builtItems[champName]?.includes(item);
+
         return (
           <Fragment key={index}>
             <Center>
@@ -54,13 +93,16 @@ export default function ChampionBestItems({ items, role }) {
                   name={item}
                   sx={{
                     opacity:
-                      selectedComponents.includes(recipe[0]) &&
-                      selectedComponents.includes(recipe[1])
+                      (selectedComponents.includes(recipe[0]) &&
+                        selectedComponents.includes(recipe[1])) ||
+                      isBuilt
                         ? 1
                         : 0.5,
+                    outline: isBuilt ? '3px solid teal' : 'none',
                   }}
+                  onClick={(event) => handleBuildItem(event, item, recipe)}
                 />
-                {recipe?.length && (
+                {recipe?.length && !isBuilt && (
                   <HStack>
                     {recipe.map((component, index) => {
                       return (
