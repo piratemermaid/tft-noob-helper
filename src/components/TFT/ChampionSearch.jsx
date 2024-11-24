@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Center,
@@ -20,11 +20,14 @@ import costColors from '../../styles/costColors';
 export default function ChampSearch({ champs }) {
   const [checkedTraits, setCheckedTraits] = useState([]);
   const [nameFilterInput, setNameFilterInput] = useState('');
+  const [sortedTraits, setSortedTraits] = useState(TRAITS);
 
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
 
-  const activeTraits = useActiveTraits(champs);
+  const activeTraits = useCallback(useActiveTraits(champs), [
+    selectedChampions,
+  ]);
 
   const filterByTraits = (champion) => {
     return champion.traits.some((trait) => checkedTraits.includes(trait));
@@ -61,21 +64,6 @@ export default function ChampSearch({ champs }) {
     }
   };
 
-  const traitsSorted = TRAITS.sort((a, b) => {
-    const isActiveA = activeTraits?.includes(a.name);
-    const isActiveB = activeTraits?.includes(b.name);
-
-    if (isActiveA && !isActiveB) {
-      return -1;
-    }
-
-    if (isActiveB && !isActiveA) {
-      return 1;
-    }
-
-    return a.name - b.name;
-  });
-
   useEffect(() => {
     setCheckedTraits([]);
   }, []);
@@ -83,6 +71,17 @@ export default function ChampSearch({ champs }) {
   useEffect(() => {
     setNameFilterInput('');
   }, [selectedChampions]);
+
+  useEffect(() => {
+    const activeSorted = TRAITS.filter((trait) =>
+      activeTraits.includes(trait.name)
+    ).sort();
+    const inactiveSorted = TRAITS.filter(
+      (trait) => !activeTraits.includes(trait.name)
+    ).sort();
+
+    setSortedTraits([...activeSorted, ...inactiveSorted]);
+  }, [activeTraits]);
 
   return (
     <>
@@ -131,7 +130,7 @@ export default function ChampSearch({ champs }) {
           <Text sx={{ mb: 1.5, color: 'purple.300' }}>Search by Trait</Text>
           <CheckboxGroup sx={{}}>
             <VStack>
-              {traitsSorted.map((trait) => {
+              {sortedTraits.map((trait) => {
                 const isActive = activeTraits?.includes(trait.name);
                 const numActive = selectedChampions?.filter((champ) => {
                   const champData = CHAMPS.find(
