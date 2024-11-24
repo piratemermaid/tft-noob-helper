@@ -13,14 +13,16 @@ export default function ChampionBestItems({ items, role }) {
   if (!items?.length && !role) return null;
 
   const ComponentImage = ({ name }) => {
+    const size = 26;
+
     return (
       <ItemImage
         name={name}
         type="component"
         sx={{
           opacity: selectedComponents.includes(name) ? 1 : 0.3,
-          height: '26px',
-          width: '26px',
+          height: size,
+          width: size,
         }}
       />
     );
