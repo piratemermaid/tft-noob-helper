@@ -4,7 +4,6 @@ import {
   Center,
   Checkbox,
   CheckboxGroup,
-  HStack,
   Input,
   SimpleGrid,
   Text,
@@ -14,9 +13,9 @@ import {
 import ChampionImage from '../images/ChampionImage';
 import { useStore } from '../../store';
 import { useActiveTraits } from '../../hooks/useActiveTraits';
-import costColors from '../../styles/costColors';
 import TRAITS from '../../data/tft/set13/set13Traits';
 import CHAMPS from '../../data/tft/set13/set13Champions';
+import costColors from '../../styles/costColors';
 
 export default function ChampSearch({ champs }) {
   const [checkedTraits, setCheckedTraits] = useState([]);
@@ -61,6 +60,21 @@ export default function ChampSearch({ champs }) {
       setCheckedTraits(newFilterTraits);
     }
   };
+
+  const traitsSorted = TRAITS.sort((a, b) => {
+    const isActiveA = activeTraits?.includes(a.name);
+    const isActiveB = activeTraits?.includes(b.name);
+
+    if (isActiveA && !isActiveB) {
+      return -1;
+    }
+
+    if (isActiveB && !isActiveA) {
+      return 1;
+    }
+
+    return a.name - b.name;
+  });
 
   useEffect(() => {
     setCheckedTraits([]);
@@ -117,7 +131,7 @@ export default function ChampSearch({ champs }) {
           <Text sx={{ mb: 1.5, color: 'purple.300' }}>Search by Trait</Text>
           <CheckboxGroup sx={{}}>
             <VStack>
-              {TRAITS.map((trait) => {
+              {traitsSorted.map((trait) => {
                 const isActive = activeTraits?.includes(trait.name);
                 const numActive = selectedChampions?.filter((champ) => {
                   const champData = CHAMPS.find(
