@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { Text, VStack } from '@chakra-ui/react';
 
 export default function TraitSummary({ champions }) {
   const traits = champions.reduce((acc, champion) => {
@@ -15,13 +15,13 @@ export default function TraitSummary({ champions }) {
   const sortedTraits = Object.entries(traits).sort((a, b) => b[1] - a[1]);
 
   return (
-    <SimpleGrid columns={3}>
+    <VStack align="start">
       {traits &&
         sortedTraits?.map(([trait, count]) => (
-          <div key={trait}>
+          <Text key={trait}>
             {trait}: {count}
-          </div>
+          </Text>
         ))}
-    </SimpleGrid>
+    </VStack>
   );
 }

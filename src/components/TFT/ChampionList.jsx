@@ -1,3 +1,4 @@
+import { Flex, SimpleGrid } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import ChampionCard from './ChampionCard';
 
@@ -31,7 +32,7 @@ export default function ChampionList({
   });
 
   return (
-    <>
+    <SimpleGrid columns={2} spacing={2}>
       {sortedChampions?.map((champion) => (
         <ChampionCard
           key={champion.name}
@@ -41,6 +42,6 @@ export default function ChampionList({
           isSelectedList={isSelectedList}
         />
       ))}
-    </>
+    </SimpleGrid>
   );
 }

@@ -2,7 +2,7 @@ import { Image as ChakraImage } from '@chakra-ui/react';
 
 // TODO: get png for faerie queen's crown
 
-export default function Image({ name, type = 'current', ...rest }) {
+export default function Image({ name, type = 'current', sx, ...rest }) {
   if (!name) return null;
 
   const formattedName = name
@@ -35,7 +35,7 @@ export default function Image({ name, type = 'current', ...rest }) {
       src={getSrc()}
       title={name}
       alt={name}
-      sx={{ width: '40px', height: '40px' }}
+      sx={{ width: '40px', height: '40px', ...sx }}
       {...rest}
     />
   );

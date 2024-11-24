@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid, VStack } from '@chakra-ui/react';
 
 import Image from '../images/Image';
 import ITEM_COMPONENTS from '../../data/tft/components';
@@ -11,7 +11,7 @@ export default function ComponentsHave() {
   );
 
   return (
-    <SimpleGrid columns={10}>
+    <VStack>
       {ITEM_COMPONENTS.map((component) => (
         <Image
           name={component.name}
@@ -22,10 +22,11 @@ export default function ComponentsHave() {
             '&:hover': {
               cursor: 'pointer',
             },
+            width: '30px',
           }}
           onClick={() => toggleSelectedComponent(component.name)}
         />
       ))}
-    </SimpleGrid>
+    </VStack>
   );
 }
