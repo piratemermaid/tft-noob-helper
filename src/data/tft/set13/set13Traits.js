@@ -24,17 +24,6 @@ const TRAITS = [
   { name: 'Sorceror' },
   { name: 'Visionary' },
   { name: 'Watcher' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
-  { name: '' },
 ];
 
 export default TRAITS;

@@ -15,6 +15,8 @@ import ChampionImage from '../images/ChampionImage';
 import { useStore } from '../../store';
 import { useActiveTraits } from '../../hooks/useActiveTraits';
 import costColors from '../../styles/costColors';
+import TRAITS from '../../data/tft/set13/set13Traits';
+import CHAMPS from '../../data/tft/set13/set13Champions';
 
 export default function ChampSearch({ champs }) {
   const [checkedTraits, setCheckedTraits] = useState([]);
@@ -101,35 +103,46 @@ export default function ChampSearch({ champs }) {
         })}
       </SimpleGrid>
 
-      <VStack sx={{ width: '20vw', float: 'right' }}>
+      <VStack sx={{ width: '20vw', float: 'right', textAlign: 'left' }}>
         <Box>
-          <Text sx={{ mb: 1.5 }}>Search Champs</Text>
+          <Text sx={{ mb: 1.5, color: 'purple.300' }}>Search by Name</Text>
           <Input
             placeholder="Champion name"
             value={nameFilterInput}
             onChange={(e) => setNameFilterInput(e.target.value)}
           />
         </Box>
-        <Box>
-          <Text sx={{ mb: 1.5 }}>Filter by Current Traits</Text>
-          <CheckboxGroup>
-            <SimpleGrid sx={{ float: 'left' }}>
-              {activeTraits?.length ? (
-                activeTraits.map((trait) => {
-                  return (
-                    <Checkbox
-                      key={trait}
-                      checked={checkedTraits.includes(trait)}
-                      onChange={(e) => handleCheck(e, trait)}
-                    >
-                      {trait}
-                    </Checkbox>
+
+        <Box sx={{ width: '100%' }}>
+          <Text sx={{ mb: 1.5, color: 'purple.300' }}>Search by Trait</Text>
+          <CheckboxGroup sx={{}}>
+            <VStack>
+              {TRAITS.map((trait) => {
+                const isActive = activeTraits?.includes(trait.name);
+                const numActive = selectedChampions?.filter((champ) => {
+                  const champData = CHAMPS.find(
+                    (champion) => champion.name === champ.name
                   );
-                })
-              ) : (
-                <></>
-              )}
-            </SimpleGrid>
+
+                  return champData.traits.includes(trait.name);
+                }).length;
+
+                return (
+                  <Checkbox
+                    key={trait.name}
+                    checked={checkedTraits.includes(trait.name)}
+                    onChange={(e) => handleCheck(e, trait.name, e)}
+                    sx={{
+                      width: '100%',
+                      color: isActive ? 'teal.400' : '',
+                      fontWeight: isActive ? 600 : 400,
+                    }}
+                  >
+                    {trait.name} {numActive > 0 && `(${numActive})`}
+                  </Checkbox>
+                );
+              })}
+            </VStack>
           </CheckboxGroup>
         </Box>
       </VStack>
