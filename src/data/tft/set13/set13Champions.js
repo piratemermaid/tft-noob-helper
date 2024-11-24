@@ -48,7 +48,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Sett',
     cost: 2,
-    traits: ['Enforcer', 'Bruiser'],
+    traits: ['Rebel', 'Bruiser'],
     role: magTank,
     position: front,
     bestItems: ["Warmog's Armor", 'Bramble Vest', "Dragon's Claw"],
@@ -57,8 +57,8 @@ const CURRENT_CHAMPIONS = [
     name: 'Zeri',
     cost: 2,
     traits: ['Firelight', 'Sniper'],
-    role: null,
-    position: null,
+    role: atkCarry,
+    position: back,
     bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Last Whisper'],
   },
   {
@@ -393,8 +393,8 @@ const CURRENT_CHAMPIONS = [
     name: 'Vi',
     cost: 4,
     traits: ['Enforcer', 'Pit Fighter'],
-    role: null,
-    position: null,
+    role: atkFgt,
+    position: front,
     bestItems: ['Bloodthirster', "Sterak's Gage", "Titan's Resolve"],
   },
   {
