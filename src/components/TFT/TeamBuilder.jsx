@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import {
   Box,
   Button,
+  Center,
   Flex,
+  HStack,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -24,6 +26,7 @@ export default function TeamBuilder({ championList, type }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const selectedChampions = useStore((state) => state.selectedChampions);
+  const resetTft = useStore((state) => state.resetTft);
 
   const selectedChampionData = championList.filter((champion) =>
     selectedChampions?.find(
@@ -48,7 +51,12 @@ export default function TeamBuilder({ championList, type }) {
 
   return (
     <>
-      <Button onClick={onOpen}>Search Champs</Button>
+      <Center>
+        <HStack sx={{ mb: 4 }}>
+          <Button onClick={onOpen}>Search Champs</Button>
+          <Button onClick={resetTft}>Reset</Button>
+        </HStack>
+      </Center>
 
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay />
