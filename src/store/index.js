@@ -53,6 +53,17 @@ export const useStore = create(
 
         return set({ selectedComponents: [...selectedComponents, component] });
       },
+      selectedTraits: [],
+      selectTrait: (trait) => {
+        const selectedTraits = get().selectedTraits;
+
+        const newSelectedTraits = selectedTraits.includes(trait)
+          ? selectedTraits.filter((selectedTrait) => selectedTrait !== trait)
+          : [...selectedTraits, trait];
+
+        set({ selectedTraits: newSelectedTraits });
+      },
+      setSelectedTraits: (selectedTraits) => set({ selectedTraits }),
     }),
     {
       name: 'persistedState',

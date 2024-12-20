@@ -1,9 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Box,
   Center,
   Checkbox,
-  CheckboxGroup,
   Flex,
   Input,
   SimpleGrid,
@@ -19,19 +18,20 @@ import CHAMPS from '../../data/tft/set13/set13Champions';
 import costColors from '../../styles/costColors';
 
 export default function ChampSearch({ champs }) {
-  const [checkedTraits, setCheckedTraits] = useState([]);
   const [nameFilterInput, setNameFilterInput] = useState('');
   const [sortedTraits, setSortedTraits] = useState(TRAITS);
 
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
+  const selectedTraits = useStore((state) => state.selectedTraits);
+  const setSelectedTraits = useStore((state) => state.setSelectedTraits);
 
   const activeTraits = useCallback(useActiveTraits(champs), [
     selectedChampions,
   ]);
 
   const filterByTraits = (champion) => {
-    return champion.traits.some((trait) => checkedTraits.includes(trait));
+    return champion.traits.some((trait) => selectedTraits.includes(trait));
   };
 
   const filterByName = (champion) => {
@@ -39,7 +39,7 @@ export default function ChampSearch({ champs }) {
   };
 
   const filteredChamps = champs.filter((champion) => {
-    if (!checkedTraits.length && !nameFilterInput) {
+    if (!selectedTraits.length && !nameFilterInput) {
       return true;
     }
 
@@ -47,7 +47,7 @@ export default function ChampSearch({ champs }) {
       return filterByName(champion);
     }
 
-    if (checkedTraits.length) {
+    if (selectedTraits.length) {
       return filterByTraits(champion);
     }
 
@@ -56,18 +56,14 @@ export default function ChampSearch({ champs }) {
 
   const handleCheck = (e, trait) => {
     if (e.target.checked) {
-      setCheckedTraits([...checkedTraits, trait]);
+      setSelectedTraits([...selectedTraits, trait]);
     } else {
-      const newFilterTraits = checkedTraits.filter(
+      const newFilterTraits = selectedTraits.filter(
         (filterTrait) => filterTrait !== trait
       );
-      setCheckedTraits(newFilterTraits);
+      setSelectedTraits(newFilterTraits);
     }
   };
-
-  useEffect(() => {
-    setCheckedTraits([]);
-  }, []);
 
   useEffect(() => {
     setNameFilterInput('');
@@ -165,35 +161,34 @@ export default function ChampSearch({ champs }) {
 
         <Box sx={{ width: '100%' }}>
           <Text sx={{ mb: 1.5, color: 'purple.300' }}>Search by Trait</Text>
-          <CheckboxGroup sx={{}}>
-            <VStack>
-              {sortedTraits.map((trait) => {
-                const isActive = activeTraits?.includes(trait.name);
-                const numActive = selectedChampions?.filter((champ) => {
-                  const champData = CHAMPS.find(
-                    (champion) => champion.name === champ.name
-                  );
-
-                  return champData.traits.includes(trait.name);
-                }).length;
-
-                return (
-                  <Checkbox
-                    key={trait.name}
-                    checked={checkedTraits.includes(trait.name)}
-                    onChange={(e) => handleCheck(e, trait.name, e)}
-                    sx={{
-                      width: '100%',
-                      color: isActive ? 'teal.400' : '',
-                      fontWeight: isActive ? 600 : 400,
-                    }}
-                  >
-                    {trait.name} {numActive > 0 && `(${numActive})`}
-                  </Checkbox>
+          <VStack>
+            {sortedTraits.map((trait) => {
+              const isActive = activeTraits?.includes(trait.name);
+              const numActive = selectedChampions?.filter((champ) => {
+                const champData = CHAMPS.find(
+                  (champion) => champion.name === champ.name
                 );
-              })}
-            </VStack>
-          </CheckboxGroup>
+
+                return champData.traits.includes(trait.name);
+              }).length;
+
+              return (
+                <Checkbox
+                  key={trait.name}
+                  defaultChecked={selectedTraits.includes(trait.name)}
+                  value={selectedTraits.includes(trait.name)}
+                  onChange={(e) => handleCheck(e, trait.name, e)}
+                  sx={{
+                    width: '100%',
+                    color: isActive ? 'teal.400' : '',
+                    fontWeight: isActive ? 600 : 400,
+                  }}
+                >
+                  {trait.name} {numActive > 0 && `(${numActive})`}
+                </Checkbox>
+              );
+            })}
+          </VStack>
         </Box>
       </VStack>
     </Flex>
