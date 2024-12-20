@@ -1,4 +1,5 @@
-import { Flex, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
+
 import { useStore } from '../../store';
 import ChampionCard from './ChampionCard';
 

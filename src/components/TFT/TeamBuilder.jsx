@@ -44,7 +44,8 @@ export default function TeamBuilder({ championList, type }) {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [onOpen]);
+
   return (
     <>
       <Button onClick={onOpen}>Open Modal</Button>

@@ -1,4 +1,4 @@
-import { SimpleGrid, VStack } from '@chakra-ui/react';
+import { VStack } from '@chakra-ui/react';
 
 import Image from '../images/Image';
 import ITEM_COMPONENTS from '../../data/tft/components';

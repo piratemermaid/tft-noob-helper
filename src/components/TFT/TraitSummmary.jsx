@@ -1,4 +1,4 @@
-import { Box, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react';
+import { Box, Text, VStack } from '@chakra-ui/react';
 import TRAITS from '../../data/tft/set13/set13Traits';
 
 export default function TraitSummary({ champions }) {
