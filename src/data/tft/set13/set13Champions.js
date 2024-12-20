@@ -168,7 +168,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Ezreal',
     cost: 3,
-    traits: ['Academy', 'Rebel', 'Artilerist'],
+    traits: ['Academy', 'Rebel', 'Artillerist'],
     role: atkCast,
     position: back,
     bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
@@ -176,7 +176,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Zoe',
     cost: 4,
-    traits: ['Rebel', 'Sorcerer'],
+    traits: ['Rebel', 'Sorceror'],
     role: magCast,
     position: back,
     bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
@@ -200,7 +200,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Corki',
     cost: 4,
-    traits: ['Scrap', 'Artilerist'],
+    traits: ['Scrap', 'Artillerist'],
     role: atkCast,
     position: back,
     bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
@@ -232,7 +232,7 @@ const CURRENT_CHAMPIONS = [
   {
     name: 'Lux',
     cost: 1,
-    traits: ['Academy', 'Sorcerer'],
+    traits: ['Academy', 'Sorceror'],
     role: magCast,
     position: back,
     bestItems: ['Spear of Shojin', "Nashor's Tooth", 'Jeweled Gauntlet'],
@@ -342,7 +342,7 @@ const CURRENT_CHAMPIONS = [
     bestItems: ['Bloodthirster', 'Hand of Justice', 'Jeweled Gauntlet'],
   },
   {
-    name: 'Nunu & Willump',
+    name: 'Nunu',
     cost: 3,
     traits: ['Experiment', 'Bruiser', 'Visionary'],
     role: magTank,

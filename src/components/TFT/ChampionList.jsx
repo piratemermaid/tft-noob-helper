@@ -1,3 +1,4 @@
+import { Flex, SimpleGrid } from '@chakra-ui/react';
 import { useStore } from '../../store';
 import ChampionCard from './ChampionCard';
 
@@ -10,9 +11,7 @@ export default function ChampionList({
 }) {
   const selectedChampions = useStore((state) => state.selectedChampions);
 
-  const existingChampions = champions.filter((champ) => champ.name);
-
-  const sortedChampions = existingChampions?.sort((a, b) => {
+  const sortedChampions = champions?.sort((a, b) => {
     if (isSelectedList) {
       const aSelected = selectedChampions.find(
         (champ) => champ.name === a.name
@@ -33,7 +32,7 @@ export default function ChampionList({
   });
 
   return (
-    <>
+    <SimpleGrid columns={2} spacing={2}>
       {sortedChampions?.map((champion) => (
         <ChampionCard
           key={champion.name}
@@ -43,6 +42,6 @@ export default function ChampionList({
           isSelectedList={isSelectedList}
         />
       ))}
-    </>
+    </SimpleGrid>
   );
 }

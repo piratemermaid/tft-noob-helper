@@ -489,7 +489,7 @@ const revivalChampions = [
     bestItems: atkRprItems,
   },
   {
-    name: 'Nunu & Willump',
+    name: 'Nunu',
     cost: 3,
     traits: ['Abomination', 'Brawler'],
     role: magTank,
