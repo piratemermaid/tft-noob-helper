@@ -48,7 +48,7 @@ export default function TeamBuilder({ championList, type }) {
 
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button onClick={onOpen}>Search Champs</Button>
 
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay />
