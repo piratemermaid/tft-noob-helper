@@ -17,9 +17,13 @@ import TRAITS from '../../data/tft/set13/set13Traits';
 import CHAMPS from '../../data/tft/set13/set13Champions';
 import costColors from '../../styles/costColors';
 
-export default function ChampSearch({ champs }) {
+export default function ChampSearch({
+  champs,
+  champList = CHAMPS,
+  traitList = TRAITS,
+}) {
   const [nameFilterInput, setNameFilterInput] = useState('');
-  const [sortedTraits, setSortedTraits] = useState(TRAITS);
+  const [sortedTraits, setSortedTraits] = useState(traitList);
 
   const selectedChampions = useStore((state) => state.selectedChampions);
   const handleSelectChampion = useStore((state) => state.handleSelectChampion);
@@ -70,12 +74,12 @@ export default function ChampSearch({ champs }) {
   }, [selectedChampions]);
 
   useEffect(() => {
-    const activeSorted = TRAITS.filter((trait) =>
-      activeTraits.includes(trait.name)
-    ).sort();
-    const inactiveSorted = TRAITS.filter(
-      (trait) => !activeTraits.includes(trait.name)
-    ).sort();
+    const activeSorted = traitList
+      .filter((trait) => activeTraits.includes(trait.name))
+      .sort();
+    const inactiveSorted = traitList
+      .filter((trait) => !activeTraits.includes(trait.name))
+      .sort();
 
     setSortedTraits([...activeSorted, ...inactiveSorted]);
   }, [activeTraits]);
@@ -165,7 +169,7 @@ export default function ChampSearch({ champs }) {
             {sortedTraits.map((trait) => {
               const isActive = activeTraits?.includes(trait.name);
               const numActive = selectedChampions?.filter((champ) => {
-                const champData = CHAMPS.find(
+                const champData = champList.find(
                   (champion) => champion.name === champ.name
                 );
 
