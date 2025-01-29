@@ -69,7 +69,7 @@ export default function NavBar() {
               })}
             </HStack>
           </Box>
-          <GameTimer />
+          {/* <GameTimer /> */}
         </SimpleGrid>
       </Box>
     </Flex>
