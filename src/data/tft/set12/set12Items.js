@@ -1,4 +1,4 @@
-const CURRENT_ITEMS = [
+const SET_12_ITEMS = [
   {
     recipe: ['B.F. Sword', 'B.F. Sword'],
     combinesInto: 'Deathblade',
@@ -687,4 +687,4 @@ const CURRENT_ITEMS = [
   },
 ];
 
-export default CURRENT_ITEMS;
+export default SET_12_ITEMS;

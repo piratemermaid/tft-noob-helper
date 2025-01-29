@@ -53,6 +53,15 @@ export const useStore = create(
 
         return set({ selectedComponents: [...selectedComponents, component] });
       },
+      selectedTraits: [],
+      setSelectedTraits: (selectedTraits) => set({ selectedTraits }),
+      resetTft: () => {
+        set({
+          selectedChampions: [],
+          selectedComponents: [],
+          selectedTraits: [],
+        });
+      },
     }),
     {
       name: 'persistedState',

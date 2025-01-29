@@ -1,6 +1,6 @@
-import TRAITS from './traits';
-import CURRENT_ITEMS from './currentItems';
-import { validateItems, validateTraits } from '../../scripts/dataValidation';
+import TRAITS from '../set12Traits';
+import CURRENT_ITEMS from './set12Items';
+import { validateItems, validateTraits } from '../../../scripts/dataValidation';
 
 // stats not validated
 
@@ -525,6 +525,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Nasus',
     cost: 4,
     traits: ['Pyro', 'Shapeshifter'],
+    role: atkTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: [950, 1710, 3078],
       damage: [50, 75, 112],
@@ -535,7 +538,6 @@ const CURRENT_CHAMPIONS = [
       mana: [0, 40],
       range: 1,
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Neeko',
@@ -593,6 +595,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Norra & Yuumi',
     cost: 5,
     traits: ['Mage', 'Portal', 'Best Friends'],
+    role: magCast,
+    position: back,
+    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
     stats: {
       health: [900, 1620, 2916],
       damage: [50, 90, 162],
@@ -604,7 +609,6 @@ const CURRENT_CHAMPIONS = [
       range: 4,
       mana: [30, 90],
     },
-    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
   },
   {
     name: 'Nunu',
@@ -670,6 +674,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Ryze',
     cost: 4,
     traits: ['Portal', 'Scholar'],
+    role: magCast,
+    position: back,
+    bestItems: ["Archangel's Staff", "Guinsoo's Rageblade", 'Spear of Shojin'],
     stats: {
       health: '850 / 1530 / 2754',
       armor: 30,
@@ -677,7 +684,6 @@ const CURRENT_CHAMPIONS = [
       damage: '40 / 72 / 130',
       atkSpd: 0.8,
     },
-    bestItems: ["Archangel's Staff", "Guinsoo's Rageblade", 'Spear of Shojin'],
   },
 
   {
@@ -763,6 +769,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Soraka',
     cost: 1,
     traits: ['Sugarcraft', 'Mage'],
+    role: magCast,
+    position: back,
+    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
     stats: {
       health: 650,
       armor: 20,
@@ -771,12 +780,14 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.65,
       range: 4,
     },
-    bestItems: ['Jeweled Gauntlet', "Nashor's Tooth", 'Spear of Shojin'],
   },
   {
     name: 'Swain',
     cost: 3,
     traits: ['Shapeshifter', 'Frost'],
+    role: magTank,
+    position: front,
+    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
     stats: {
       health: 900,
       armor: 45,
@@ -785,7 +796,6 @@ const CURRENT_CHAMPIONS = [
       attackSpeed: 0.6,
       range: 2,
     },
-    bestItems: ["Dragon's Claw", 'Gargoyle Stoneplate', "Warmog's Armor"],
   },
   {
     name: 'Syndra',
@@ -823,6 +833,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Taric',
     cost: 4,
     traits: ['Portal', 'Bastion'],
+    role: magTank,
+    position: front,
+    bestItems: ['Gargoyle Stoneplate', "Warmog's Armor", 'Redemption'],
     stats: {
       health: 800,
       mana: 150,
@@ -833,7 +846,6 @@ const CURRENT_CHAMPIONS = [
       range: 1,
       attackSpeed: 0.67,
     },
-    bestItems: ['Gargoyle Stoneplate', "Warmog's Armor", 'Redemption'],
   },
   {
     name: 'Tristana',
@@ -857,6 +869,9 @@ const CURRENT_CHAMPIONS = [
     name: 'Twitch',
     cost: 1,
     traits: ['Frost', 'Hunter'],
+    role: atkCst,
+    position: back,
+    bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Last Whisper'],
     stats: {
       health: 450,
       mana: 35,
@@ -867,12 +882,14 @@ const CURRENT_CHAMPIONS = [
       range: 5,
       attackSpeed: 0.7,
     },
-    bestItems: ["Guinsoo's Rageblade", 'Infinity Edge', 'Last Whisper'],
   },
   {
     name: 'Varus',
     cost: 4,
     traits: ['Pyro', 'Blaster'],
+    role: magCast,
+    position: back,
+    bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
     stats: {
       health: 700,
       mana: 60,
@@ -883,7 +900,6 @@ const CURRENT_CHAMPIONS = [
       range: 5,
       attackSpeed: 0.7,
     },
-    bestItems: ['Infinity Edge', 'Last Whisper', 'Spear of Shojin'],
   },
   {
     name: 'Veigar',
