@@ -1,5 +1,5 @@
 import CurrentSetTeamBuilder from '../pages/CurrentSetTeamBuilder';
-// import RevivalSetTeamBuilder from '../pages/RevivalSetTeamBuilder';
+import RevivalSetTeamBuilder from '../pages/RevivalSetTeamBuilder';
 import LowEloTierList from '../pages/LowEloTierList';
 import Cheatsheets from '../pages/Cheatsheets';
 
@@ -10,12 +10,12 @@ const ROUTES = [
     Component: CurrentSetTeamBuilder,
     type: 'tft',
   },
-  // {
-  //   label: 'Revival Set Team Builder',
-  //   path: '/revival_set',
-  //   Component: RevivalSetTeamBuilder,
-  //   type: 'tft',
-  // },
+  {
+    label: 'Revival Set Team Builder',
+    path: '/revival_set',
+    Component: RevivalSetTeamBuilder,
+    type: 'tft',
+  },
   {
     label: 'Tier List',
     path: '/lol_tier_list',

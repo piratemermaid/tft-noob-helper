@@ -1,7 +1,6 @@
 import { Box, Text, VStack } from '@chakra-ui/react';
-import TRAITS from '../../data/tft/set13/set13Traits';
 
-export default function TraitSummary({ champions }) {
+export default function TraitSummary({ champions, traitList }) {
   const traits = champions.reduce((acc, champion) => {
     champion.traits.forEach((trait) => {
       if (acc[trait]) {
@@ -33,7 +32,7 @@ export default function TraitSummary({ champions }) {
     <VStack align="start">
       {traits &&
         sortedTraits?.map(([trait, count]) => {
-          const traitData = TRAITS.find((t) => t.name === trait);
+          const traitData = traitList.find((t) => t.name === trait);
 
           const activatedLevel = getActivatedLevel(traitData, count);
 
