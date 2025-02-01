@@ -1,3 +1,25 @@
-const TRAITS = [{ name: '' }];
+const TRAITS = [
+  { name: 'Brawler' },
+  { name: 'Cultist' },
+  { name: 'Divine' },
+  { name: 'Dragonsoul' },
+  { name: 'Duelist' },
+  { name: 'Elderwoood' },
+  { name: 'Enlightened' },
+  { name: 'Executioner' },
+  { name: 'Exile' },
+  { name: 'Fabled' },
+  { name: 'Fortune' },
+  { name: 'Keeper' },
+  { name: 'Mage' },
+  { name: 'Ninja' },
+  { name: 'Sharpshooter' },
+  { name: 'Slayer' },
+  { name: 'Spirit' },
+  { name: 'Syphoner' },
+  { name: 'Vanguard' },
+  { name: 'Warlord' },
+  // { name: '' },
+];
 
 export default TRAITS;
