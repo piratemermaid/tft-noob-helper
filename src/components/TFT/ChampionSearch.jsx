@@ -15,7 +15,7 @@ import costColors from '../../styles/costColors';
 import { useStore } from '../../store';
 import { useActiveTraits } from '../../hooks/useActiveTraits';
 
-export default function ChampSearch({ champs, traitList }) {
+export default function ChampSearch({ champs, traitList, getImgUrl }) {
   const [nameFilterInput, setNameFilterInput] = useState('');
   const [sortedTraits, setSortedTraits] = useState(traitList);
 
@@ -112,7 +112,10 @@ export default function ChampSearch({ champs, traitList }) {
                       {champion.name}
                     </Text>
                     <Center>
-                      <ChampionImage name={champion.name} />
+                      <ChampionImage
+                        url={getImgUrl(champion.name)}
+                        name={champion.name}
+                      />
                     </Center>
                     {champion.traits.map((trait) => (
                       <Text

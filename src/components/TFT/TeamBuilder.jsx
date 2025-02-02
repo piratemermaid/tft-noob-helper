@@ -22,7 +22,12 @@ import ComponentsHave from './ComponentsHave';
 import TraitSummary from './TraitSummmary';
 import { useStore } from '../../store';
 
-export default function TeamBuilder({ championList, traitList, type }) {
+export default function TeamBuilder({
+  championList,
+  traitList,
+  type,
+  getImgUrl,
+}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const selectedChampions = useStore((state) => state.selectedChampions);
@@ -64,7 +69,11 @@ export default function TeamBuilder({ championList, traitList, type }) {
           <ModalHeader>Search Champs</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <ChampSearch champs={championList} traitList={traitList} />
+            <ChampSearch
+              champs={championList}
+              traitList={traitList}
+              getImgUrl={getImgUrl}
+            />
           </ModalBody>
 
           <ModalFooter>

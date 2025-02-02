@@ -1,6 +1,6 @@
 import Image from './Image';
 
-export default function ChampionImage({ name, type, ...rest }) {
+export default function ChampionImage({ url, name, type, ...rest }) {
   const webpNames = [
     'Akali',
     'Gangplank',
@@ -14,6 +14,18 @@ export default function ChampionImage({ name, type, ...rest }) {
     'Zeri',
     'Zoe',
   ];
+
+  if (url) {
+    return (
+      <Image
+        name={name}
+        url={url}
+        type={webpNames.includes(name) ? 'champwebp' : type}
+        sx={{ width: 50, height: 50 }}
+        {...rest}
+      />
+    );
+  }
 
   return (
     <Image
