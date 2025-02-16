@@ -1,10 +1,11 @@
 const TRAITS = [
+  { name: 'Assassin' },
   { name: 'Brawler' },
   { name: 'Cultist' },
   { name: 'Divine' },
   { name: 'Dragonsoul' },
   { name: 'Duelist' },
-  { name: 'Elderwoood' },
+  { name: 'Elderwood' },
   { name: 'Enlightened' },
   { name: 'Executioner' },
   { name: 'Exile' },
@@ -12,6 +13,7 @@ const TRAITS = [
   { name: 'Fortune' },
   { name: 'Keeper' },
   { name: 'Mage' },
+  { name: 'Mythic' },
   { name: 'Ninja' },
   { name: 'Sharpshooter' },
   { name: 'Slayer' },
@@ -19,7 +21,13 @@ const TRAITS = [
   { name: 'Syphoner' },
   { name: 'Vanguard' },
   { name: 'Warlord' },
-  // { name: '' },
+  { name: '' },
+  { name: '' },
+  { name: '' },
+  { name: '' },
+  { name: '' },
+  { name: '' },
+  { name: '' },
 ];
 
 export default TRAITS;
