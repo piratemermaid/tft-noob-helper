@@ -1,5 +1,5 @@
 import { Box, Text, VStack } from '@chakra-ui/react';
-import TRAITS from '../../data/tft/set13/set13Traits';
+import TRAITS from '../../data/tft/set14/set14Traits';
 
 export default function TraitSummary({ champions, traitList = TRAITS }) {
   const traits = champions.reduce((acc, champion) => {

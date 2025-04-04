@@ -13,8 +13,8 @@ import {
 import ChampionImage from '../images/ChampionImage';
 import { useStore } from '../../store';
 import { useActiveTraits } from '../../hooks/useActiveTraits';
-import TRAITS from '../../data/tft/set13/set13Traits';
-import CHAMPS from '../../data/tft/set13/set13Champions';
+import TRAITS from '../../data/tft/set14/set14Traits';
+import CHAMPS from '../../data/tft/set14/set14Champions';
 import costColors from '../../styles/costColors';
 
 export default function ChampSearch({
