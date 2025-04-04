@@ -23,3 +23,5 @@ const CURRENT_CHAMPIONS = [
   //     bestItems: [],
   //   },
 ];
+
+export default CURRENT_CHAMPIONS;
