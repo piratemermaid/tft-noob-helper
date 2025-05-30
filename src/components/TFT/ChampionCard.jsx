@@ -59,7 +59,7 @@ export default function ChampionCard({
           </Text>
         </Box>
         <UnorderedList sx={{ minWidth: '120px' }}>
-          {champion.traits.map((trait) => (
+          {champion.traits?.map((trait) => (
             <ListItem key={trait} sx={{ textAlign: 'left' }}>
               <Text
                 sx={{
@@ -73,7 +73,7 @@ export default function ChampionCard({
         </UnorderedList>
         <Box>
           <ChampionImage type={type} name={champion.name} />
-          {!champion.bestItems.length ? (
+          {!champion.bestItems?.length ? (
             <Text sx={{ position: 'relative', top: -10, left: 4 }}>
               !! items
             </Text>

@@ -112,7 +112,7 @@ export const magCastBlueBuffItems = [
   purpleHelmet,
 ];
 
-export const magicarry = [
+export const magiccarry = [
   fierySword,
   pinkFist,
   archangelStaff,

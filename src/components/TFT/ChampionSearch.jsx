@@ -120,7 +120,7 @@ export default function ChampSearch({
                     <Center>
                       <ChampionImage name={champion.name} />
                     </Center>
-                    {champion.traits.map((trait) => (
+                    {champion.traits?.map((trait) => (
                       <Text
                         key={trait}
                         sx={{
